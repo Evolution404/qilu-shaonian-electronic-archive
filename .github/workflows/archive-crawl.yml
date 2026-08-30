@@ -40,7 +40,7 @@ jobs:
 
       - name: Commit newly discovered archive metadata
         run: |
-          if git diff --quiet -- data/archive_crawl; then
+          if [ -z "$(git status --porcelain -- data/archive_crawl)" ]; then
             echo 'No archive-index changes.'
             exit 0
           fi
