@@ -1,0 +1,6 @@
+year,date_or_period,lead_type,description,evidence_url,status,next_action
+2020,2020-11-30,cms_lower_bound,"szb.cnssiot.cn 快照日历 mindate=2020-11-30，证明该数字报系统至少从此日期覆盖《齐鲁少年》",https://web.archive.org/web/20220928010853/http://szb.cnssiot.cn/,strong_lead,"恢复 2020-11-30 日期页、版面页和 Img 静态资源"
+2021,2021-12-25,static_page_image,"云展网静态 CDN 仍保存《齐鲁少年》整版图，内容对应 CMS A1 的‘2021，小小少年们的暖心时刻’",https://www.yunzhan365.com/newspapers/publications/images/%E9%BD%90%E9%B2%81%E5%B0%91%E5%B9%B4%20.jpg,verified_image,"追查同目录静态图、缓存副本和历史文件名"
+2022,2022-01,winter_combined_issue,"鲁中网报道学校收到并阅读 2022 寒假合刊，文章含多张报纸实拍图，但尚未取得可直接辨识的整版原图 URL",https://news.lznews.cn/edu/ttxw/202201/t20220121_9728731.html,strong_lead,"反查页面媒体附件/缓存，识别期号与版面"
+2025,2025,winter_combined_issue_28,"湖南大学教师简历明确记载黄茜《解锁生活中的色彩美学》发表于《齐鲁少年报》2025寒假合刊第28期",https://arch.hnu.edu.cn/__local/7/B1/32/74DEFBF7AF1BCB63287D8DC8B04_6C740019_4300E.pdf,strong_metadata,"用文章题名、作者、寒假合刊第28期反查扫描/电子版"
+2026,2026-06-23,front_page_report,"搜狐教育频道索引保留标题《齐鲁少年》报头版头条点赞振华实验学校，正文直接 URL 尚未恢复",https://mt.sohu.com/kindfeed/learning/20260623/50,strong_lead,"反查搜狐内容 ID、原标题转载、学校官网/公众号和图片 CDN"
