@@ -1,0 +1,51 @@
+name: Media Evidence Extraction
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/extract_media_evidence.py'
+      - '.github/workflows/media-evidence.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: media-evidence
+  cancel-in-progress: true
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image metadata dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Extract public media-resource evidence
+        run: python scripts/extract_media_evidence.py
+
+      - name: Commit media metadata
+        run: |
+          if git diff --quiet -- data/media_evidence.csv data/media_evidence_report.json; then
+            echo 'No media-evidence changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/media_evidence.csv data/media_evidence_report.json
+          git commit -m 'data: refresh media evidence metadata'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
