@@ -1,0 +1,11 @@
+{
+  "target_count": 7,
+  "candidate_media_urls": 86,
+  "media_record_count": 86,
+  "large_portrait_candidates": 1,
+  "page_errors": [],
+  "notes": [
+    "Image bytes are inspected transiently for dimensions/hashes but are not committed.",
+    "Large portrait images are triage candidates only; content must be verified before promotion to electronic_records.csv."
+  ]
+}
