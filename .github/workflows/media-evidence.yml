@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit media metadata
         run: |
-          if git diff --quiet -- data/media_evidence.csv data/media_evidence_report.json; then
+          if [ -z "$(git status --porcelain -- data/media_evidence.csv data/media_evidence_report.json)" ]; then
             echo 'No media-evidence changes.'
             exit 0
           fi
