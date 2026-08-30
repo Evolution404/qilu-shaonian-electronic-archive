@@ -1,0 +1,45 @@
+name: Archive URL Crawl
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/crawl_archives.py'
+      - '.github/workflows/archive-crawl.yml'
+  schedule:
+    - cron: '17 3 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: archive-url-crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Crawl Wayback and Common Crawl indexes
+        run: python scripts/crawl_archives.py
+
+      - name: Commit newly discovered archive metadata
+        run: |
+          if git diff --quiet -- data/archive_crawl; then
+            echo 'No archive-index changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/archive_crawl
+          git commit -m 'data: refresh archival URL indexes'
+          git push
