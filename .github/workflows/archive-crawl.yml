@@ -16,7 +16,7 @@ permissions:
 
 concurrency:
   group: archive-url-crawl
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   crawl:
