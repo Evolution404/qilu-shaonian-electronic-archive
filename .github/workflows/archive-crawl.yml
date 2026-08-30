@@ -3,6 +3,8 @@ name: Archive URL Crawl
 on:
   workflow_dispatch:
   push:
+    branches:
+      - main
     paths:
       - 'scripts/crawl_archives.py'
       - '.github/workflows/archive-crawl.yml'
@@ -20,6 +22,8 @@ jobs:
   crawl:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      PYTHONUNBUFFERED: '1'
     steps:
       - uses: actions/checkout@v4
         with:
