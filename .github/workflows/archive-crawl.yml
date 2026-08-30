@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'scripts/crawl_archives.py'
+      - 'scripts/crawl_archives_v2.py'
       - '.github/workflows/archive-crawl.yml'
   schedule:
     - cron: '17 3 * * 0'
@@ -34,7 +35,7 @@ jobs:
           python-version: '3.12'
 
       - name: Crawl Wayback and Common Crawl indexes
-        run: python scripts/crawl_archives.py
+        run: python scripts/crawl_archives_v2.py
 
       - name: Commit newly discovered archive metadata
         run: |
