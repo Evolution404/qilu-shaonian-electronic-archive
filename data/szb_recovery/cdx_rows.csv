@@ -1,10 +1,10 @@
 query_target,timestamp,original,statuscode,mimetype,digest,length,error
-szb.cnssiot.cn/*.pdf,,szb.cnssiot.cn/*.pdf,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/Img/*,,szb.cnssiot.cn/Img/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/Img/*.pdf,,szb.cnssiot.cn/Img/*.pdf,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/api/*,,szb.cnssiot.cn/api/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/content/*,,szb.cnssiot.cn/content/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/css/*,,szb.cnssiot.cn/css/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/img/*,,szb.cnssiot.cn/img/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/jquery/*,,szb.cnssiot.cn/jquery/*,,,,,URLError: <urlopen error timed out>
-szb.cnssiot.cn/js/*,,szb.cnssiot.cn/js/*,,,,,URLError: <urlopen error timed out>
+szb.cnssiot.cn/*.pdf,,szb.cnssiot.cn/*.pdf,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/Img/*,,szb.cnssiot.cn/Img/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/Img/*.pdf,,szb.cnssiot.cn/Img/*.pdf,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/api/*,,szb.cnssiot.cn/api/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/content/*,,szb.cnssiot.cn/content/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/css/*,,szb.cnssiot.cn/css/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/img/*,,szb.cnssiot.cn/img/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/jquery/*,,szb.cnssiot.cn/jquery/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
+szb.cnssiot.cn/js/*,,szb.cnssiot.cn/js/*,,,,,URLError: <urlopen error [Errno 111] Connection refused>
