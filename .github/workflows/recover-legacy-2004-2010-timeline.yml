@@ -1,0 +1,44 @@
+name: Recover Legacy 2004-2010 Timeline Links
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/run_legacy_2004_2010_timeline_seeds.py'
+      - '.github/workflows/recover-legacy-2004-2010-timeline.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recover-legacy-2004-2010-timeline
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover links from official-home timeline snapshots
+        run: python scripts/run_legacy_2004_2010_timeline_seeds.py
+      - name: Commit recovery metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_timeline_2004_2010)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_timeline_2004_2010
+          git commit -m 'data: recover 2004-2010 legacy timeline links'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
