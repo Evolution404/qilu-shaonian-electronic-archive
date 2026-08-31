@@ -1,0 +1,16 @@
+{
+  "inventory_media_selected": 0,
+  "responses_ok": 0,
+  "pdf_magic_rows": 0,
+  "large_images": 0,
+  "page_geometry_images": 0,
+  "ocr_keyword_rows": 0,
+  "ocr_issue_number_rows": 0,
+  "candidate_rows": 0,
+  "candidates": [],
+  "notes": [
+    "Selection comes from the complete Wayback inventory, not parent-linked HTML media.",
+    "2007-2011 capture window is used to catch late captures of 2010-era assets; newspaper date is never inferred from capture date alone.",
+    "Bytes are transient and not committed."
+  ]
+}
