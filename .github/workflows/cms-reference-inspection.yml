@@ -6,10 +6,15 @@ on:
     branches: [main]
     paths:
       - 'scripts/inspect_53bk_reference.py'
+      - 'scripts/extract_53bk_focused.py'
       - '.github/workflows/cms-reference-inspection.yml'
 
 permissions:
   contents: write
+
+concurrency:
+  group: cms-reference-inspection
+  cancel-in-progress: true
 
 jobs:
   inspect:
@@ -24,6 +29,8 @@ jobs:
           python-version: '3.12'
       - name: Inspect public reference package paths
         run: python scripts/inspect_53bk_reference.py
+      - name: Emit focused recovery summary
+        run: python scripts/extract_53bk_focused.py
       - name: Commit reference metadata
         run: |
           if [ -z "$(git status --porcelain -- data/cms_reference)" ]; then exit 0; fi
