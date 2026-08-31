@@ -1,0 +1,16 @@
+{
+  "source_mobile_url": "http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326",
+  "derived_pc_url": "http://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326",
+  "derived_pc_basename": "pc202112245170816f8aaf438f9a1a9119831a2eab.jpg",
+  "formula": "pc{yyyyMMdd}{same_guid32}.jpg",
+  "formula_evidence": "generic 53BK MakePhoto.ProcessSavejpg transient decompile; pc/mobile share the same date and GUID",
+  "attempts": 6,
+  "verified_jpeg_responses": 0,
+  "verified": false,
+  "verified_sha256": [],
+  "notes": [
+    "The filename transformation is deterministic CMS evidence; qlsn asset existence still requires a verified response.",
+    "No PDF filename is inferred here because Pagepdf is a separate CMS field.",
+    "No newspaper binary is committed."
+  ]
+}

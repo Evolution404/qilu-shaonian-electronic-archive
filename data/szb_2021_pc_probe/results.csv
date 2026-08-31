@@ -1,0 +1,7 @@
+attempt,url,http_status,resolved_url,content_type,bytes,sha256,is_jpeg,error
+wayback_exact_with_editionid,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,,,,,,no,HTTPError: HTTP Error 404: NOT FOUND
+live_http_with_editionid,http://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,,,,,,no,URLError: <urlopen error [Errno -2] Name or service not known>
+live_https_with_editionid,https://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,,,,,,no,URLError: <urlopen error [Errno -2] Name or service not known>
+wayback_exact_without_query,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg,,,,,,no,HTTPError: HTTP Error 404: NOT FOUND
+live_http_without_query,http://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg,,,,,,no,URLError: <urlopen error [Errno -2] Name or service not known>
+live_https_without_query,https://szb.cnssiot.cn/Img/2021/12/pc202112245170816f8aaf438f9a1a9119831a2eab.jpg,,,,,,no,URLError: <urlopen error [Errno -2] Name or service not known>
