@@ -1,0 +1,20 @@
+{
+  "images_ocr_attempted": 12,
+  "images_with_qilu_shaonian": 0,
+  "images_with_zhenhua": 0,
+  "images_with_frontpage": 0,
+  "hit_rows": [
+    {
+      "index": "8",
+      "source_url": "https://q8.itc.cn/q_70/images03/20260623/27fac0fbdd724c60aa98993ddbc8e77b.png",
+      "width": "1080",
+      "height": "508",
+      "keyword_hits": "实验学校",
+      "ocr_excerpt": "实验学校“诵读红色经典。 ME” HRD “=|, 3 & & wa | 一 eal i” DB | 3 Sls 2s es 232M | i ete meee a am ee \"le — eT 上"
+    }
+  ],
+  "notes": [
+    "OCR is triage evidence only; candidate images still require visual/content verification before promotion.",
+    "Image bytes are not committed."
+  ]
+}
