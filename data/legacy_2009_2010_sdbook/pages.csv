@@ -1,0 +1,46 @@
+capture_timestamp,original,archive_url,encoding,historical_windows,issue_mentions,error
+20110918080739,http://www.qlsn.com/sdbook/?/105-1-0-1-1.html,https://web.archive.org/web/20110918080739id_/http://www.qlsn.com/sdbook/?/105-1-0-1-1.html,gb18030,6,3,
+20110918064637,http://www.qlsn.com/sdbook/?/12-1-0-1-1.html,https://web.archive.org/web/20110918064637id_/http://www.qlsn.com/sdbook/?/12-1-0-1-1.html,gb18030,2,0,
+20110918153351,http://www.qlsn.com/sdbook/?/120-1-0-1-1.html,https://web.archive.org/web/20110918153351id_/http://www.qlsn.com/sdbook/?/120-1-0-1-1.html,gb18030,1,0,
+20110918133732,http://www.qlsn.com/sdbook/?/16-1-0-1-1.html,https://web.archive.org/web/20110918133732id_/http://www.qlsn.com/sdbook/?/16-1-0-1-1.html,gb18030,1,1,
+20110918082029,http://www.qlsn.com/sdbook/?/18-1-0-1-1.html,https://web.archive.org/web/20110918082029id_/http://www.qlsn.com/sdbook/?/18-1-0-1-1.html,gb18030,5,0,
+20110918152328,http://www.qlsn.com/sdbook/?/18-1-0-2-1.html,https://web.archive.org/web/20110918152328id_/http://www.qlsn.com/sdbook/?/18-1-0-2-1.html,gb18030,0,0,
+20110919024935,http://www.qlsn.com/sdbook/?/23-1-0-1-1.html,https://web.archive.org/web/20110919024935id_/http://www.qlsn.com/sdbook/?/23-1-0-1-1.html,gb18030,6,1,
+20110918064447,http://www.qlsn.com/sdbook/?/31-1-0-1-1.html,https://web.archive.org/web/20110918064447id_/http://www.qlsn.com/sdbook/?/31-1-0-1-1.html,,0,0,HTTPError: HTTP Error 404: NOT FOUND
+20110917213718,http://www.qlsn.com/sdbook/?/31-1-0-2-1.html,https://web.archive.org/web/20110917213718id_/http://www.qlsn.com/sdbook/?/31-1-0-2-1.html,gb18030,6,0,
+20110918082840,http://www.qlsn.com/sdbook/?/31-1-0-3-1.html,https://web.archive.org/web/20110918082840id_/http://www.qlsn.com/sdbook/?/31-1-0-3-1.html,gb18030,0,0,
+20110918074801,http://www.qlsn.com/sdbook/?/459-1-0-1-1.html,https://web.archive.org/web/20110918074801id_/http://www.qlsn.com/sdbook/?/459-1-0-1-1.html,gb18030,0,0,
+20110918070335,http://www.qlsn.com/sdbook/?/611-1-0-1-1.html,https://web.archive.org/web/20110918070335id_/http://www.qlsn.com/sdbook/?/611-1-0-1-1.html,gb18030,0,0,
+20110918154023,http://www.qlsn.com/sdbook/?/611-1-0-2-1.html,https://web.archive.org/web/20110918154023id_/http://www.qlsn.com/sdbook/?/611-1-0-2-1.html,gb18030,0,0,
+20110918082534,http://www.qlsn.com/sdbook/?/612-1-0-1-1.html,https://web.archive.org/web/20110918082534id_/http://www.qlsn.com/sdbook/?/612-1-0-1-1.html,gb18030,0,0,
+20110918023341,http://www.qlsn.com/sdbook/?/71-1-0-1-1.html,https://web.archive.org/web/20110918023341id_/http://www.qlsn.com/sdbook/?/71-1-0-1-1.html,gb18030,7,0,
+20110918132002,http://www.qlsn.com/sdbook/?/71-1-0-2-1.html,https://web.archive.org/web/20110918132002id_/http://www.qlsn.com/sdbook/?/71-1-0-2-1.html,gb18030,0,0,
+20110918133419,http://www.qlsn.com/sdbook/?/720-1-0-1-1.html,https://web.archive.org/web/20110918133419id_/http://www.qlsn.com/sdbook/?/720-1-0-1-1.html,gb18030,0,0,
+20110918065829,http://www.qlsn.com/sdbook/?/749-1-0-1-1.html,https://web.archive.org/web/20110918065829id_/http://www.qlsn.com/sdbook/?/749-1-0-1-1.html,,0,0,URLError: <urlopen error timed out>
+20110917195345,http://www.qlsn.com/sdbook/?/753-1-0-1-1.html,https://web.archive.org/web/20110917195345id_/http://www.qlsn.com/sdbook/?/753-1-0-1-1.html,,0,0,URLError: <urlopen error timed out>
+20110918062218,http://www.qlsn.com/sdbook/?/754-1-0-1-1.html,https://web.archive.org/web/20110918062218id_/http://www.qlsn.com/sdbook/?/754-1-0-1-1.html,,0,0,URLError: <urlopen error timed out>
+20110919011726,http://www.qlsn.com/sdbook/?/755-1-0-1-1.html,https://web.archive.org/web/20110919011726id_/http://www.qlsn.com/sdbook/?/755-1-0-1-1.html,gb18030,0,0,
+20110918235241,http://www.qlsn.com/sdbook/?/756-1-0-1-1.html,https://web.archive.org/web/20110918235241id_/http://www.qlsn.com/sdbook/?/756-1-0-1-1.html,gb18030,0,0,
+20110918123231,http://www.qlsn.com/sdbook/?/757-1-0-1-1.html,https://web.archive.org/web/20110918123231id_/http://www.qlsn.com/sdbook/?/757-1-0-1-1.html,,0,0,HTTPError: HTTP Error 404: NOT FOUND
+20110918023527,http://www.qlsn.com/sdbook/?/758-1-0-1-1.html,https://web.archive.org/web/20110918023527id_/http://www.qlsn.com/sdbook/?/758-1-0-1-1.html,gb18030,0,0,
+20110918051728,http://www.qlsn.com/sdbook/?/759-1-0-1-1.html,https://web.archive.org/web/20110918051728id_/http://www.qlsn.com/sdbook/?/759-1-0-1-1.html,gb18030,0,0,
+20110918080801,http://www.qlsn.com/sdbook/?/761-1-0-1-1.html,https://web.archive.org/web/20110918080801id_/http://www.qlsn.com/sdbook/?/761-1-0-1-1.html,gb18030,0,0,
+20110918155222,http://www.qlsn.com/sdbook/?/762-1-0-1-1.html,https://web.archive.org/web/20110918155222id_/http://www.qlsn.com/sdbook/?/762-1-0-1-1.html,gb18030,0,0,
+20110918153427,http://www.qlsn.com/sdbook/?/78-1-0-1-1.html,https://web.archive.org/web/20110918153427id_/http://www.qlsn.com/sdbook/?/78-1-0-1-1.html,gb18030,9,0,
+20110919001107,http://www.qlsn.com/sdbook/?/78-1-0-2-1.html,https://web.archive.org/web/20110919001107id_/http://www.qlsn.com/sdbook/?/78-1-0-2-1.html,gb18030,0,0,
+20110918121431,http://www.qlsn.com/sdbook/?/87-1-0-1-1.html,https://web.archive.org/web/20110918121431id_/http://www.qlsn.com/sdbook/?/87-1-0-1-1.html,,0,0,URLError: <urlopen error timed out>
+20110918082850,http://www.qlsn.com/sdbook/?/90-1-0-1-1.html,https://web.archive.org/web/20110918082850id_/http://www.qlsn.com/sdbook/?/90-1-0-1-1.html,,0,0,URLError: <urlopen error timed out>
+20110529092430,http://www.qlsn.com/sdbook/index.asp?,https://web.archive.org/web/20110529092430id_/http://www.qlsn.com/sdbook/index.asp?,,0,0,URLError: <urlopen error timed out>
+20110919001111,http://www.qlsn.com/sdbook/index.asp?action=Add_New&forumid=1&fn=0,https://web.archive.org/web/20110919001111id_/http://www.qlsn.com/sdbook/index.asp?action=Add_New&forumid=1&fn=0,gb18030,0,0,
+20110918183655,http://www.qlsn.com/sdbook/index.asp?action=Best_Topics&forumid=1,https://web.archive.org/web/20110918183655id_/http://www.qlsn.com/sdbook/index.asp?action=Best_Topics&forumid=1,gb18030,1,0,
+20110918072946,http://www.qlsn.com/sdbook/index.asp?action=UbbHelp&forumid=1,https://web.archive.org/web/20110918072946id_/http://www.qlsn.com/sdbook/index.asp?action=UbbHelp&forumid=1,gb18030,0,0,
+20110918082604,http://www.qlsn.com/sdbook/index.asp?action=forget_pw&forumid=1,https://web.archive.org/web/20110918082604id_/http://www.qlsn.com/sdbook/index.asp?action=forget_pw&forumid=1,gb18030,0,0,
+20110918063503,http://www.qlsn.com/sdbook/index.asp?action=member_login&forumid=1,https://web.archive.org/web/20110918063503id_/http://www.qlsn.com/sdbook/index.asp?action=member_login&forumid=1,gb18030,0,0,
+20110918072840,http://www.qlsn.com/sdbook/index.asp?action=member_reg&forumid=1,https://web.archive.org/web/20110918072840id_/http://www.qlsn.com/sdbook/index.asp?action=member_reg&forumid=1,,0,0,URLError: <urlopen error timed out>
+20110918052805,http://www.qlsn.com/sdbook/index.asp?forumid=1&action=list,https://web.archive.org/web/20110918052805id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&action=list,,0,0,URLError: <urlopen error timed out>
+20110918104834,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=1&action=,https://web.archive.org/web/20110918104834id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=1&action=,,0,0,URLError: <urlopen error timed out>
+20110918112837,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=2&action=,https://web.archive.org/web/20110918112837id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=2&action=,gb18030,9,12,
+20110918115201,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=3&action=,https://web.archive.org/web/20110918115201id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=3&action=,gb18030,2,4,
+20110917175305,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=31&action=,https://web.archive.org/web/20110917175305id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=31&action=,gb18030,0,0,
+20110918084350,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=4&action=,https://web.archive.org/web/20110918084350id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=4&action=,gb18030,6,4,
+20110918121616,http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=5&action=,https://web.archive.org/web/20110918121616id_/http://www.qlsn.com/sdbook/index.asp?forumid=1&fn=0&page=5&action=,gb18030,5,4,

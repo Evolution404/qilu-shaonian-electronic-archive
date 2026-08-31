@@ -1,0 +1,46 @@
+{
+  "sdbook_html_states": 45,
+  "pages_fetch_ok": 34,
+  "issue_evidence_rows": 29,
+  "distinct_issues": [
+    "294",
+    "898",
+    "913",
+    "915",
+    "917",
+    "918",
+    "920",
+    "924",
+    "925",
+    "926",
+    "927",
+    "928",
+    "944",
+    "965",
+    "967"
+  ],
+  "dated_2009_rows": 0,
+  "dated_2010_rows": 29,
+  "issues_with_explicit_post_date": [
+    "294",
+    "898",
+    "913",
+    "915",
+    "917",
+    "918",
+    "920",
+    "924",
+    "925",
+    "926",
+    "927",
+    "928",
+    "944",
+    "965",
+    "967"
+  ],
+  "notes": [
+    "Forum capture year may be 2011; historical post dates are preserved separately.",
+    "A forum request for a sample copy is issue-existence metadata, not an electronic newspaper page.",
+    "No newspaper publication date is inferred from the forum post date."
+  ]
+}
