@@ -1,0 +1,14 @@
+{
+  "edition_pages_expected": 8,
+  "edition_pages_recovered": 0,
+  "asset_urls": 1,
+  "verified_assets": 0,
+  "verified_pagepdf_assets": 0,
+  "verified_pages": [],
+  "complete_a1_to_a8": false,
+  "notes": [
+    "Only Wayback responses are used for verification in this focused probe.",
+    "A Pagepdf may be either high-resolution JPG or PDF in 53BK deployments.",
+    "No newspaper binary is committed by this probe."
+  ]
+}
