@@ -1,0 +1,23 @@
+{
+  "raw_distinct_issue_numbers": [294, 898, 913, 915, 917, 918, 920, 924, 925, 926, 927, 928, 944, 965, 967],
+  "false_positive_issue_numbers": [294],
+  "valid_2009_issue_numbers": [898],
+  "valid_2010_issue_numbers": [913, 915, 917, 918, 920, 924, 925, 926, 927, 928, 944],
+  "valid_but_2011_issue_numbers": [965, 967],
+  "direct_publication_date_anchor": {
+    "issue": 924,
+    "date": "2010-06-08",
+    "evidence": "Official qlsn.com forum correction explicitly says 2010年的6月8日第924期吧"
+  },
+  "weekly_policy_evidence": "Archived 2004 qlsn.com newspaper introduction says the paper is 4开4版 and 每周二出版.",
+  "independent_cross_check": {
+    "issue": 1000,
+    "date": "2011-11-22",
+    "evidence": "Official editor Sina blog posted a 1000th-issue commemorative article on 2011-11-22; exactly 76 weeks after issue 924."
+  },
+  "notes": [
+    "Raw miner output is preserved unchanged.",
+    "Inferred dates are sequence-based and must not be labeled direct publication dates.",
+    "The official forum also contains a 2010-10-21 post asking when the newspaper would have an electronic edition; treat this as evidence that a full e-paper system may not yet have existed, not as absolute proof."
+  ]
+}
