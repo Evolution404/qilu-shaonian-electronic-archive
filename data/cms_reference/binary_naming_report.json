@@ -1,0 +1,96 @@
+{
+  "reference_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a9511c2&auth_key=c3ff8a7f77aaec32f1cdb21e0146bb3b",
+  "binary_count": 17,
+  "binaries": [
+    {
+      "entry": "paperweb/bin/FeiShareLibrary.dll",
+      "bytes": 136192
+    },
+    {
+      "entry": "paperweb/bin/FeiShareLibrary.pdb",
+      "bytes": 198144
+    },
+    {
+      "entry": "paperweb/bin/Interop.Acrobat.dll",
+      "bytes": 36864
+    },
+    {
+      "entry": "paperweb/bin/MvcViewEngine.dll",
+      "bytes": 10752
+    },
+    {
+      "entry": "paperweb/bin/MvcViewEngine.pdb",
+      "bytes": 22016
+    },
+    {
+      "entry": "paperweb/bin/Mvcb2b.dll",
+      "bytes": 495104
+    },
+    {
+      "entry": "paperweb/bin/Mvcb2b.pdb",
+      "bytes": 1271296
+    },
+    {
+      "entry": "paperweb/bin/Mvcbll.dll",
+      "bytes": 500224
+    },
+    {
+      "entry": "paperweb/bin/Mvcbll.pdb",
+      "bytes": 589312
+    },
+    {
+      "entry": "paperweb/bin/Mvccom.dll",
+      "bytes": 94720
+    },
+    {
+      "entry": "paperweb/bin/Mvccom.pdb",
+      "bytes": 130560
+    },
+    {
+      "entry": "paperweb/bin/Mvcmode.dll",
+      "bytes": 80384
+    },
+    {
+      "entry": "paperweb/bin/Mvcmode.pdb",
+      "bytes": 101888
+    },
+    {
+      "entry": "paperweb/bin/Newtonsoft.Json.dll",
+      "bytes": 444416
+    },
+    {
+      "entry": "paperweb/bin/PdfCode.dll",
+      "bytes": 23552
+    },
+    {
+      "entry": "paperweb/bin/PdfCode.pdb",
+      "bytes": 36352
+    },
+    {
+      "entry": "paperweb/bin/RouteDebug.dll",
+      "bytes": 11264
+    }
+  ],
+  "matched_string_contexts": 513,
+  "top_score": 22,
+  "top_entries": [
+    "paperweb/bin/FeiShareLibrary.dll",
+    "paperweb/bin/FeiShareLibrary.pdb",
+    "paperweb/bin/Interop.Acrobat.dll",
+    "paperweb/bin/MvcViewEngine.dll",
+    "paperweb/bin/Mvcb2b.dll",
+    "paperweb/bin/Mvcb2b.pdb",
+    "paperweb/bin/Mvcbll.dll",
+    "paperweb/bin/Mvcbll.pdb",
+    "paperweb/bin/Mvccom.dll",
+    "paperweb/bin/Mvccom.pdb",
+    "paperweb/bin/Mvcmode.dll",
+    "paperweb/bin/Newtonsoft.Json.dll",
+    "paperweb/bin/PdfCode.dll",
+    "paperweb/bin/RouteDebug.dll"
+  ],
+  "notes": [
+    "Strings/symbols come from generic 53BK reference binaries, not the historical qlsn server.",
+    "Any recovered naming template must still be independently validated against a real archived/live media response."
+  ]
+}
