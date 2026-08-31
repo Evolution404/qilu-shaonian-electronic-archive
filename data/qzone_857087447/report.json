@@ -1,0 +1,19 @@
+{
+  "official_qzone_uin": "857087447",
+  "cdx_targets": [
+    "857087447.qzone.qq.com/*",
+    "user.qzone.qq.com/857087447/*",
+    "qzone.qq.com/857087447/*"
+  ],
+  "inventory_rows": 0,
+  "cdx_errors": 0,
+  "pages_replayed": 0,
+  "pages_with_qilu_keywords": 0,
+  "pages_with_issue_numbers": 0,
+  "unique_media_refs": 0,
+  "notes": [
+    "The UIN/space is sourced from the verified 2009 editor-blog submission guide.",
+    "Only archive metadata, text excerpts and media URLs are committed.",
+    "QQ media URLs require separate content verification before promotion as newspaper pages."
+  ]
+}
