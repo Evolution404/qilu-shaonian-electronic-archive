@@ -1,0 +1,118 @@
+{
+  "type": "Mvcb2b.admin.jquery.MakePhoto",
+  "relevant_assignments": [
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ""
+      ],
+      "identifiers": []
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [
+        ""
+      ],
+      "identifiers": []
+    },
+    {
+      "variable": "ispdf",
+      "string_literals": [],
+      "identifiers": []
+    },
+    {
+      "variable": "isjpg",
+      "string_literals": [],
+      "identifiers": []
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "identifiers": [
+        "text4"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "identifiers": [
+        "text5"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "identifiers": [
+        "text",
+        "text6"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "identifiers": [
+        "text",
+        "text8"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "identifiers": [
+        "text",
+        "text10"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ]
+    },
+    {
+      "variable": "ismobile",
+      "string_literals": [],
+      "identifiers": [
+        "E_settingbll",
+        "Sitesetting",
+        "Ismobile"
+      ]
+    }
+  ],
+  "relevant_string_literals": [
+    "\", \"mobilepath\": \"",
+    ".jpg",
+    "/",
+    "mobile",
+    "yyyy-MM-dd",
+    "{ \"pcpath\": \"\", \"mobilepath\": \"\",\"ismany\":0 ,\"success\":0 } ] }"
+  ],
+  "relevant_method_names": [
+    "Page_Load",
+    "PdfChange",
+    "PdftoJpg",
+    "ProcessSavejpg"
+  ],
+  "relevant_type_tokens": [
+    "MakePhoto",
+    "Page"
+  ],
+  "notes": [
+    "Derived metadata from transient ILSpy output; decompiled source is not committed.",
+    "Generic 53BK reference implementation only; candidate qlsn paths still require independent verification."
+  ]
+}
