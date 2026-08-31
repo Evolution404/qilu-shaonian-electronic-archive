@@ -1,30 +1,22 @@
 {
   "list_pages": 7,
   "list_pages_recovered": 7,
-  "matching_thread_urls": 16,
-  "threads_recovered": 16,
+  "matching_thread_ids": 6,
+  "threads_with_valid_archived_body": 2,
+  "threads_rejected_as_non_body": 4,
   "threads_with_file_refs": 0,
-  "threads_with_external_links": 16,
+  "threads_with_external_links": 0,
   "titles": [
-    "请您给我寄一份样报好吗？",
-    "俺也期待样报",
     "期待样报！",
+    "俺也期待样报",
+    "请您给我寄一份样报好吗？",
     "感谢贵报 邮寄样稿",
-    "有齐鲁少年报的电子版么",
     "齐鲁少年报电子版 每期都应刊登发表稿件的目录",
-    "请来份样报",
-    "跪求965期和967期样报",
-    "齐鲁少年报什么时候能有电子版啊",
-    "期待样报！",
-    "请您给我寄一份样报好吗？",
-    "俺也期待样报",
-    "发表了文章能寄一份样报吗？？",
-    "感谢贵报 邮寄样稿",
-    "能不能邮寄一份944期的样报",
-    "给俺寄一份样报好吗"
+    "有齐鲁少年报的电子版么"
   ],
   "notes": [
-    "A 2010 forum question about when an electronic edition would exist is useful only after reading replies; the question alone does not prove non-existence.",
-    "This pass targets retrieval/access discussions rather than issue-number mining."
+    "Internet Archive fallback/landing HTML is explicitly rejected and never counted as a recovered forum thread.",
+    "Known exact sdbook captures are tried before Wayback availability lookup.",
+    "A question about an electronic edition is evidence only after its actual historical body/replies are recovered."
   ]
 }
