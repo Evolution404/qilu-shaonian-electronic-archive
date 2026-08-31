@@ -1,0 +1,14 @@
+{
+  "source_rows_2009_2010_focus": 32,
+  "distinct_post_media_keys": 14,
+  "wayback_candidate_attempts": 82,
+  "attempts_with_snapshot": 0,
+  "verified_nonplaceholder_images": 0,
+  "verified_issue_hints": [],
+  "verified_media": [],
+  "notes": [
+    "Only media keys already embedded in official-editor Sina post HTML are queried.",
+    "Archived image bytes are transient and are not committed.",
+    "A Wayback snapshot is not promoted as a newspaper page until image content/issue identity is verified."
+  ]
+}
