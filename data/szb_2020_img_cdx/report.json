@@ -1,0 +1,14 @@
+{
+  "query": "szb.cnssiot.cn/Img/2020*",
+  "cdx_rows": 0,
+  "image_rows": 0,
+  "pdf_rows": 0,
+  "page_asset_pattern_rows": 0,
+  "page_asset_examples": [],
+  "query_error": "",
+  "valid_negative_result": true,
+  "notes": [
+    "This inventory targets archived media independently of missing 2020 content pages.",
+    "A matching filename is only a candidate until the media itself and newspaper identity are verified."
+  ]
+}
