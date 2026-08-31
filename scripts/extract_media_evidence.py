@@ -21,7 +21,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "media_evidence.csv"
-UA = "qilu-shaonian-electronic-archive-media/2.0 (+https://github.com/Evolution404/qilu-shaonian-electronic-archive)"
+UA = "qilu-shaonian-electronic-archive-media/2.1 (+https://github.com/Evolution404/qilu-shaonian-electronic-archive)"
 TIMEOUT = 20
 MAX_BYTES = 20 * 1024 * 1024
 WORKERS = 16
@@ -65,8 +65,18 @@ class MediaParser(HTMLParser):
                 self.urls.append(("link", "href", d["href"]))
 
 
+def safe_http_url(url: str) -> str:
+    """Percent-encode spaces/non-ASCII without double-encoding existing %XX escapes."""
+    p = urllib.parse.urlsplit(url)
+    path = urllib.parse.quote(p.path, safe="/%:@!$&'()*+,;=-._~")
+    query = urllib.parse.quote(p.query, safe="=&?/:;+,%@[]!$'()*-._~")
+    fragment = urllib.parse.quote(p.fragment, safe="=&?/:;+,%@[]!$'()*-._~")
+    return urllib.parse.urlunsplit((p.scheme, p.netloc, path, query, fragment))
+
+
 def request(url: str, *, max_bytes: int | None = None):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+    safe_url = safe_http_url(url)
+    req = urllib.request.Request(safe_url, headers={"User-Agent": UA, "Accept": "*/*"})
     with urllib.request.urlopen(req, timeout=TIMEOUT) as response:
         headers = {k.lower(): v for k, v in response.headers.items()}
         final_url = response.geturl()
@@ -86,10 +96,13 @@ def extract_urls(page_url: str, html: str):
         if value.startswith("//"):
             value = "https:" + value
         resolved = urllib.parse.urljoin(page_url, value)
-        if not resolved.startswith(("http://", "https://")) or resolved in seen:
+        if not resolved.startswith(("http://", "https://")):
             continue
-        seen.add(resolved)
-        out.append((tag, attr, resolved))
+        safe_resolved = safe_http_url(resolved)
+        if safe_resolved in seen:
+            continue
+        seen.add(safe_resolved)
+        out.append((tag, attr, safe_resolved))
     return out
 
 
@@ -197,6 +210,7 @@ def main() -> int:
         "notes": [
             "Image bytes are inspected transiently for dimensions/hashes but are not committed.",
             "Large portrait images are triage candidates only; content must be verified before promotion to electronic_records.csv.",
+            "Non-ASCII and space-containing media paths are percent-encoded before HTTP fetch to avoid silent InvalidURL misses.",
         ],
     }
     (ROOT / "data" / "media_evidence_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
