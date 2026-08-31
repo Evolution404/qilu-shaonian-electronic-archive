@@ -1,16 +1,31 @@
 {
-  "sina_posts": 230,
+  "sina_posts": 232,
   "wordpress_posts": 3,
-  "total_posts": 233,
-  "media_refs": 1248,
-  "unique_media_urls": 308,
-  "reachable_media": 267,
+  "total_posts": 235,
+  "media_refs": 1113,
+  "unique_media_urls": 170,
+  "reachable_media": 136,
   "likely_page_scan_refs": 3,
   "likely_page_scan_unique_urls": 3,
   "errors": [
     {
       "source": "sina_chain",
-      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d90101am1o.html",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d90100e7gu.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_chain",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d90100h5kv.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_chain",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d90101dkvj.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_chain",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d901016yw4.html",
       "error": "HTTPError: HTTP Error 418: "
     }
   ],
