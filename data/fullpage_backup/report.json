@@ -1,0 +1,24 @@
+{
+  "elapsed_seconds": 54.38,
+  "wayback_media_candidates": 88,
+  "inspected_candidates": 88,
+  "large_portrait_candidates": 1,
+  "reachable_pdf_candidates": 0,
+  "internet_archive_item_hits": 1,
+  "large_portrait_examples": [
+    {
+      "original": "http://qlsn.com/upload/newsImg/2014-06/60cf3a14-430a-4757-83a1-e51ddd47d7f0.jpg",
+      "archive_url": "https://web.archive.org/web/20150113052956id_/http://qlsn.com/upload/newsImg/2014-06/60cf3a14-430a-4757-83a1-e51ddd47d7f0.jpg",
+      "width": "1872",
+      "height": "3328",
+      "sha256": "53f242e8ed44399a23b92c1cea40e80038599bfb6eb1fe822b74f1e2c25f8ec1",
+      "historical_identity": "requires_context_verification"
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "Large portrait classification is triage only; visual identity/issue/page must be verified before promotion.",
+    "qlsn.com resources after the verified historical period require contextual verification because the domain was later repurposed.",
+    "Third-party image/PDF bytes are never committed; only URLs, dimensions, hashes and metadata are stored."
+  ]
+}
