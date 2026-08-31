@@ -211,8 +211,6 @@ def media_urls_from_edition(text, page_url, edition_id):
         if not u.startswith(("http://", "https://")):
             return
         low = u.lower()
-        # Avoid probing theme logos/icons. Historical newspaper assets live under
-        # the CMS Img tree, while Pagepdf can also be a direct PDF elsewhere.
         if not ("/img/" in low or re.search(r"\.pdf(?:\?|$)", low)):
             return
         found.append((u, discovery))
@@ -235,8 +233,6 @@ def media_urls_from_edition(text, page_url, edition_id):
         add(u, "edition_html_regex")
     for u in PAGEPIC_JS_RE.findall(text):
         add(u, "edition_pagepic_js")
-    # Pagepdf may itself be a high-resolution JPG rather than a .pdf. Capture
-    # the href specifically associated with the UI label "PDF原版/原面".
     for u in PDF_HREF_RE.findall(text):
         absu = normalize_origin(page_url, u)
         if absu.startswith(("http://", "https://")):
@@ -319,8 +315,6 @@ def probe_asset(url):
             errors.append(f"{candidate}: {type(e).__name__}: {e}")
             return False
 
-    # Historical evidence first: the exact root-snapshot timestamp is both faster
-    # and stronger provenance than a live-domain probe.
     exact = archive_for_original(url)
     if try_one(exact):
         return out
@@ -329,7 +323,6 @@ def probe_asset(url):
     if closest and closest != exact and try_one(closest, closest_ts):
         return out
 
-    # Live origin is a last fallback because the historical host is often offline.
     live = [url]
     if url.startswith("http://"):
         live.append(url.replace("http://", "https://", 1))
@@ -668,14 +661,23 @@ def main():
             if r["status"] == "verified" and not r["discovery"].startswith("inferred_")
         ),
         "cdx_image_rows": sum(
-            1 for r in cdx_rows if str(r.get("mimetype", "")).startswith("image/")
+            1
+            for r in cdx_rows
+            if not r.get("error")
+            and r.get("timestamp")
+            and str(r.get("mimetype", "")).startswith("image/")
         ),
         "cdx_pdf_rows": sum(
             1
             for r in cdx_rows
-            if "pdf" in str(r.get("mimetype", "")).lower()
-            or ".pdf" in str(r.get("original", "")).lower()
+            if not r.get("error")
+            and r.get("timestamp")
+            and (
+                "pdf" in str(r.get("mimetype", "")).lower()
+                or ".pdf" in str(r.get("original", "")).lower()
+            )
         ),
+        "cdx_errors": sum(1 for r in cdx_rows if r.get("error")),
         "errors": errors,
         "notes": [
             "Archive timestamps are not publication dates.",
