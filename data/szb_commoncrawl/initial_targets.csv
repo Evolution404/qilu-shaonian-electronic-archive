@@ -1,0 +1,12 @@
+page,edition_id,provenance,url
+,,known_root,http://szb.cnssiot.cn/
+A1,326,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html
+A2,333,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html
+A3,327,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html
+A4,328,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html
+A5,329,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html
+A6,330,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html
+A7,331,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html
+A8,332,known_edition_route,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html
+A1,326,known_root_media_reference,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326
+A1,326,known_root_media_reference_no_query,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg

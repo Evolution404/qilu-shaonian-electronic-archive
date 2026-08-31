@@ -1,0 +1,67 @@
+stage,index,query_url,error
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,HTTPError: HTTP Error 404: Not Found
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-05,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,HTTPError: HTTP Error 503: Service Temporarily Unavailable
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,URLError: <urlopen error _ssl.c:993: The handshake operation timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-21,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-27,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-33,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-40,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,URLError: <urlopen error timed out>
+initial,CC-MAIN-2022-49,http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg,URLError: <urlopen error timed out>

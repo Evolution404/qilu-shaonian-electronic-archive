@@ -1,0 +1,1 @@
+page,edition_id,provenance,query_url,index,timestamp,url,status,mime,digest,filename,offset,length,warc_fetch,status_line,content_type,body_kind,body_bytes,sha256,warc_target_uri,error

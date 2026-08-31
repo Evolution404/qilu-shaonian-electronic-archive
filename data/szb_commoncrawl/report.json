@@ -1,0 +1,21 @@
+{
+  "indexes_queried": 6,
+  "initial_exact_targets": 11,
+  "initial_index_records": 0,
+  "verified_initial_warc_responses": 0,
+  "verified_html_responses": 0,
+  "discovered_media_targets": 0,
+  "second_pass_index_records": 0,
+  "verified_media_responses": 0,
+  "verified_pdf_responses": 0,
+  "verified_image_responses": 0,
+  "pages_with_verified_media": [],
+  "complete_a1_to_a8_media": false,
+  "query_errors": 66,
+  "notes": [
+    "Common Crawl capture timestamps are archival timestamps, not publication dates.",
+    "A recovered Pagepdf can be PDF or a high-resolution JPG in 53BK deployments.",
+    "Media bytes are verified transiently and hashed; this stage does not republish third-party newspaper binaries.",
+    "inferred_from_real_mobile_hash targets remain hypotheses unless a WARC body verifies them."
+  ]
+}
