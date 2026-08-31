@@ -56,6 +56,7 @@ MEDIA_ATTR_RE = re.compile(
 )
 PAGEPIC_JS_RE = re.compile(r'''(?is)\bpagepic\s*=\s*["']([^"']+)["']''')
 PDF_TEXT_RE = re.compile(r"PDF原(?:版|面)|pdficon|pdf\.gif", re.I)
+PDF_HREF_RE = re.compile(r'''(?is)<a[^>]+href=["']([^"']+)["'][^>]*>[^<]*(?:<[^>]+>[^<]*){0,3}PDF原(?:版|面)''')
 
 
 class P(HTMLParser):
@@ -210,10 +211,9 @@ def media_urls_from_edition(text, page_url, edition_id):
         if not u.startswith(("http://", "https://")):
             return
         low = u.lower()
-        if not (
-            re.search(r"\.(?:pdf|jpe?g|png)(?:\?|$)", low)
-            or "/img/" in low
-        ):
+        # Avoid probing theme logos/icons. Historical newspaper assets live under
+        # the CMS Img tree, while Pagepdf can also be a direct PDF elsewhere.
+        if not ("/img/" in low or re.search(r"\.pdf(?:\?|$)", low)):
             return
         found.append((u, discovery))
 
@@ -235,6 +235,12 @@ def media_urls_from_edition(text, page_url, edition_id):
         add(u, "edition_html_regex")
     for u in PAGEPIC_JS_RE.findall(text):
         add(u, "edition_pagepic_js")
+    # Pagepdf may itself be a high-resolution JPG rather than a .pdf. Capture
+    # the href specifically associated with the UI label "PDF原版/原面".
+    for u in PDF_HREF_RE.findall(text):
+        absu = normalize_origin(page_url, u)
+        if absu.startswith(("http://", "https://")):
+            found.append((absu, "edition_pagepdf_anchor"))
 
     normalized = []
     seen = set()
@@ -285,16 +291,9 @@ def probe_asset(url):
         "archive_timestamp": "",
         "error": "",
     }
-    candidates = [url]
-    if url.startswith("http://"):
-        candidates.append(url.replace("http://", "https://", 1))
-    candidates.append(archive_for_original(url))
-    closest, closest_ts = wayback_available(url)
-    if closest and closest not in candidates:
-        candidates.append(closest)
-
     errors = []
-    for candidate in dict.fromkeys(candidates):
+
+    def try_one(candidate, closest_ts=""):
         try:
             raw, final, h = get(candidate, "*/*", MAX_ASSET_BYTES)
             ctype = h.get("content-type", "").lower()
@@ -302,7 +301,7 @@ def probe_asset(url):
             magic_img = raw[:3] == b"\xff\xd8\xff" or raw.startswith(b"\x89PNG\r\n\x1a\n")
             if not (magic_pdf or magic_img or ctype.startswith("image/") or "pdf" in ctype):
                 errors.append(f"{candidate}: non-media {ctype} ({len(raw)} bytes)")
-                continue
+                return False
             ts_match = re.search(r"/web/(\d+)", final)
             out.update(
                 {
@@ -315,9 +314,29 @@ def probe_asset(url):
                     "error": "",
                 }
             )
-            return out
+            return True
         except Exception as e:
             errors.append(f"{candidate}: {type(e).__name__}: {e}")
+            return False
+
+    # Historical evidence first: the exact root-snapshot timestamp is both faster
+    # and stronger provenance than a live-domain probe.
+    exact = archive_for_original(url)
+    if try_one(exact):
+        return out
+
+    closest, closest_ts = wayback_available(url)
+    if closest and closest != exact and try_one(closest, closest_ts):
+        return out
+
+    # Live origin is a last fallback because the historical host is often offline.
+    live = [url]
+    if url.startswith("http://"):
+        live.append(url.replace("http://", "https://", 1))
+    for candidate in dict.fromkeys(live):
+        if try_one(candidate):
+            return out
+
     out["status"] = "unverified"
     out["error"] = " | ".join(errors)[:4000]
     return out
