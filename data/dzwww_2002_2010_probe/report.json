@@ -1,0 +1,13 @@
+{
+  "inventory_rows": 13,
+  "candidate_2002_2010_urls": 0,
+  "recovered_2002_2010_pages": 0,
+  "years_with_recovered_pages": [],
+  "pages_with_issue_numbers": 0,
+  "distinct_issue_numbers": [],
+  "cdx_errors": 0,
+  "notes": [
+    "URL dates are treated as publication/date-path evidence only when filename begins YYYYMMDD.",
+    "This independently tests whether the Dazhongwang four-page electronic-edition mirror continued after the verified 2001 records."
+  ]
+}
