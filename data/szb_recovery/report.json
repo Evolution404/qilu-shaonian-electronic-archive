@@ -1,6 +1,6 @@
 {
   "discovered_strings": 35,
-  "cdx_rows": 9,
+  "cdx_rows": 8,
   "scripts_inspected": 6,
   "live_probes": 14,
   "live_hits": 0,
@@ -10,7 +10,8 @@
   "verified_edition_assets": 0,
   "verified_non_inferred_assets": 0,
   "cdx_image_rows": 0,
-  "cdx_pdf_rows": 2,
+  "cdx_pdf_rows": 0,
+  "cdx_errors": 8,
   "errors": [],
   "notes": [
     "Archive timestamps are not publication dates.",
