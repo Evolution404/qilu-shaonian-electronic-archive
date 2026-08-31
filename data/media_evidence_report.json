@@ -1,11 +1,21 @@
 {
   "target_count": 7,
-  "candidate_media_urls": 86,
-  "media_record_count": 86,
-  "large_portrait_candidates": 2,
+  "candidate_media_refs": 95,
+  "unique_media_urls": 95,
+  "media_record_count": 95,
+  "large_portrait_candidates": 4,
+  "best_2023_page_candidate": {
+    "variant": "sohu_q100",
+    "url": "https://p8.itc.cn/q_100/images03/20230915/7d7ec65a3464465da8781696d8d80c62.jpeg",
+    "width": "1080",
+    "height": "1585",
+    "bytes": "356333",
+    "sha256": "41013fb6f1c57f69196ccac6aa76b921ac8a043396889b63705a5b851330ce55"
+  },
   "page_errors": [],
   "notes": [
     "Image bytes are inspected transiently for dimensions/hashes but are not committed.",
+    "Sohu q_XX variants are derived only from the same immutable CDN asset path; content must still be verified.",
     "Large portrait images are triage candidates only; content must be verified before promotion to electronic_records.csv.",
     "Non-ASCII and space-containing media paths are percent-encoded before HTTP fetch to avoid silent InvalidURL misses."
   ]
