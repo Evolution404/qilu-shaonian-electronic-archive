@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'scripts/recover_legacy_articles.py'
+      - 'scripts/extract_legacy_seed_links.py'
       - '.github/workflows/legacy-article-recovery.yml'
 
 permissions:
@@ -29,6 +30,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Map all internal legacy-site navigation
+        run: python scripts/extract_legacy_seed_links.py
       - name: Recover issue-linked legacy articles
         run: python scripts/recover_legacy_articles.py
       - name: Commit recovery metadata
@@ -40,6 +43,6 @@ jobs:
           git config user.name 'qilu-archive-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/legacy_recovery
-          git commit -m 'data: recover issue-linked legacy qlsn.com articles'
+          git commit -m 'data: map legacy navigation and recover issue-linked articles'
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"
