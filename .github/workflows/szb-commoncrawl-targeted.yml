@@ -1,0 +1,35 @@
+name: SZB Common Crawl Targeted Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/commoncrawl_szb_targeted.py'
+      - '.github/workflows/szb-commoncrawl-targeted.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Query 2020-2022 Common Crawl indexes serially
+        run: python scripts/commoncrawl_szb_targeted.py
+      - name: Commit Common Crawl metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/szb_commoncrawl)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/szb_commoncrawl
+          git commit -m 'data: recover szb Common Crawl index records'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
