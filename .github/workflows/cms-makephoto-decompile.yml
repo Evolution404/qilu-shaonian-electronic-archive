@@ -1,0 +1,50 @@
+name: CMS MakePhoto Naming Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/materialize_53bk_binary.py'
+      - 'scripts/summarize_53bk_makephoto_decompile.py'
+      - '.github/workflows/cms-makephoto-decompile.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cms-makephoto-decompile
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Materialize reference assembly once
+        run: python scripts/materialize_53bk_binary.py paperweb/bin/mvcb2b.dll /tmp/Mvcb2b.dll
+      - name: Decompile MakePhoto and retain naming metadata only
+        run: |
+          dotnet tool install --global ilspycmd
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          ilspycmd -t Mvcb2b.admin.jquery.MakePhoto /tmp/Mvcb2b.dll > /tmp/MakePhoto.cs
+          python scripts/summarize_53bk_makephoto_decompile.py /tmp/MakePhoto.cs
+          rm -f /tmp/MakePhoto.cs /tmp/Mvcb2b.dll
+      - name: Commit naming metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/cms_reference/makephoto_decompile_summary.json)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/cms_reference/makephoto_decompile_summary.json
+          git commit -m 'data: recover 53BK MakePhoto filename metadata'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
