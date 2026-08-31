@@ -1,0 +1,14 @@
+{
+  "target_url": "https://www.yunzhan365.com/newspapers/publications/images/齐鲁少年 .jpg",
+  "cdx_rows": 0,
+  "unique_cdx_digests": 0,
+  "verified_image_versions": 0,
+  "distinct_verified_sha256": 0,
+  "portrait_fullpage_geometry_versions": 0,
+  "query_error": "TimeoutError: The read operation timed out",
+  "versions": [],
+  "notes": [
+    "Different digests under the fixed publication-image URL may represent different historical editions, but require visual/OCR verification before promotion.",
+    "Only metadata is committed; archived image bytes are transient."
+  ]
+}
