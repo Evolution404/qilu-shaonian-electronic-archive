@@ -1,0 +1,45 @@
+name: Legacy Article Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/recover_legacy_articles.py'
+      - '.github/workflows/legacy-article-recovery.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: legacy-article-recovery
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover issue-linked legacy articles
+        run: python scripts/recover_legacy_articles.py
+      - name: Commit recovery metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_recovery)" ]; then
+            echo 'No legacy-recovery changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_recovery
+          git commit -m 'data: recover issue-linked legacy qlsn.com articles'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
