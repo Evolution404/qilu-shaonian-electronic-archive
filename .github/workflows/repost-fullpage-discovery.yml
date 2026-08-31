@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'scripts/discover_repost_fullpages.py'
+      - 'scripts/run_repost_fullpages.py'
       - 'scripts/ocr_repost_candidates.py'
       - '.github/workflows/repost-fullpage-discovery.yml'
 
@@ -36,7 +37,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
       - name: Scan editor and reader archives
-        run: python scripts/discover_repost_fullpages.py
+        run: python scripts/run_repost_fullpages.py
       - name: OCR likely page scans
         run: python scripts/ocr_repost_candidates.py
       - name: Commit candidate metadata
