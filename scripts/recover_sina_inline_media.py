@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Recover Sina blog media URLs hidden in raw/escaped source for issue-specific posts.
 
-The normal HTML parser misses some legacy Sina body images because URLs can live in
-``real_src`` attributes, escaped HTML fragments, or script strings. This targeted pass reads
-already-discovered editor posts, prioritizes issue/page-review semantics, extracts sinaimg.cn
-URLs directly from raw source, derives only legacy large/orignal sibling variants, and records
-reachable image metadata/hash. Image bytes are transient and are not committed.
+Legacy Sina blog HTML can hide images in ``real_src`` attributes, escaped fragments or
+script strings.  This pass extracts only URLs present in the verified editor-blog HTML,
+then probes deterministic historical CDN siblings.  Old Sina used both sN.sinaimg.cn and
+ssN.sinaimg.cn hosts and paths such as middle/bmiddle/large/orignal.  Image requests carry
+the source blog post as Referer.  Bytes are transient; only metadata and hashes persist.
 """
 from __future__ import annotations
 
@@ -27,23 +27,28 @@ POSTS = ROOT / "data" / "repost_fullpage" / "sina_posts.csv"
 OUTDIR = ROOT / "data" / "repost_fullpage"
 OUT = OUTDIR / "sina_inline_media.csv"
 REPORT = OUTDIR / "sina_inline_media_report.json"
-UA = "Mozilla/5.0 qilu-shaonian-sina-inline-media/1.0"
+UA = "Mozilla/5.0 qilu-shaonian-sina-inline-media/2.0"
 TIMEOUT = 14
 MAX_HTML = 5 * 1024 * 1024
 MAX_IMAGE = 25 * 1024 * 1024
-WORKERS = 14
+WORKERS = 12
+PLACEHOLDER_SHA256 = "d2b5a30568572332968808f1fd3d0218cd8a8ca41889627168fc6d9ca487e766"
 
 SEMANTIC = re.compile(r"评报|看图说事|版面|合刊|第\s*\d{3,5}\s*期|\d{3,5}\s*期|一版|二版|三版|四版|头版|报纸", re.I)
 SINA_URL = re.compile(
-    r'''(?i)(?:https?:)?(?:\\?/\\?/|//)(?:s\d+|photo|album|ww\d+|wx\d+)\.sinaimg\.cn(?:\\?/|/)[^"'<>\s\\]+'''
+    r'''(?i)(?:https?:)?(?:\\?/\\?/|//)(?:s\d+|ss\d+|photo|album|ww\d+|wx\d+)\.sinaimg\.cn(?:\\?/|/)[^"'<>\s\\]+'''
 )
-# Also catch plain unescaped http(s) URLs with query suffixes.
-SINA_HTTP = re.compile(r'''(?i)https?://(?:s\d+|photo|album|ww\d+|wx\d+)\.sinaimg\.cn/[^"'<>\s]+''')
+SINA_HTTP = re.compile(r'''(?i)https?://(?:s\d+|ss\d+|photo|album|ww\d+|wx\d+)\.sinaimg\.cn/[^"'<>\s]+''')
 PATH_CLASS = re.compile(r"/(middle|bmiddle|thumbnail|mw\d+|orj\d+|square|large|orignal)/", re.I)
+HOST_S = re.compile(r"^s(\d+)\.sinaimg\.cn$", re.I)
+HOST_SS = re.compile(r"^ss(\d+)\.sinaimg\.cn$", re.I)
 
 
-def get(url: str, limit: int, accept="*/*"):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": accept})
+def get(url: str, limit: int, accept="*/*", referer=""):
+    headers = {"User-Agent": UA, "Accept": accept}
+    if referer:
+        headers["Referer"] = referer
+    req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
         body = r.read(limit + 1)
         if len(body) > limit:
@@ -70,26 +75,39 @@ def clean_url(raw: str):
     s = html.unescape(raw).replace("\\/", "/").replace("\\u0026", "&")
     if s.startswith("//"):
         s = "http:" + s
-    # Trim JavaScript/string punctuation that the permissive regex may retain.
-    s = s.rstrip("),;]}")
-    return s
+    return s.rstrip("),;]}")
 
 
 def derive_variants(url: str):
     p = urllib.parse.urlsplit(url)
-    if not p.hostname or "sinaimg.cn" not in p.hostname.lower():
+    host = (p.hostname or "").lower()
+    if "sinaimg.cn" not in host:
         return []
     m = PATH_CLASS.search(p.path)
     if not m:
-        return [("as_found", url)]
-    current = m.group(1).lower()
-    out = [("as_found", url)]
-    for variant in ("large", "orignal"):
-        if current == variant:
-            continue
-        path = p.path[:m.start()] + f"/{variant}/" + p.path[m.end():]
-        out.append((variant, urllib.parse.urlunsplit((p.scheme or "http", p.netloc, path, p.query, p.fragment))))
-    return out
+        return []
+    # Reject parser artefacts such as http://s7.sinaimg.cn/middle with no media key.
+    tail = p.path[m.end():]
+    if len(tail) < 8:
+        return []
+
+    hosts = [p.netloc]
+    sm = HOST_S.match(host)
+    ssm = HOST_SS.match(host)
+    if sm:
+        hosts.append(re.sub(r"^s\d+", f"ss{sm.group(1)}", p.netloc, flags=re.I))
+    elif ssm:
+        hosts.append(re.sub(r"^ss\d+", f"s{ssm.group(1)}", p.netloc, flags=re.I))
+
+    path_classes = [m.group(1).lower(), "middle", "bmiddle", "large", "orignal"]
+    out = []
+    for netloc in dict.fromkeys(hosts):
+        for scheme in (p.scheme or "http", "http", "https"):
+            for cls in dict.fromkeys(path_classes):
+                path = p.path[:m.start()] + f"/{cls}/" + p.path[m.end():]
+                candidate = urllib.parse.urlunsplit((scheme, netloc, path, p.query, p.fragment))
+                out.append((f"{netloc}:{cls}:{scheme}", candidate))
+    return list(dict.fromkeys(out))
 
 
 def fetch_post(row):
@@ -97,7 +115,6 @@ def fetch_post(row):
     try:
         raw, final, h = get(url, MAX_HTML, "text/html,*/*;q=0.5")
         text = decode(raw, h.get("content-type", ""))
-        # Search both raw source and one HTML-unescaped pass.
         blobs = [text, html.unescape(text).replace("\\/", "/")]
         found = set()
         for blob in blobs:
@@ -124,28 +141,31 @@ def inspect(item):
         "image_format": "",
         "portrait_ratio": "",
         "likely_document": "",
+        "is_placeholder": "",
         "fetch_error": "",
     }
     try:
-        raw, final, h = get(url, MAX_IMAGE, "image/*,*/*;q=0.5")
+        raw, final, h = get(url, MAX_IMAGE, "image/*,*/*;q=0.5", base.get("post_url", ""))
         ctype = h.get("content-type", "").split(";", 1)[0].lower()
         with Image.open(io.BytesIO(raw)) as im:
             w, hg = im.size
             fmt = im.format or ""
+        digest = hashlib.sha256(raw).hexdigest()
         ratio = hg / w if w else 0
+        placeholder = digest == PLACEHOLDER_SHA256 or "default_s_" in final or (w == 360 and hg == 360 and fmt.upper() == "GIF")
         out.update(
             {
                 "resolved_url": final,
                 "http_status": "200",
                 "content_type": ctype,
                 "bytes": str(len(raw)),
-                "sha256": hashlib.sha256(raw).hexdigest(),
+                "sha256": digest,
                 "width": str(w),
                 "height": str(hg),
                 "image_format": fmt,
                 "portrait_ratio": f"{ratio:.3f}",
-                # Newspaper/document triage: portrait-ish and not avatar-size.
-                "likely_document": "yes" if w >= 500 and hg >= 650 and ratio >= 1.12 else "no",
+                "likely_document": "yes" if not placeholder and w >= 500 and hg >= 650 and ratio >= 1.12 else "no",
+                "is_placeholder": "yes" if placeholder else "no",
             }
         )
     except Exception as exc:
@@ -158,9 +178,7 @@ def main():
         all_posts = list(csv.DictReader(f))
     selected = []
     for row in all_posts:
-        semantic_text = " ".join(
-            [row.get("post_title", ""), row.get("issue_hints", ""), row.get("page_text_hint", "")]
-        )
+        semantic_text = " ".join([row.get("post_title", ""), row.get("issue_hints", ""), row.get("page_text_hint", "")])
         if row.get("issue_hints") or row.get("page_text_hint") or SEMANTIC.search(semantic_text):
             selected.append(row)
     print(f"selected semantic posts={len(selected)} of {len(all_posts)}", flush=True)
@@ -173,24 +191,16 @@ def main():
             row, final, urls, err = fut.result()
             if err:
                 errors.append({"post_url": row["post_url"], "error": err})
-            if urls:
-                print("INLINE", row.get("post_title", ""), "urls", len(urls), flush=True)
             for u in urls:
-                raw_hits.append(
-                    {
-                        "post_url": row["post_url"],
-                        "post_date": row.get("post_date", ""),
-                        "post_title": row.get("post_title", ""),
-                        "issue_hints": row.get("issue_hints", ""),
-                        "page_text_hint": row.get("page_text_hint", ""),
-                        "resolved_post_url": final,
-                        "source_media_url": u,
-                    }
-                )
+                raw_hits.append({
+                    "post_url": row["post_url"], "post_date": row.get("post_date", ""),
+                    "post_title": row.get("post_title", ""), "issue_hints": row.get("issue_hints", ""),
+                    "page_text_hint": row.get("page_text_hint", ""), "resolved_post_url": final,
+                    "source_media_url": u,
+                })
             if n % 30 == 0:
                 print("post progress", n, "/", len(futures), "raw hits", len(raw_hits), flush=True)
 
-    # De-dup per post/source URL, then derive high-res siblings.
     uniq = {}
     for r in raw_hits:
         uniq[(r["post_url"], r["source_media_url"])] = r
@@ -199,45 +209,35 @@ def main():
         for variant, u in derive_variants(r["source_media_url"]):
             jobs.append((r, variant, u))
 
-    # Fetch each candidate URL once; retain strongest post association afterwards.
     by_url = {}
     for base, variant, u in jobs:
-        key = u
         score = (3 if base.get("issue_hints") else 0) + (2 if base.get("page_text_hint") else 0)
-        old = by_url.get(key)
+        old = by_url.get(u)
         if old is None or score > old[0]:
-            by_url[key] = (score, base, variant, u)
+            by_url[u] = (score, base, variant, u)
     print(f"unique candidate media={len(by_url)}", flush=True)
 
     results = []
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         futures = [pool.submit(inspect, item[1:]) for item in by_url.values()]
         for n, fut in enumerate(as_completed(futures), 1):
-            r = fut.result()
-            results.append(r)
-            if r.get("likely_document") == "yes":
-                print("DOCUMENT", r["width"], r["height"], r["post_title"], r["media_url"], flush=True)
-            elif n % 40 == 0:
+            r = fut.result(); results.append(r)
+            if r.get("http_status") == "200" and r.get("is_placeholder") == "no":
+                print("REAL", r["width"], r["height"], r["post_title"], r["media_url"], flush=True)
+            elif n % 50 == 0:
                 print("media progress", n, "/", len(futures), flush=True)
 
-    results.sort(
-        key=lambda r: (
-            r.get("likely_document") != "yes",
-            not bool(r.get("issue_hints")),
-            r.get("post_date", ""),
-            r.get("post_url", ""),
-            r.get("media_url", ""),
-        )
-    )
+    results.sort(key=lambda r: (
+        r.get("is_placeholder") != "no", r.get("likely_document") != "yes",
+        not bool(r.get("issue_hints")), r.get("post_date", ""), r.get("post_url", ""), r.get("media_url", "")
+    ))
     fields = [
         "post_url", "post_date", "post_title", "issue_hints", "page_text_hint", "resolved_post_url",
         "source_media_url", "variant", "media_url", "resolved_url", "http_status", "content_type", "bytes",
-        "sha256", "width", "height", "image_format", "portrait_ratio", "likely_document", "fetch_error",
+        "sha256", "width", "height", "image_format", "portrait_ratio", "likely_document", "is_placeholder", "fetch_error",
     ]
     with OUT.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore")
-        w.writeheader()
-        w.writerows(results)
+        w = csv.DictWriter(f, fieldnames=fields, extrasaction="ignore"); w.writeheader(); w.writerows(results)
 
     report = {
         "all_sina_posts": len(all_posts),
@@ -246,12 +246,15 @@ def main():
         "raw_inline_media_refs": len(raw_hits),
         "unique_candidate_media_urls": len(by_url),
         "reachable_media": sum(r.get("http_status") == "200" for r in results),
+        "reachable_non_placeholder": sum(r.get("http_status") == "200" and r.get("is_placeholder") == "no" for r in results),
         "likely_document_images": sum(r.get("likely_document") == "yes" for r in results),
+        "issue_hint_non_placeholder": sum(r.get("issue_hints") and r.get("is_placeholder") == "no" for r in results),
         "posts_fetch_errors": len(errors),
         "notes": [
-            "Only source URLs already embedded in historical Sina post HTML are considered; large/orignal siblings are deterministic legacy CDN variants.",
-            "likely_document is geometry triage only and requires content/OCR verification before archival promotion.",
-            "No image bytes are committed.",
+            "Only media keys embedded in historical editor-blog HTML are probed.",
+            "Deterministic historical variants include sN/ssN host aliases and middle/bmiddle/large/orignal paths over HTTP/HTTPS.",
+            "Image requests carry the source blog post as Referer.",
+            "No image bytes are committed."
         ],
     }
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
