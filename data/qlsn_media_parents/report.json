@@ -1,0 +1,15 @@
+{
+  "target_media": 4,
+  "inventoried_html_snapshots": 144,
+  "unique_parent_matches": 4,
+  "strong_qilu_parent_matches": 0,
+  "qilu_parent_matches": 4,
+  "unconfirmed_parent_matches": 0,
+  "fetch_errors": 127,
+  "matched_media": 4,
+  "notes": [
+    "Media path dates are not publication dates.",
+    "A parent match proves HTML reference association; content/issue verification is still required before promoting a newspaper page.",
+    "qlsn.com root identity is independently verified through 2012-09, but each parent page remains evidence-scoped."
+  ]
+}
