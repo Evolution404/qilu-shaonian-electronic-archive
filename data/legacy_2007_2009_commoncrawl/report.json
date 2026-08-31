@@ -1,0 +1,18 @@
+{
+  "historical_indexes_selected": [
+    "CC-MAIN-2008-2009",
+    "CC-MAIN-2009-2010"
+  ],
+  "official_child_targets": 24,
+  "index_hits": 0,
+  "warc_recovered": 0,
+  "issue_confirmed_warc_pages": 0,
+  "confirmed_issues": [],
+  "pages_with_media_refs": 0,
+  "query_errors": 48,
+  "notes": [
+    "Targets originate from archived official qlsn.com homepage anchors, not guessed article IDs.",
+    "This is an independent Common Crawl recovery after Wayback body recovery returned 0/24.",
+    "Only metadata, excerpts, media URLs and hashes are committed; no third-party newspaper binaries are stored."
+  ]
+}
