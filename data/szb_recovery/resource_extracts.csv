@@ -1,7 +1,7 @@
 resource,archive_url,kind,extract_count,text_snippet,error
-http://szb.cnssiot.cn/Content/themes/mobileslide/js/weixinshare2019.js?t=20190409,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/weixinshare2019.js?t=20190409,script,0,,HTTPError: HTTP Error 404: NOT FOUND
-http://szb.cnssiot.cn/Content/themes/mobileslide/js/slidedata.js?t=20200930,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/slidedata.js?t=20200930,script,0,,HTTPError: HTTP Error 404: NOT FOUND
-http://szb.cnssiot.cn/Comja/pubmobile.js,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Comja/pubmobile.js,script,0,,HTTPError: HTTP Error 404: NOT FOUND
+http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarshowblue.js,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarshowblue.js,script,0,,HTTPError: HTTP Error 404: NOT FOUND
 http://szb.cnssiot.cn/jquery/readtitle,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/jquery/readtitle,script,0,,HTTPError: HTTP Error 404: NOT FOUND
 http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarstartblue.js,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarstartblue.js,script,0,,HTTPError: HTTP Error 404: NOT FOUND
-http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarshowblue.js,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/calendarshowblue.js,script,0,,HTTPError: HTTP Error 404: NOT FOUND
+http://szb.cnssiot.cn/Content/themes/mobileslide/js/weixinshare2019.js?t=20190409,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/weixinshare2019.js?t=20190409,script,0,,HTTPError: HTTP Error 404: NOT FOUND
+http://szb.cnssiot.cn/Comja/pubmobile.js,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Comja/pubmobile.js,script,0,,HTTPError: HTTP Error 404: NOT FOUND
+http://szb.cnssiot.cn/Content/themes/mobileslide/js/slidedata.js?t=20200930,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/Content/themes/mobileslide/js/slidedata.js?t=20200930,script,0,,HTTPError: HTTP Error 404: NOT FOUND

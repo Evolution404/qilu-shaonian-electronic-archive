@@ -1,0 +1,9 @@
+page,edition_id,original_url,archive_url,content_type,html_length,media_count,mentions_pdf_ui,error
+A1,326,http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition326_A1.html: HTTPError: HTTP Error 404: NOT FOUND
+A2,333,http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition333_A2.html: HTTPError: HTTP Error 404: NOT FOUND
+A3,327,http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition327_A3.html: HTTPError: HTTP Error 404: NOT FOUND
+A4,328,http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition328_A4.html: HTTPError: HTTP Error 404: NOT FOUND
+A5,329,http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition329_A5.html: HTTPError: HTTP Error 404: NOT FOUND
+A6,330,http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition330_A6.html: HTTPError: HTTP Error 404: NOT FOUND
+A7,331,http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition331_A7.html: HTTPError: HTTP Error 404: NOT FOUND
+A8,332,http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html,,,0,0,no,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/content/2021-12/25/edition332_A8.html: HTTPError: HTTP Error 404: NOT FOUND

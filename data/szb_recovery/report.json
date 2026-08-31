@@ -1,13 +1,21 @@
 {
   "discovered_strings": 35,
-  "cdx_rows": 0,
+  "cdx_rows": 9,
   "scripts_inspected": 6,
   "live_probes": 14,
   "live_hits": 0,
+  "edition_pages": 8,
+  "edition_pages_recovered": 0,
+  "edition_asset_candidates": 5,
+  "verified_edition_assets": 0,
+  "verified_non_inferred_assets": 0,
   "cdx_image_rows": 0,
+  "cdx_pdf_rows": 2,
   "errors": [],
   "notes": [
     "Archive timestamps are not publication dates.",
-    "Routes/assets must be tied to a specific newspaper date/page before promotion."
+    "53BK Pagepdf can be JPG or PDF; only a verified response is promoted.",
+    "inferred_sibling_from_mobile_pagepic rows are hypotheses until verified.",
+    "Newspaper bytes are intentionally not committed by this discovery script."
   ]
 }
