@@ -1,0 +1,39 @@
+name: CMS Pagepdf Naming Trace
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/cms-pagepdf-decompile.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  trace:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Materialize reference assembly
+        run: python scripts/materialize_53bk_binary.py paperweb/bin/mvcb2b.dll /tmp/Mvcb2b.dll
+      - name: Trace Pagepdf and PDF upload naming
+        run: |
+          dotnet tool install --global ilspycmd
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          for type in Mvcb2b.admin.Editionadd Mvcb2b.admin.Editionedit Mvcb2b.admin.jquery.PdfProcess; do
+            echo "===== TYPE $type ====="
+            if ilspycmd -t "$type" /tmp/Mvcb2b.dll > /tmp/type.cs 2>/tmp/ilspy.err; then
+              grep -n -B 3 -A 4 -E 'Pagepdf|Pagepic|webpathpdf|pdfname|Pdfname|Upqipdf|\.pdf|Guid.NewGuid|Savedata' /tmp/type.cs | head -n 320 || true
+            else
+              cat /tmp/ilspy.err
+            fi
+          done
+          rm -f /tmp/type.cs /tmp/ilspy.err /tmp/Mvcb2b.dll
