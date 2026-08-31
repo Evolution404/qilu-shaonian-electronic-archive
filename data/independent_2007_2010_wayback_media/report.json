@@ -1,5 +1,8 @@
 {
-  "inventory_media_selected": 0,
+  "cdx_queries": 8,
+  "cdx_query_errors": 0,
+  "cdx_media_rows_before_dedupe": 0,
+  "media_selected_after_dedupe": 0,
   "responses_ok": 0,
   "pdf_magic_rows": 0,
   "large_images": 0,
@@ -9,8 +12,9 @@
   "candidate_rows": 0,
   "candidates": [],
   "notes": [
-    "Selection comes from the complete Wayback inventory, not parent-linked HTML media.",
-    "2007-2011 capture window is used to catch late captures of 2010-era assets; newspaper date is never inferred from capture date alone.",
-    "Bytes are transient and not committed."
+    "CDX is queried directly for qlsn.com/www.qlsn.com 2007-2011 image/PDF captures.",
+    "Parent HTML is not required for discovery.",
+    "Capture date is never treated as newspaper publication date by itself.",
+    "Bytes are transient and are not committed."
   ]
 }
