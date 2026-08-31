@@ -1,0 +1,492 @@
+{
+  "type": "Mvcb2b.admin.jquery.MakePhoto",
+  "filename_variable_assignments_in_source_order": [
+    {
+      "variable": "text",
+      "string_literals": [
+        "p"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Request",
+        "QueryString",
+        "ToString"
+      ],
+      "calls": [
+        "ToString"
+      ],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "p"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Request",
+        "Form",
+        "ToString"
+      ],
+      "calls": [
+        "ToString"
+      ],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Fun",
+        "Webdirectory",
+        "text"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Path",
+        "GetExtension",
+        "text2",
+        "ToLower"
+      ],
+      "calls": [
+        "Path.GetExtension",
+        "ToLower"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "val2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pages",
+        "i"
+      ],
+      "calls": [],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "text4",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "dir",
+        "val2",
+        "Pcname"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "val2",
+        "Mobilename"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "dir",
+        "val2",
+        "Mobilename"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text4"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text5"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "savedata",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Fun",
+        "Savedata"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "savedata"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "text"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Year",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Year.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text3"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text3"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Month",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Month.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text4",
+      "string_literals": [
+        "-",
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Guid",
+        "NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "calls": [
+        "Guid.NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "pdf2jpg"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "text6"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "text8"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [
+        "text",
+        "text10"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "dir",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "savedata"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "dir"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Year",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Year.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "dir",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text2"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text2"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Month",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Month.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text3",
+      "string_literals": [
+        "-",
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Guid",
+        "NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "calls": [
+        "Guid.NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text4",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "webpathpdf"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": []
+    }
+  ],
+  "high_value_literals": [
+    ".jpg",
+    "/",
+    "mobile",
+    "yyyy-MM-dd"
+  ],
+  "high_value_methods": [
+    "Page_Load",
+    "PdfChange",
+    "PdftoJpg",
+    "ProcessSavejpg"
+  ],
+  "interpretation_guardrails": [
+    "Rows preserve assignment order but omit original expressions.",
+    "Repeated generic text/textN variables may belong to different methods/scopes; use neighboring dependencies and method semantics conservatively.",
+    "This is generic 53BK reference behavior, not proof of a historical qlsn file."
+  ]
+}
