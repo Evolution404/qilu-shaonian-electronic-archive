@@ -1,0 +1,14 @@
+{
+  "samples_requested": 32,
+  "unique_snapshots": 8,
+  "identity_counts": {
+    "qilu_shaonian": 7,
+    "unclear": 1
+  },
+  "last_qilu_shaonian_snapshot": "20120909233944",
+  "first_youth_center_snapshot": "",
+  "notes": [
+    "Closest-snapshot sampling establishes domain identity, not the creation date of each media object.",
+    "Media from ambiguous transition periods still requires parent-page/content verification before attribution."
+  ]
+}
