@@ -1,0 +1,44 @@
+name: Mine 2009-2010 Official Forum Issue Anchors
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/mine_2009_2010_sdbook_issue_posts.py'
+      - '.github/workflows/mine-2009-2010-sdbook.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mine-2009-2010-sdbook
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Mine historical issue anchors
+        run: python scripts/mine_2009_2010_sdbook_issue_posts.py
+      - name: Commit forum metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_2009_2010_sdbook)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_2009_2010_sdbook
+          git commit -m 'data: mine 2009-2010 official forum issue anchors'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
