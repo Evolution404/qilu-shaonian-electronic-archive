@@ -1,13 +1,19 @@
 {
-  "sina_posts": 2,
+  "sina_posts": 230,
   "wordpress_posts": 3,
-  "total_posts": 5,
-  "media_refs": 98,
-  "unique_media_urls": 75,
-  "reachable_media": 41,
+  "total_posts": 233,
+  "media_refs": 1248,
+  "unique_media_urls": 308,
+  "reachable_media": 267,
   "likely_page_scan_refs": 3,
   "likely_page_scan_unique_urls": 3,
-  "errors": [],
+  "errors": [
+    {
+      "source": "sina_chain",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d90101am1o.html",
+      "error": "HTTPError: HTTP Error 418: "
+    }
+  ],
   "notes": [
     "Sina discovery walks previous/next post links because legacy article-list pages may return HTTP 418.",
     "Sina real_src and large image variants are probed to avoid missing historical original-resolution uploads.",
