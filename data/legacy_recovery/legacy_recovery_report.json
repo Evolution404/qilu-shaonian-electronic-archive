@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-08-31T01:55:27.835557+00:00",
+  "elapsed_seconds": 36.88,
+  "seed_count": 2,
+  "unique_content_links": 20,
+  "recovered_rows": 20,
+  "verified_issue_linked_articles": 1,
+  "issues": [
+    "745"
+  ],
+  "verified_articles": [
+    {
+      "issue": "745",
+      "title": "网站首页 | 本报新闻 | 公告栏 | 美文选登 | 快乐下载 | 图片 | 站内搜索 | 过客留言 | 少年论坛 [ 习作精选 ] | [ 电脑知识 ] | [ 家庭教育 ] | [ 成长乐园 ] | [ 名师讲坛 ] | 浏览文章 你知道1+1＞2吗",
+      "site_date": "2007-1-18",
+      "original_url": "http://www.qlsn.com/article_view.asp?id=221",
+      "archive_url": "https://web.archive.org/web/20070625133830id_/http://www.qlsn.com:80/article_view.asp?id=221"
+    }
+  ],
+  "seed_errors": [],
+  "notes": [
+    "Site dates are not automatically treated as newspaper publication dates.",
+    "Only pages explicitly tied to a 《齐鲁少年》 issue are candidates for promotion to electronic_records.csv.",
+    "Full article bodies are not persisted; only metadata excerpts are stored for verification."
+  ]
+}
