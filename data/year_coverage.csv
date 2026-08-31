@@ -1,28 +1,28 @@
 year,status,electronic_evidence,notes
-2000,not_found_yet,,"已确认当年持续出版；尚未找到可核验电子版"
-2001,found,dzwww HTML,"2001-08-03 至少9个原生电子报页面"
-2002,not_found_yet,,"Wayback 2002抓取包含2001内容，不得误算为2002出版"
-2003,not_found_yet,,"Wayback 2003抓取包含旧栏目页，不等于2003期次"
-2004,not_found_yet,,"已确认 qlsn.com 为《齐鲁少年》旧官网，但当前恢复的是站点简介/首页，尚未恢复明确对应期号的电子报文章"
+2000,not_found_yet,,已确认当年持续出版；尚未找到可核验电子版
+2001,found,dzwww HTML,2001-08-03 至少9个原生电子报页面
+2002,not_found_yet,,Wayback 2002抓取包含2001内容，不得误算为2002出版
+2003,not_found_yet,,Wayback 2003抓取包含旧栏目页，不等于2003期次
+2004,not_found_yet,,已确认 qlsn.com 为《齐鲁少年》旧官网，但当前恢复的是站点简介/首页，尚未恢复明确对应期号的电子报文章
 2005,not_found_yet,,
-2006,not_found_yet,,"旧官网存在本报新闻/文章/公告内容，正在按期号核验；尚未将无期号页面计入电子报主档"
-2007,found,qlsn.com HTML,"旧官网 article_view.asp 已恢复第745期至少3篇原生HTML文章：《森林里的春节联欢晚会》《我的同桌》《你知道1+1＞2吗》；页面网站日期为2007-01-18，但未将其推定为报纸出版日；连续ID 216-221中217、218、220经Wayback closest复核无快照"
-2008,not_found_yet,,
-2009,metadata_only,,"编辑部新浪博客存在，但普通博文不算电子报"
-2010,metadata_only,,"可找到编辑部/用稿资料，尚未找到整版电子报"
-2011,metadata_only,,"第1000期及989-1001期存在明确期号锚点，尚未找到对应整版电子报"
-2012,metadata_only,,"1002-1014、1018、1044、1049、1053-1055、1057等期号可由编辑部资料确认，尚未找到整版电子报"
+2006,found,qlsn.com HTML,旧官网已恢复第740期原生HTML《科学让他们登上今天的舞台》；正文署名“本报记者 李珊 雨虹 第740期”，页面网站日期2006-12-11不作为报纸出版日。
+2007,found,qlsn.com HTML + official paths,第745期已恢复3篇原生HTML；官方首页快照另直接保存第780、781、784、785、786、787期的带期号文章路径及页面显示日期，子页正文大多未被Wayback保存。
+2008,metadata_only,award title anchors,中国少年儿童报刊工作者协会资料明确列出《齐鲁少年报》2008年三篇作品及作者：纪晶《尖子生落马三好评选——也谈德智体全面发展》《穿越罗布泊的女孩》、王育红《铁窗外的期盼——写给大墙内的妈妈》；尚未恢复原始电子页/扫描。
+2009,path_coverage_proven,qlsn.com official-home paths,2009官方首页Wayback快照直接保存第858、869、870、872、873、895、897、898、899、900期的带期号原始文章/公告路径；其中页面显示日期已单独记录，但不推定为报纸出版日；子页正文仍在专项恢复。
+2010,metadata_only,official editor blog + official forum,编辑部新浪博客已明确锚定941、950、951等期号；官方qlsn.com留言本还保留2010历史帖子，如“烦恼防火墙”第18波（928期）及“能不能邮寄一份944期的样报”。完整期号链正在从官方论坛快照提取。
+2011,metadata_only,,第1000期及989-1001期存在明确期号锚点，尚未找到对应整版电子报
+2012,metadata_only,,1002-1014、1018、1044、1049、1053-1055、1057等期号可由编辑部资料确认，尚未找到整版电子报
 2013,not_found_yet,,
-2014,not_found_yet,,"qlsn.com 此时快照已显示山东省青少年活动中心，不能把同域资源自动归为《齐鲁少年》"
+2014,not_found_yet,,qlsn.com 此时快照已显示山东省青少年活动中心，不能把同域资源自动归为《齐鲁少年》
 2015,not_found_yet,,
-2016,not_found_yet,,"qlsn.com 部分快照已被垃圾/SEO污染，必须逐页核验"
+2016,not_found_yet,,qlsn.com 部分快照已被垃圾/SEO污染，必须逐页核验
 2017,not_found_yet,,
 2018,not_found_yet,,
-2019,metadata_only,,"小读者十周年网站存在；普通读者资料不算电子版"
-2020,system_coverage_proven,szb.cnssiot.cn,"数字报首页快照显示 mindate=2020-11-30；Wayback专项查询 szb.cnssiot.cn/content/2020* 与 Img/2020* 均成功返回0条，因此Wayback未保存2020内容页或媒体资产；具体版面须转第三方镜像/转载来源恢复"
-2021,found,szb.cnssiot.cn,"2021-12-25 A1-A8路径已恢复；A1手机图名已确定对应PC图公式 pc{yyyyMMdd}{same_guid32}.jpg，但该PC资产在Wayback/失效原站未恢复；Pagepdf为独立上传字段，不可由Pagepic文件名推导"
-2022,metadata_only,,"2022-01寒假合刊实物活动可证出版；电子版路径仍待恢复"
-2023,found,scan image,"第1616期1版整版图可核验"
+2019,metadata_only,,小读者十周年网站存在；普通读者资料不算电子版
+2020,system_coverage_proven,szb.cnssiot.cn,数字报首页快照显示 mindate=2020-11-30；Wayback专项查询 szb.cnssiot.cn/content/2020* 与 Img/2020* 均成功返回0条，因此Wayback未保存2020内容页或媒体资产；具体版面须转第三方镜像/转载来源恢复
+2021,found,szb.cnssiot.cn,2021-12-25 A1-A8路径已恢复；A1手机图名已确定对应PC图公式 pc{yyyyMMdd}{same_guid32}.jpg，但该PC资产在Wayback/失效原站未恢复；Pagepdf为独立上传字段，不可由Pagepic文件名推导
+2022,metadata_only,,2022-01寒假合刊实物活动可证出版；电子版路径仍待恢复
+2023,found,scan image,第1616期1版整版图可核验
 2024,not_found_yet,,
 2025,not_found_yet,,
 2026,not_found_yet,,
