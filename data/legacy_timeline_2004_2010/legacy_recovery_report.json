@@ -1,0 +1,38 @@
+{
+  "generated_at_utc": "2026-08-31T12:33:25.145680+00:00",
+  "elapsed_seconds": 216.22,
+  "recovery_version": "1.1",
+  "seed_count": 6,
+  "inventory_keys": 759,
+  "unique_content_links": 70,
+  "recovered_rows": 70,
+  "verified_issue_linked_articles": 2,
+  "issues": [
+    "745"
+  ],
+  "verified_articles": [
+    {
+      "issue": "745",
+      "title": "我的同桌",
+      "site_date": "2007-1-18",
+      "original_url": "http://www.qlsn.com/article_view.asp?id=219",
+      "archive_url": "https://web.archive.org/web/20070623224326id_/http://www.qlsn.com/article_view.asp?id=219",
+      "snapshot_source": "local_inventory"
+    },
+    {
+      "issue": "745",
+      "title": "你知道1+1＞2吗",
+      "site_date": "2007-1-18",
+      "original_url": "http://www.qlsn.com/article_view.asp?id=221",
+      "archive_url": "https://web.archive.org/web/20070625133830id_/http://www.qlsn.com/article_view.asp?id=221",
+      "snapshot_source": "local_inventory"
+    }
+  ],
+  "seed_errors": [],
+  "notes": [
+    "Local Wayback inventory is preferred over live CDX queries to avoid rate limits/timeouts.",
+    "Site dates are not automatically treated as newspaper publication dates.",
+    "Only pages explicitly tied to a 《齐鲁少年》 issue are candidates for promotion to electronic_records.csv.",
+    "Full article bodies are not persisted; only metadata excerpts are stored for verification."
+  ]
+}
