@@ -10,6 +10,7 @@ on:
       - 'scripts/crawl_archives_v2.py'
       - 'scripts/crawl_archives_v3.py'
       - 'scripts/verify_qlsn_com.py'
+      - 'scripts/classify_archive_candidates.py'
       - '.github/workflows/archive-crawl.yml'
   schedule:
     - cron: '17 3 * * 0'
@@ -42,15 +43,18 @@ jobs:
       - name: Verify qlsn.com archived-site identity
         run: python scripts/verify_qlsn_com.py
 
+      - name: Classify archive candidates
+        run: python scripts/classify_archive_candidates.py
+
       - name: Commit newly discovered archive metadata
         run: |
-          if [ -z "$(git status --porcelain -- data/archive_crawl data/site_verification)" ]; then
-            echo 'No archive-index or site-verification changes.'
+          if [ -z "$(git status --porcelain -- data/archive_crawl data/site_verification data/archive_candidates)" ]; then
+            echo 'No archive-index, verification, or candidate changes.'
             exit 0
           fi
           git config user.name 'qilu-archive-bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/archive_crawl data/site_verification
-          git commit -m 'data: refresh archive indexes and legacy-site verification'
+          git add data/archive_crawl data/site_verification data/archive_candidates
+          git commit -m 'data: refresh archive indexes and candidate verification'
           git pull --rebase origin "$GITHUB_REF_NAME"
           git push origin HEAD:"$GITHUB_REF_NAME"
