@@ -1,0 +1,43 @@
+{
+  "issue_link_rows": 25,
+  "distinct_issues": [
+    "780",
+    "781",
+    "784",
+    "785",
+    "786",
+    "787",
+    "858",
+    "869",
+    "870",
+    "872",
+    "873",
+    "895",
+    "897",
+    "898",
+    "899",
+    "900"
+  ],
+  "rows_with_nearby_date": 25,
+  "seed_summary": [
+    {
+      "seed_id": "2007_nov",
+      "link_issue_rows": 9,
+      "error": ""
+    },
+    {
+      "seed_id": "2009_aug",
+      "link_issue_rows": 5,
+      "error": ""
+    },
+    {
+      "seed_id": "2009_dec",
+      "link_issue_rows": 11,
+      "error": ""
+    }
+  ],
+  "notes": [
+    "Nearby dates are displayed-page context, not automatically newspaper publication dates.",
+    "Issue numbers come directly from archived official-home anchor text."
+  ]
+}
