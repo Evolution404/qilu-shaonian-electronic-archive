@@ -1,0 +1,14 @@
+{
+  "target_posts": 8,
+  "posts_with_wayback_snapshot": 0,
+  "posts_with_media_refs": 0,
+  "raw_media_refs": 0,
+  "media_variant_rows": 0,
+  "reachable_nonplaceholder_images": 0,
+  "portrait_document_geometry": 0,
+  "notes": [
+    "Historical Wayback HTML is used to recover media keys that current Sina HTML may rewrite.",
+    "Geometry is triage only; any document candidate still requires visual/OCR verification.",
+    "No image bytes are committed."
+  ]
+}
