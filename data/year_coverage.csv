@@ -3,19 +3,19 @@ year,status,electronic_evidence,notes
 2001,found,dzwww HTML,"2001-08-03 至少9个原生电子报页面"
 2002,not_found_yet,,"Wayback 2002抓取包含2001内容，不得误算为2002出版"
 2003,not_found_yet,,"Wayback 2003抓取包含旧栏目页，不等于2003期次"
-2004,not_found_yet,,
+2004,not_found_yet,,"已确认 qlsn.com 为《齐鲁少年》旧官网，但当前恢复的是站点简介/首页，尚未恢复明确对应期号的电子报文章"
 2005,not_found_yet,,
-2006,not_found_yet,,
-2007,not_found_yet,,
+2006,not_found_yet,,"旧官网存在本报新闻/文章/公告内容，正在按期号核验；尚未将无期号页面计入电子报主档"
+2007,found,qlsn.com HTML,"旧官网 article_view.asp 已恢复第745期至少2篇原生HTML文章：《我的同桌》《你知道1+1＞2吗》；页面网站日期为2007-01-18，但未将其推定为报纸出版日"
 2008,not_found_yet,,
 2009,metadata_only,,"编辑部新浪博客存在，但普通博文不算电子报"
 2010,metadata_only,,"可找到编辑部/用稿资料，尚未找到整版电子报"
 2011,metadata_only,,"第1000期及989-1001期存在明确期号锚点，尚未找到对应整版电子报"
 2012,metadata_only,,"1002-1014、1018等期号可由编辑部资料确认，尚未找到整版电子报"
 2013,not_found_yet,,
-2014,not_found_yet,,
+2014,not_found_yet,,"qlsn.com 此时快照已显示山东省青少年活动中心，不能把同域资源自动归为《齐鲁少年》"
 2015,not_found_yet,,
-2016,not_found_yet,,
+2016,not_found_yet,,"qlsn.com 部分快照已被垃圾/SEO污染，必须逐页核验"
 2017,not_found_yet,,
 2018,not_found_yet,,
 2019,metadata_only,,"小读者十周年网站存在；普通读者资料不算电子版"
