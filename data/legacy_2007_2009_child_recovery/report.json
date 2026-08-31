@@ -1,0 +1,14 @@
+{
+  "official_child_targets": 24,
+  "recovered_pages": 0,
+  "unrecovered_pages": 24,
+  "pages_body_confirms_anchor_issue": 0,
+  "confirmed_issues": [],
+  "recovered_issues": [],
+  "pages_with_media_refs": 0,
+  "notes": [
+    "Every target URL is sourced from an archived official qlsn.com homepage anchor.",
+    "A recovered page is promoted to verified issue content only when body/source context confirms the anchor issue or equivalent explicit identity.",
+    "No full article or image binaries are committed."
+  ]
+}
