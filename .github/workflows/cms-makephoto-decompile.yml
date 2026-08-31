@@ -40,6 +40,9 @@ jobs:
           ilspycmd -t Mvcb2b.admin.jquery.MakePhoto /tmp/Mvcb2b.dll > /tmp/MakePhoto.cs
           python scripts/summarize_53bk_makephoto_decompile.py /tmp/MakePhoto.cs
           python scripts/extract_makephoto_filename_facts.py
+          echo '--- transient naming windows ---'
+          grep -n -B 2 -A 2 -E 'Pcname|Mobilename|pcdir|mobiledir|text6|text8|text10' /tmp/MakePhoto.cs | head -n 220 || true
+          echo '--- end transient naming windows ---'
           rm -f /tmp/MakePhoto.cs /tmp/Mvcb2b.dll
       - name: Commit naming metadata
         run: |
@@ -48,5 +51,11 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/cms_reference/makephoto_decompile_summary.json data/cms_reference/makephoto_filename_facts.json
           git commit -m 'data: recover 53BK MakePhoto filename metadata'
-          git pull --rebase origin "$GITHUB_REF_NAME"
-          git push origin HEAD:"$GITHUB_REF_NAME"
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          echo 'Failed to push after retries' >&2
+          exit 1
