@@ -9,6 +9,7 @@ on:
       - 'scripts/extract_53bk_focused.py'
       - 'scripts/extract_53bk_asset_logic.py'
       - 'scripts/extract_53bk_upload_naming.py'
+      - 'scripts/extract_53bk_makephoto_logic.py'
       - '.github/workflows/cms-reference-inspection.yml'
 
 permissions:
@@ -37,6 +38,8 @@ jobs:
         run: python scripts/extract_53bk_asset_logic.py
       - name: Extract backend upload naming rules
         run: python scripts/extract_53bk_upload_naming.py
+      - name: Extract PDF-to-image generation naming
+        run: python scripts/extract_53bk_makephoto_logic.py
       - name: Commit reference metadata
         run: |
           if [ -z "$(git status --porcelain -- data/cms_reference)" ]; then exit 0; fi
