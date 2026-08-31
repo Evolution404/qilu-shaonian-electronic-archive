@@ -21,7 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "archive_crawl"
 OUT.mkdir(parents=True, exist_ok=True)
-UA = "qilu-shaonian-electronic-archive/3.0 (+https://github.com/Evolution404/qilu-shaonian-electronic-archive)"
+UA = "qilu-shaonian-electronic-archive/3.1 (+https://github.com/Evolution404/qilu-shaonian-electronic-archive)"
 TIMEOUT = 20
 WAYBACK_WORKERS = 10
 CC_WORKERS = 20
@@ -32,7 +32,6 @@ WAYBACK_TARGETS = [
     "202.102.188.131/qilushaonian/*",
     "szb.cnssiot.cn/*",
     "qlsn.com/*", "www.qlsn.com/*",
-    "qlsn.cn/*", "www.qlsn.cn/*",
     "qilushaonian.com/*", "www.qilushaonian.com/*",
     "qlshaonian.com/*", "www.qlshaonian.com/*",
     "857087447.qzone.qq.com/*",
@@ -49,8 +48,6 @@ WAYBACK_TARGETS = [
 CC_TARGET_WINDOWS = {
     "qlsn.com/*": (2008, 2017),
     "www.qlsn.com/*": (2008, 2017),
-    "qlsn.cn/*": (2008, 2017),
-    "www.qlsn.cn/*": (2008, 2017),
     "qilushaonian.com/*": (2008, 2017),
     "www.qilushaonian.com/*": (2008, 2017),
     "qlshaonian.com/*": (2008, 2017),
@@ -63,7 +60,8 @@ CC_TARGET_WINDOWS = {
     "www.yunzhan365.com/newspapers/publications/qilushaonian*": (2021, 2026),
 }
 
-EXCLUDE = re.compile(r"(?:^|//)paper\.cnssiot\.cn(?:/|$)", re.I)
+# Confirmed false positives. qlsn.cn / www.qlsn.cn is 齐鲁三农网, not 《齐鲁少年》.
+EXCLUDE = re.compile(r"(?:^|//)(?:paper\.cnssiot\.cn|(?:www\.)?qlsn\.cn)(?:/|$)", re.I)
 SINA_ID = re.compile(r"blog_4c4fc7d9", re.I)
 CC_YEAR = re.compile(r"CC-MAIN-(20\d{2})-")
 
@@ -242,7 +240,7 @@ def main():
     report = {
         "generated_at_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
         "elapsed_seconds": round(time.monotonic() - started, 2),
-        "crawler_version": 3,
+        "crawler_version": "3.1",
         "wayback_unique_records": len(wb_rows),
         "commoncrawl_unique_records": len(cc_rows),
         "wayback_by_host": by_host(wb_rows),
@@ -254,6 +252,7 @@ def main():
             "Candidate domains are discovery-only until archived content proves they belong to 《齐鲁少年》.",
             "Archive timestamps are capture times and must not be used as newspaper publication dates.",
             "paper.cnssiot.cn is excluded because it was independently verified as 《山东青年报》.",
+            "qlsn.cn and www.qlsn.cn are excluded because they were independently verified as 齐鲁三农网.",
         ],
     }
     (OUT / "crawl_report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
