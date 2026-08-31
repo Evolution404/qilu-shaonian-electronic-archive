@@ -1,0 +1,14 @@
+{
+  "archived_media_urls_selected": 19,
+  "responses_ok": 12,
+  "image_rows": 12,
+  "large_images": 0,
+  "document_geometry_images": 0,
+  "ocr_keyword_rows": 0,
+  "candidate_rows": 0,
+  "candidate_media": [],
+  "notes": [
+    "Media bytes are downloaded transiently and are not committed.",
+    "OCR and geometry are triage evidence only; newspaper identity/issue must be verified before promotion."
+  ]
+}
