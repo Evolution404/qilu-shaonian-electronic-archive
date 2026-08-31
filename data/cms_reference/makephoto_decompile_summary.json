@@ -7,11 +7,13 @@
     "ispdf",
     "mobiledir",
     "mobilefilename",
+    "mobilename",
     "pagenum",
     "path",
     "path2",
     "pcdir",
     "pcfilename",
+    "pcname",
     "pdf2jpg",
     "pdfname"
   ],
@@ -729,6 +731,33 @@
       "operators": []
     }
   ],
+  "member_assignments": [],
+  "relevant_call_sites": [
+    {
+      "call": "ProcessSavejpg",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "pcdir",
+        "mobiledir",
+        "ismany",
+        "text3"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "call": "File.Delete",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text5"
+      ],
+      "calls": [],
+      "operators": []
+    }
+  ],
   "relevant_assignments": [
     {
       "variable": "pcdir",
@@ -890,7 +919,7 @@
   ],
   "notes": [
     "Derived metadata from transient ILSpy output; decompiled source and statement text are not committed.",
-    "Transitive dependency summaries retain constants/identifiers/operators only, allowing filename reconstruction without source reproduction.",
+    "Member assignments retain only target/property plus expression constants/identifiers; this captures Pcname/Mobilename naming facts without source reproduction.",
     "Generic 53BK reference implementation only; candidate qlsn paths still require independent verification."
   ]
 }

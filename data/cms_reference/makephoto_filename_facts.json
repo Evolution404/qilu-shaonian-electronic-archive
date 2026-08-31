@@ -472,11 +472,30 @@
       "operators": []
     }
   ],
+  "filename_member_assignments_in_source_order": [],
+  "naming_call_sites_in_source_order": [
+    {
+      "call": "ProcessSavejpg",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "pcdir",
+        "mobiledir",
+        "ismany",
+        "text3"
+      ],
+      "calls": [],
+      "operators": []
+    }
+  ],
   "high_value_literals": [
+    "\", \"mobilepath\": \"",
     ".jpg",
     "/",
     "mobile",
-    "yyyy-MM-dd"
+    "yyyy-MM-dd",
+    "{ \"pcpath\": \"\", \"mobilepath\": \"\",\"ismany\":0 ,\"success\":0 } ] }"
   ],
   "high_value_methods": [
     "Page_Load",
@@ -486,7 +505,8 @@
   ],
   "interpretation_guardrails": [
     "Rows preserve assignment order but omit original expressions.",
-    "Repeated generic text/textN variables may belong to different methods/scopes; use neighboring dependencies and method semantics conservatively.",
+    "Member-assignment rows are the strongest evidence for Pcname/Mobilename formulas.",
+    "Repeated generic text/textN variables may belong to different methods/scopes; interpret only with their dependencies/call sites.",
     "This is generic 53BK reference behavior, not proof of a historical qlsn file."
   ]
 }
