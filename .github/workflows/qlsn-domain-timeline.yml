@@ -1,0 +1,39 @@
+name: QLSN Domain Identity Timeline
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/verify_qlsn_domain_timeline.py'
+      - '.github/workflows/qlsn-domain-timeline.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qlsn-domain-timeline
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Sample historical root snapshots
+        run: python scripts/verify_qlsn_domain_timeline.py
+      - name: Commit identity evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/qlsn_domain_timeline.csv data/qlsn_domain_timeline_report.json)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/qlsn_domain_timeline.csv data/qlsn_domain_timeline_report.json
+          git commit -m 'data: record qlsn domain identity timeline'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
