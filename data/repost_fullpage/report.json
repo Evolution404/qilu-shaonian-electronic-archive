@@ -1,44 +1,17 @@
 {
-  "sina_posts": 0,
+  "sina_posts": 2,
   "wordpress_posts": 3,
-  "total_posts": 3,
-  "media_refs": 90,
-  "reachable_media": 56,
-  "likely_page_scans": 2,
-  "errors": [
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_11.html",
-      "error": "HTTPError: HTTP Error 418: "
-    },
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_24.html",
-      "error": "HTTPError: HTTP Error 418: "
-    },
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_36.html",
-      "error": "HTTPError: HTTP Error 418: "
-    },
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_37.html",
-      "error": "HTTPError: HTTP Error 418: "
-    },
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_44.html",
-      "error": "HTTPError: HTTP Error 418: "
-    },
-    {
-      "source": "sina_list",
-      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_49.html",
-      "error": "HTTPError: HTTP Error 418: "
-    }
-  ],
+  "total_posts": 5,
+  "media_refs": 98,
+  "unique_media_urls": 75,
+  "reachable_media": 41,
+  "likely_page_scan_refs": 3,
+  "likely_page_scan_unique_urls": 3,
+  "errors": [],
   "notes": [
-    "Candidates require visual/OCR verification before promotion.",
+    "Sina discovery walks previous/next post links because legacy article-list pages may return HTTP 418.",
+    "Sina real_src and large image variants are probed to avoid missing historical original-resolution uploads.",
+    "Candidates require OCR/visual verification before promotion.",
     "Only metadata is committed; third-party image bytes are transient."
   ]
 }
