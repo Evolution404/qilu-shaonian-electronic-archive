@@ -1,0 +1,18 @@
+{
+  "ids": "216-221",
+  "snapshots_recovered": 3,
+  "verified_issue745": 3,
+  "missing_ids": [
+    "217",
+    "218",
+    "220"
+  ],
+  "verified_titles": [
+    "森林里的春节联欢晚会",
+    "我的同桌",
+    "你知道1+1＞2吗"
+  ],
+  "notes": [
+    "Only metadata is committed; full article bodies are not persisted."
+  ]
+}
