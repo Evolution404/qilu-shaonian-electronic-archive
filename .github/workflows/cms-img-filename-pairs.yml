@@ -1,0 +1,39 @@
+name: CMS Image Filename Pair Inspection
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extract_53bk_img_filename_pairs.py'
+      - '.github/workflows/cms-img-filename-pairs.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cms-img-filename-pairs
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect filename pairs only
+        run: python scripts/extract_53bk_img_filename_pairs.py
+      - name: Commit filename metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/cms_reference/img_filename_pairs.csv data/cms_reference/img_filename_pairs_report.json)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/cms_reference/img_filename_pairs.csv data/cms_reference/img_filename_pairs_report.json
+          git commit -m 'data: record 53BK PC/mobile filename pairs'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
