@@ -1,13 +1,16 @@
 {
   "seed_pages": 3,
   "download_view_ids": 19,
-  "download_views_recovered": 16848,
-  "attachment_candidates": 0,
-  "attachments_recovered": 0,
-  "pdf_candidates": 0,
-  "archive_recovered_pdf_candidates": 0,
+  "download_views_recovered": 1,
+  "direct_file_candidates": 0,
+  "handler_candidates": 6,
+  "handler_targets_recovered": 2,
+  "secondary_redirect_targets": 0,
+  "binary_payloads_recovered": 0,
+  "pdf_payloads_recovered": 0,
   "notes": [
-    "The download section is inspected because it is a plausible historical route for PDF/ZIP/page-image files.",
-    "No attachment is promoted as a newspaper issue unless content/title/issue evidence confirms it."
+    "The 2007 '快乐下载' section primarily lists software/games; this v2 pass checks non-extension download handlers before closing that route.",
+    "Internet Archive fallback landing pages are rejected as recovered payloads.",
+    "No payload is promoted as a newspaper issue without independent title/issue/page evidence."
   ]
 }
