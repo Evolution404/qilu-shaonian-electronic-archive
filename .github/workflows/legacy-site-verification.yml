@@ -1,0 +1,52 @@
+name: Legacy Site Verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/verify_qlsn_com.py'
+      - 'scripts/classify_archive_candidates.py'
+      - '.github/workflows/legacy-site-verification.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: legacy-site-verification
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify qlsn.com archived-site identity
+        run: python scripts/verify_qlsn_com.py
+
+      - name: Classify archive candidates
+        run: python scripts/classify_archive_candidates.py
+
+      - name: Commit verification results
+        run: |
+          if [ -z "$(git status --porcelain -- data/site_verification data/archive_candidates)" ]; then
+            echo 'No verification changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/site_verification data/archive_candidates
+          git commit -m 'data: verify legacy site and refresh candidate queue'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
