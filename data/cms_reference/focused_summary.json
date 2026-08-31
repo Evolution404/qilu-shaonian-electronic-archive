@@ -1,0 +1,596 @@
+{
+  "reference_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a950335&auth_key=95bf149ae342195b8c602d73dc38cacb",
+  "package_entries": 1970,
+  "focused_filename_matches": 118,
+  "focused_quoted_literals": 309,
+  "focused_contexts": 1156,
+  "top_filename_matches": [
+    "paperweb/Comja/pubmobile.js",
+    "paperweb/Content/nopdf.png",
+    "paperweb/Content/themes/basic/images/detail/pdf.gif",
+    "paperweb/Content/themes/daily/images/downpdf.gif",
+    "paperweb/Content/themes/daily/images/pdficon.jpg",
+    "paperweb/Content/themes/default/images/pdf_dl.gif",
+    "paperweb/Content/themes/lightblue/images/pdficon.jpg",
+    "paperweb/Content/themes/red/images/downpdf.gif",
+    "paperweb/Content/themes/red/images/pdficon.jpg",
+    "paperweb/admin/PdfText.aspx",
+    "paperweb/admin/Pdfadd.aspx",
+    "paperweb/admin/Pdfedit.aspx",
+    "paperweb/admin/Pdfmanage.aspx",
+    "paperweb/admin/controls/Upqipdf.ascx",
+    "paperweb/admin/images/pdf.jpg",
+    "paperweb/admin/jquery/PdfProcess.aspx",
+    "paperweb/bin/PdfCode.dll",
+    "paperweb/bin/PdfCode.pdb",
+    "paperweb/editors/ueditor/dialogs/attachment/fileTypeImages/icon_pdf.gif",
+    "paperweb/admin/Editionadd.aspx",
+    "paperweb/admin/Editionedit.aspx",
+    "paperweb/admin/Editionmanage.aspx",
+    "paperweb/admin/jquery/EditionDel.aspx",
+    "paperweb/themes/basic/Jquery/Editionlist.aspx",
+    "paperweb/themes/basic/Magazine/Edition.aspx",
+    "paperweb/themes/daily/Content/Edition.aspx",
+    "paperweb/themes/daily/Content/EditionMany.aspx",
+    "paperweb/themes/daily/Jquery/Editionlist.aspx",
+    "paperweb/themes/default/Content/Edition.aspx",
+    "paperweb/themes/default/Jquery/Editionlist.aspx",
+    "paperweb/themes/lightblue/Content/Edition.aspx",
+    "paperweb/themes/lightblue/Content/EditionMany.aspx",
+    "paperweb/themes/lightblue/Jquery/Editionlist.aspx",
+    "paperweb/themes/red/Content/Edition.aspx",
+    "paperweb/themes/red/Content/EditionMany.aspx",
+    "paperweb/themes/red/Jquery/Editionlist.aspx",
+    "paperweb/Img/",
+    "paperweb/editors/tiny_mce3.5/plugins/advimage/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/advimage/img/sample.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-cool.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-cry.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-embarassed.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-foot-in-mouth.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-frown.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-innocent.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-kiss.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-laughing.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-money-mouth.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-sealed.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-smile.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-surprised.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-tongue-out.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-undecided.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-wink.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/emotions/img/smiley-yell.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/example/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/example/img/example.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/alert.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/button.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/corners.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif",
+    "paperweb/editors/tiny_mce3.5/plugins/insertcode/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/insertcode/img/code.png",
+    "paperweb/editors/tiny_mce3.5/plugins/spellchecker/img/",
+    "paperweb/editors/tiny_mce3.5/plugins/spellchecker/img/wline.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/colorpicker.jpg",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/flash.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/icons.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/iframe.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/pagebreak.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/partlabel.gif",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/partlabel.png",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/partlabel.psd",
+    "paperweb/editors/tiny_mce3.5/themes/advanced/img/quicktime.gif"
+  ],
+  "top_literals": [
+    {
+      "entry": "paperweb/Comja/pageswf.js",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/basic/Userinc/Calendarqi.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/themes/daily/Userinc/Calendarqi.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/themes/daily/Userinc/Calendarqi2.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/themes/default/Content/Eachqi.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/default/Content/Edition.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/default/Content/View.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/default/Main/Index.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/default/Userinc/Calendarqi.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/Eachqi.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/EachqiMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/Edition.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/EditionMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/View.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Content/ViewMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Main/Index.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/lightblue/Userinc/Calendarqi.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/Eachqi.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/EachqiMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/Edition.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/EditionMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/View.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Content/ViewMany.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Main/Index.aspx",
+      "literal": "#editionimg"
+    },
+    {
+      "entry": "paperweb/themes/red/Userinc/Calendarqi.ascx",
+      "literal": "].ToString()%>jquery/dayslist"
+    },
+    {
+      "entry": "paperweb/Comja/addcomment.js",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/Comja/addcommentmobile.js",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/Comja/addreply.js",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/Comja/addreplymobile.js",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/Comja/show.js",
+      "literal": ",editionid:"
+    },
+    {
+      "entry": "paperweb/Content/themes/basic/js/showbasic.js",
+      "literal": ",editionid:"
+    },
+    {
+      "entry": "paperweb/Content/themes/daily/js/show.js",
+      "literal": ",editionid:"
+    },
+    {
+      "entry": "paperweb/Content/themes/lightblue/js/showblue.js",
+      "literal": ",editionid:"
+    },
+    {
+      "entry": "paperweb/Content/themes/red/js/show.js",
+      "literal": ",editionid:"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "FK_e_eachedition_e_eachqi"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "[dbo].[FK_e_eachedition_e_eachqi]"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "[dbo].[PK_e_eachedition]"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "[dbo].[PK_e_scoedition]"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "e_eachedition_pagepath"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "e_eachedition_qiid"
+    },
+    {
+      "entry": "paperweb/Install/constraints.sql",
+      "literal": "e_newsban_editionid"
+    },
+    {
+      "entry": "paperweb/Install/tables.sql",
+      "literal": "[dbo].[e_eachedition]"
+    },
+    {
+      "entry": "paperweb/Install/tables.sql",
+      "literal": "[dbo].[e_scoedition]"
+    },
+    {
+      "entry": "paperweb/Install/update4.2-4.3.sql",
+      "literal": "[dbo].[PK_e_scoedition]"
+    },
+    {
+      "entry": "paperweb/Install/update4.2-4.3.sql",
+      "literal": "[dbo].[e_scoedition]"
+    },
+    {
+      "entry": "paperweb/Install/update4.8-4.9.sql",
+      "literal": "e_newsban_editionid"
+    },
+    {
+      "entry": "paperweb/Install/update5.1-5.2.sql",
+      "literal": "e_eachedition_pagepath"
+    },
+    {
+      "entry": "paperweb/Install/update5.3-5.4.sql",
+      "literal": "e_eachedition_qiid"
+    },
+    {
+      "entry": "paperweb/admin/Commentmanage.aspx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/admin/Editionadd.aspx",
+      "literal": "Editionadd.aspx.cs"
+    },
+    {
+      "entry": "paperweb/admin/Editionadd.aspx",
+      "literal": "Mvcb2b.admin.Editionadd"
+    },
+    {
+      "entry": "paperweb/admin/Editionedit.aspx",
+      "literal": "Editionedit.aspx.cs"
+    },
+    {
+      "entry": "paperweb/admin/Editionedit.aspx",
+      "literal": "Mvcb2b.admin.Editionedit"
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "Editionedit.aspx?id=<%#Eval("
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "Editionmanage.aspx.cs"
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "Editionmanage.aspx?qi="
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "Mvcb2b.admin.Editionmanage"
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "edition_id"
+    },
+    {
+      "entry": "paperweb/admin/Editionmanage.aspx",
+      "literal": "jquery/EditionDel.aspx"
+    },
+    {
+      "entry": "paperweb/admin/Hotedit.aspx",
+      "literal": "editionname_txt"
+    },
+    {
+      "entry": "paperweb/admin/Newsadd.aspx",
+      "literal": "edition_div"
+    },
+    {
+      "entry": "paperweb/admin/Newsedit.aspx",
+      "literal": "edition_div"
+    },
+    {
+      "entry": "paperweb/admin/Termedit.aspx",
+      "literal": "Editionmanage.aspx?qi=<%=Qiid%>"
+    },
+    {
+      "entry": "paperweb/admin/Termmanage.aspx",
+      "literal": "Editionmanage.aspx?qi=<%#Eval("
+    },
+    {
+      "entry": "paperweb/admin/controls/Date_Qi.ascx",
+      "literal": "<%=Editionid%>"
+    },
+    {
+      "entry": "paperweb/admin/controls/Date_Qi.ascx",
+      "literal": "edition_div"
+    },
+    {
+      "entry": "paperweb/admin/images/allqi.js",
+      "literal": "edition_div"
+    },
+    {
+      "entry": "paperweb/admin/jquery/EditionDel.aspx",
+      "literal": "EditionDel.aspx.cs"
+    },
+    {
+      "entry": "paperweb/admin/jquery/EditionDel.aspx",
+      "literal": "Mvcb2b.admin.jquery.EditionDel"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/AddComment.ascx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/AddCommentforlist.ascx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/Index.aspx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/Index.aspx",
+      "literal": "re_editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/PageComment.aspx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Comment/PageComment.aspx",
+      "literal": "re_editionid"
+    },
+    {
+      "entry": "paperweb/themes/basic/Home/Index.aspx",
+      "literal": "three_editions"
+    },
+    {
+      "entry": "paperweb/themes/basic/Jquery/Editionlist.aspx",
+      "literal": "System.Web.Mvc.ViewPage<IEnumerable<Mvcmode.E_eachedition>>"
+    },
+    {
+      "entry": "paperweb/themes/basic/Jquery/Editionlist.aspx",
+      "literal": "edition_inc"
+    },
+    {
+      "entry": "paperweb/themes/basic/Jquery/Editionlist.aspx",
+      "literal": "edition_incbg"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Eachqi.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Eachqi.aspx",
+      "literal": "three_editions"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "]%>Comment/PageComment?qiid=<%=eachqi2.Id%>&editionid=<%=eachban.Id%>&tl="
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "editionlist"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Edition.aspx",
+      "literal": "three_editions"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Menu.aspx",
+      "literal": "System.Web.Mvc.ViewPage<IEnumerable<Mvcmode.E_eachedition>>"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/Menu.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": ".editionnav"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "]%>Comment/PageComment?qiid=<%=eachqi2.Id%>&editionid=<%=eachban.Id%>&newsid=<%=ViewData["
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "]%>jquery/editionlist"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/basic/Magazine/View.aspx",
+      "literal": "editionnav"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/AddComment.ascx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/AddCommentforlist.ascx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/Index.aspx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/Index.aspx",
+      "literal": "re_editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/PageComment.aspx",
+      "literal": "editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Comment/PageComment.aspx",
+      "literal": "re_editionid"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Eachqi.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Eachqi.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Eachqi.aspx",
+      "literal": "editionlist"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/EachqiMany.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/EachqiMany.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Edition.aspx",
+      "literal": "]%>Comment/PageComment?qiid=<%=eachqi2.Id%>&editionid=<%=eachban.Id%>&tl="
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Edition.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Edition.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Edition.aspx",
+      "literal": "editionlist"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/EditionMany.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/EditionMany.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Menu.aspx",
+      "literal": "System.Web.Mvc.ViewPage<IEnumerable<Mvcmode.E_eachedition>>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/Menu.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/View.aspx",
+      "literal": "]%>Comment/PageComment?qiid=<%=eachqi2.Id%>&editionid=<%=eachban.Id%>&tl="
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/View.aspx",
+      "literal": "].ToString()+eachban.Pagepic.ToString()%>?editionid=<%=eachban.Id%>"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/View.aspx",
+      "literal": "edition"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/View.aspx",
+      "literal": "editionid_sigle"
+    },
+    {
+      "entry": "paperweb/themes/daily/Content/ViewMany.aspx",
+      "literal": "edition"
+    }
+  ],
+  "matching_extension_counts": {
+    ".gif": 48,
+    ".aspx": 22,
+    ".js": 19,
+    "<none>": 12,
+    ".png": 8,
+    ".jpg": 5,
+    ".ascx": 1,
+    ".dll": 1,
+    ".pdb": 1,
+    ".psd": 1
+  },
+  "matching_top_directories": {
+    "paperweb/editors": 64,
+    "paperweb/Content": 16,
+    "paperweb/themes": 13,
+    "paperweb/Comja": 11,
+    "paperweb/admin": 11,
+    "paperweb/bin": 2,
+    "paperweb/Img": 1
+  },
+  "notes": [
+    "Reference package bytes/source are not committed.",
+    "Quoted literals and short contexts are generic CMS evidence only; they do not prove a particular path existed on szb.cnssiot.cn."
+  ]
+}
