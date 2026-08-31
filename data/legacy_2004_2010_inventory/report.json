@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-08-31T12:25:29.455674+00:00",
+  "elapsed_seconds": 73.92,
+  "inventory_html_states_selected": 68,
+  "pages_parsed": 68,
+  "pages_with_errors": 36,
+  "pages_classified_2004_2010": 15,
+  "issue_hit_rows": 4,
+  "high_confidence_issue_hit_rows": 3,
+  "distinct_high_confidence_issues": [
+    "745"
+  ],
+  "media_refs": 203,
+  "media_refs_with_archived_binary": 35,
+  "pages_by_content_year": {
+    "2006": 7,
+    "2007": 4,
+    "2009": 4
+  },
+  "notes": [
+    "This is a full-inventory pass, not a seed-link crawl.",
+    "Capture year and publication/content year are kept separate.",
+    "Generic 第N期 matches are lower confidence; promotion requires explicit 齐鲁少年 context/source evidence.",
+    "Archived article/image bodies are not committed; only metadata and short verification excerpts are stored."
+  ]
+}
