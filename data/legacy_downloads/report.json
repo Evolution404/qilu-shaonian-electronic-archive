@@ -1,0 +1,13 @@
+{
+  "seed_pages": 3,
+  "download_view_ids": 19,
+  "download_views_recovered": 16848,
+  "attachment_candidates": 0,
+  "attachments_recovered": 0,
+  "pdf_candidates": 0,
+  "archive_recovered_pdf_candidates": 0,
+  "notes": [
+    "The download section is inspected because it is a plausible historical route for PDF/ZIP/page-image files.",
+    "No attachment is promoted as a newspaper issue unless content/title/issue evidence confirms it."
+  ]
+}
