@@ -1,0 +1,48 @@
+name: Probe Official 2009 Qzone Archive
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_official_qzone_archive.py'
+      - '.github/workflows/probe-official-qzone-archive.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qilu-official-qzone-archive
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Probe official Qzone archive and media references
+        run: python scripts/probe_official_qzone_archive.py
+      - name: Commit Qzone evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/qzone_857087447)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/qzone_857087447
+          git commit -m 'data: record official Qzone archive evidence'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
