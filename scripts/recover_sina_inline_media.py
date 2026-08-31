@@ -86,7 +86,6 @@ def derive_variants(url: str):
     m = PATH_CLASS.search(p.path)
     if not m:
         return []
-    # Reject parser artefacts such as http://s7.sinaimg.cn/middle with no media key.
     tail = p.path[m.end():]
     if len(tail) < 8:
         return []
@@ -153,21 +152,19 @@ def inspect(item):
         digest = hashlib.sha256(raw).hexdigest()
         ratio = hg / w if w else 0
         placeholder = digest == PLACEHOLDER_SHA256 or "default_s_" in final or (w == 360 and hg == 360 and fmt.upper() == "GIF")
-        out.update(
-            {
-                "resolved_url": final,
-                "http_status": "200",
-                "content_type": ctype,
-                "bytes": str(len(raw)),
-                "sha256": digest,
-                "width": str(w),
-                "height": str(hg),
-                "image_format": fmt,
-                "portrait_ratio": f"{ratio:.3f}",
-                "likely_document": "yes" if not placeholder and w >= 500 and hg >= 650 and ratio >= 1.12 else "no",
-                "is_placeholder": "yes" if placeholder else "no",
-            }
-        )
+        out.update({
+            "resolved_url": final,
+            "http_status": "200",
+            "content_type": ctype,
+            "bytes": str(len(raw)),
+            "sha256": digest,
+            "width": str(w),
+            "height": str(hg),
+            "image_format": fmt,
+            "portrait_ratio": f"{ratio:.3f}",
+            "likely_document": "yes" if not placeholder and w >= 500 and hg >= 650 and ratio >= 1.12 else "no",
+            "is_placeholder": "yes" if placeholder else "no",
+        })
     except Exception as exc:
         out["fetch_error"] = f"{type(exc).__name__}: {exc}"
     return out
@@ -248,7 +245,7 @@ def main():
         "reachable_media": sum(r.get("http_status") == "200" for r in results),
         "reachable_non_placeholder": sum(r.get("http_status") == "200" and r.get("is_placeholder") == "no" for r in results),
         "likely_document_images": sum(r.get("likely_document") == "yes" for r in results),
-        "issue_hint_non_placeholder": sum(r.get("issue_hints") and r.get("is_placeholder") == "no" for r in results),
+        "issue_hint_non_placeholder": sum(bool(r.get("issue_hints")) and r.get("is_placeholder") == "no" for r in results),
         "posts_fetch_errors": len(errors),
         "notes": [
             "Only media keys embedded in historical editor-blog HTML are probed.",
