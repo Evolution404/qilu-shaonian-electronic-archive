@@ -1,0 +1,12 @@
+{
+  "original_failed_pages": 36,
+  "retry_successes": 34,
+  "retry_failures": 2,
+  "new_issue_hit_rows": 0,
+  "distinct_issue_numbers": [],
+  "target_year_pages": 12,
+  "notes": [
+    "This pass retries transport failures; it does not reinterpret confirmed 404/no-snapshot results as recoverable.",
+    "Alternate raw/iframe/closest Wayback URLs are tried. No archived article bodies are committed."
+  ]
+}
