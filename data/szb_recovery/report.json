@@ -1,0 +1,13 @@
+{
+  "discovered_strings": 35,
+  "cdx_rows": 0,
+  "scripts_inspected": 6,
+  "live_probes": 14,
+  "live_hits": 0,
+  "cdx_image_rows": 0,
+  "errors": [],
+  "notes": [
+    "Archive timestamps are not publication dates.",
+    "Routes/assets must be tied to a specific newspaper date/page before promotion."
+  ]
+}
