@@ -1,0 +1,39 @@
+{
+  "sina_posts": 0,
+  "wordpress_posts": 3,
+  "total_posts": 3,
+  "media_refs": 90,
+  "reachable_media": 56,
+  "likely_page_scans": 2,
+  "errors": [
+    {
+      "source": "sina_list",
+      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_2.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_list",
+      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_1.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_list",
+      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_11.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_list",
+      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_13.html",
+      "error": "HTTPError: HTTP Error 418: "
+    },
+    {
+      "source": "sina_list",
+      "url": "https://blog.sina.com.cn/s/articlelist_1280296921_0_12.html",
+      "error": "HTTPError: HTTP Error 418: "
+    }
+  ],
+  "notes": [
+    "Candidates require visual/OCR verification before promotion.",
+    "Only metadata is committed; third-party image bytes are transient."
+  ]
+}
