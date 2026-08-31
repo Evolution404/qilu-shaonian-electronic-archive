@@ -1,0 +1,45 @@
+name: Mine Legacy 2004-2010 Inventory
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/mine_legacy_2004_2010_inventory.py'
+      - '.github/workflows/mine-legacy-2004-2010.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mine-legacy-2004-2010
+  cancel-in-progress: true
+
+jobs:
+  mine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Parse all archived legacy HTML states
+        run: python scripts/mine_legacy_2004_2010_inventory.py
+      - name: Commit focused metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_2004_2010_inventory)" ]; then
+            echo 'No focused legacy inventory changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_2004_2010_inventory
+          git commit -m 'data: mine 2004-2010 legacy HTML inventory'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
