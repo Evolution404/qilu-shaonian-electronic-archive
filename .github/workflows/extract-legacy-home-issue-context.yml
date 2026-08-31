@@ -1,0 +1,44 @@
+name: Extract Legacy Home Issue Context
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extract_legacy_home_issue_context.py'
+      - '.github/workflows/extract-legacy-home-issue-context.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: extract-legacy-home-issue-context
+  cancel-in-progress: true
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Extract issue link contexts
+        run: python scripts/extract_legacy_home_issue_context.py
+      - name: Commit context metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_2004_2010_home_issue_context)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_2004_2010_home_issue_context
+          git commit -m 'data: extract legacy home issue contexts'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
