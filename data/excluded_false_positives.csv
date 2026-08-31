@@ -1,3 +1,4 @@
 candidate,kind,reason,evidence,status
 paper.cnssiot.cn,digital_newspaper_host,"Wayback archived titles identify this CMS as 《山东青年报》 rather than 《齐鲁少年》; do not import its 2020-2021 edition routes into the Qilu Shaonian archive.","archived paper.cnssiot.cn page-title verification",excluded
 齐鲁少年强,newspaper_weekly,"This is a 2026 《齐鲁晚报》 weekly/section launched for children; its similar name is unrelated to the historical 《齐鲁少年》 newspaper researched here.",https://www.sdxc.gov.cn/xwcb/cbsy/202606/t20260610_17824411.htm,excluded
+qlsn.cn / www.qlsn.cn,website_domain,"Public search evidence identifies qlsn.cn as 齐鲁三农网 (an agriculture information site), not 《齐鲁少年》. The 463 Wayback records from www.qlsn.cn must be excluded from Qilu Shaonian electronic-edition recovery.","《广东农业科学》 article on Heritrix+Solr lists 齐鲁三农网 http://www.qlsn.cn/; Wayback crawler recovered 463 www.qlsn.cn records",excluded
