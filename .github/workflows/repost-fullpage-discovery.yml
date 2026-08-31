@@ -1,0 +1,47 @@
+name: Repost Full-page Discovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/discover_repost_fullpages.py'
+      - '.github/workflows/repost-fullpage-discovery.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repost-fullpage-discovery
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image dependency
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Scan editor and reader archives
+        run: python scripts/discover_repost_fullpages.py
+      - name: Commit candidate metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage)" ]; then
+            echo 'No repost full-page metadata changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage
+          git commit -m 'data: refresh repost full-page candidates'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
