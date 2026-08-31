@@ -1,0 +1,35 @@
+issue_number,publication_date,date_status,evidence_level,title_or_context,source_url,source_display_date,notes
+740,2006-11-28,inferred_weekly,verified_html,科学让他们登上今天的舞台,http://www.qlsn.com/news_view.asp?id=88,2006-12-11,Body explicitly says 本报记者 李珊 雨虹 第740期; site page date is later than inferred Tuesday publication date.
+745,2007-01-02,inferred_weekly,verified_html,森林里的春节联欢晚会; 我的同桌; 你知道1+1＞2吗,http://www.qlsn.com/article_view.asp?id=216,2007-01-18,Three recovered qlsn.com HTML articles explicitly label 来源：齐鲁少年（745期）.
+780,2007-09-04,inferred_weekly,official_path_verified,带颜色的暑假记忆; 离梦想又近了,http://www.qlsn.com/news_view.asp?id=97,2007-09-12,Archived official homepage preserves issue-numbered child paths; child bodies not recovered.
+781,2007-09-11,inferred_weekly,official_path_verified,山外来的小老师,http://www.qlsn.com/news_view.asp?id=99,2007-09-12,Archived official homepage preserves issue-numbered child path.
+784,2007-10-02,inferred_weekly,official_path_verified,784期队旗飘飘,http://www.qlsn.com/article_view.asp?id=234,2007-10-09,Official homepage evidence.
+785,2007-10-09,inferred_weekly,official_path_verified,785期,http://www.qlsn.com/article_view.asp?id=236,2007-10-25,Official homepage evidence.
+786,2007-10-16,inferred_weekly,official_path_verified,786期,http://www.qlsn.com/article_view.asp?id=238,2007-10-25,Official homepage evidence.
+787,2007-10-23,inferred_weekly,official_path_verified,787期,http://www.qlsn.com/article_view.asp?id=240,2007-10-25,Official homepage evidence.
+858,2009-03-03,inferred_weekly,official_path_verified,征文启事,http://www.qlsn.com/announce_view.asp?id=185,2009-04-01,Official homepage evidence.
+869,2009-05-19,inferred_weekly,official_path_verified,“绝地”求生,http://www.qlsn.com/news_view.asp?id=193,2009-05-26,Official homepage evidence.
+870,2009-05-26,inferred_weekly,official_path_verified,恐龙故乡的科学探秘,http://www.qlsn.com/news_view.asp?id=194,2009-06-03,Official homepage evidence.
+872,2009-06-09,inferred_weekly,official_path_verified,山里娃有了新图书,http://www.qlsn.com/news_view.asp?id=196,2009-06-23,Official homepage evidence.
+873,2009-06-16,inferred_weekly,official_path_verified,33滴“净水剂”,http://www.qlsn.com/news_view.asp?id=197,2009-06-23,Official homepage evidence.
+895,2009-11-17,inferred_weekly,official_path_verified,叽叽喳喳“小八卦”,http://www.qlsn.com/news_view.asp?id=220,2009-11-23,Official homepage evidence.
+897,2009-12-01,inferred_weekly,official_path_verified,她的绰号“智能牛魔王”,http://www.qlsn.com/news_view.asp?id=223,2009-12-07,Official homepage evidence.
+898,2009-12-08,inferred_weekly,official_path_verified+sample_request,“国际儿童墙”上的山东女孩,http://www.qlsn.com/news_view.asp?id=224,2009-12-14,Official homepage path plus Jan 2010 forum request for issue 898; sequence places publication in Dec 2009.
+899,2009-12-15,inferred_weekly,official_path_verified,烦恼防火墙; 小蜘蛛决战大苍蝇; 别让爱太沉重; 谢谢您，李老师; 种豆芽; 贾雯晶的“特殊任务”,http://www.qlsn.com/article_view.asp?id=831,2009-12-23,Official homepage preserves multiple issue-899 paths.
+900,2009-12-22,inferred_weekly,official_path_verified,队旗飘飘,http://www.qlsn.com/article_view.asp?id=830,2009-12-23,Official homepage evidence.
+902,2010-01-05,inferred_weekly,editor_metadata,Referenced by editor blog in a 2010-12-27 repost,https://blog.sina.com.cn/s/blog_4c4fc7d90100nvnc.html,2010-12-27,Issue reference only; no recovered newspaper page.
+913,2010-03-23,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第三波！,http://www.qlsn.com/sdbook/?/23-1-0-1-1.html,2010-03-11,Official qlsn.com forum preserves issue-numbered editor/admin post.
+915,2010-04-06,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第六波！,http://www.qlsn.com/sdbook/?/27-1-0-1-2.html,2010-03-11,Forum title explicitly includes 915期; forum posting time is not publication date.
+917,2010-04-20,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第七波！,http://www.qlsn.com/sdbook/?/28-1-0-1-5.html,2010-03-11,Forum title explicitly includes 917期.
+918,2010-04-27,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第五波！,http://www.qlsn.com/sdbook/?/26-1-0-1-3.html,2010-03-11,Forum title explicitly includes 918期.
+920,2010-05-11,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第10波！,http://www.qlsn.com/sdbook/?/51-1-0-1-5.html,2010-04-28,Forum title explicitly includes 920期.
+924,2010-06-08,direct_forum_statement,official_forum_direct_date,第924期,http://www.qlsn.com/sdbook/?/105-1-0-1-1.html,2010-06-14,Forum correction explicitly states ‘2010年的6月8日第924期吧’; this is the anchor for inferred weekly dates.
+925,2010-06-15,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第15波！,http://www.qlsn.com/sdbook/?/56-1-0-1-3.html,2010-04-28,Forum title explicitly includes 925期.
+926,2010-06-22,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第16波！,http://www.qlsn.com/sdbook/?/57-1-0-1-2.html,2010-04-28,Forum title explicitly includes 926期.
+927,2010-06-29,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第17波！,http://www.qlsn.com/sdbook/?/58-1-0-1-2.html,2010-04-28,Forum title explicitly includes 927期.
+928,2010-07-06,inferred_weekly,official_forum_issue_anchor,“烦恼防火墙”第18波！,http://www.qlsn.com/sdbook/?/59-1-0-1-4.html,2010-04-28,Forum title explicitly includes 928期.
+941,2010-10-05,inferred_weekly,editor_metadata,白小葱的故事,https://blog.sina.com.cn/s/blog_4c4fc7d90100ll3y.html,2010-09-30,Editor blog post carries issue hint 941.
+944,2010-10-26,inferred_weekly,official_forum_sample_request,能不能邮寄一份944期的样报,http://www.qlsn.com/sdbook/?/204-1-0-1-4.html,2010-12-12,Issue-existence metadata; request date is not publication date.
+950,2010-12-07,inferred_weekly,editor_metadata,老编说事，请您评论（一）,https://blog.sina.com.cn/s/blog_4c4fc7d90100nnr8.html,2010-12-16,Editor blog post carries issue hint 950.
+951,2010-12-14,inferred_weekly,editor_metadata,老编说事之学生实验引发社会关注（951期）,https://blog.sina.com.cn/s/blog_4c4fc7d90100nyg2.html,2010-12-30,Editor blog title explicitly includes 951期.
+953,2010-12-28,inferred_weekly,editor_metadata,主编雨虹的文章（转载）,https://blog.sina.com.cn/s/blog_4c4fc7d90100nvnc.html,2010-12-27,Editor blog page carries issue hints 953|902|951.
