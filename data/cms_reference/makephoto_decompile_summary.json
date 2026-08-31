@@ -1,96 +1,873 @@
 {
   "type": "Mvcb2b.admin.jquery.MakePhoto",
+  "seed_variables": [
+    "bigpageid",
+    "isjpg",
+    "ismobile",
+    "ispdf",
+    "mobiledir",
+    "mobilefilename",
+    "pagenum",
+    "path",
+    "path2",
+    "pcdir",
+    "pcfilename",
+    "pdf2jpg",
+    "pdfname"
+  ],
+  "dependency_variables": [
+    "dir",
+    "isjpg",
+    "ismobile",
+    "ispdf",
+    "mobiledir",
+    "pcdir",
+    "savedata",
+    "text",
+    "text10",
+    "text2",
+    "text3",
+    "text4",
+    "text5",
+    "text6",
+    "text8",
+    "val2"
+  ],
+  "dependency_edges": [
+    {
+      "from": "text2",
+      "depends_on": "text"
+    },
+    {
+      "from": "text3",
+      "depends_on": "text2"
+    },
+    {
+      "from": "text4",
+      "depends_on": "dir"
+    },
+    {
+      "from": "text4",
+      "depends_on": "val2"
+    },
+    {
+      "from": "text5",
+      "depends_on": "val2"
+    },
+    {
+      "from": "text5",
+      "depends_on": "dir"
+    },
+    {
+      "from": "pcdir",
+      "depends_on": "text4"
+    },
+    {
+      "from": "mobiledir",
+      "depends_on": "text5"
+    },
+    {
+      "from": "text",
+      "depends_on": "savedata"
+    },
+    {
+      "from": "text",
+      "depends_on": "text3"
+    },
+    {
+      "from": "text2",
+      "depends_on": "text3"
+    },
+    {
+      "from": "pcdir",
+      "depends_on": "text"
+    },
+    {
+      "from": "pcdir",
+      "depends_on": "text6"
+    },
+    {
+      "from": "pcdir",
+      "depends_on": "text8"
+    },
+    {
+      "from": "mobiledir",
+      "depends_on": "text"
+    },
+    {
+      "from": "mobiledir",
+      "depends_on": "text10"
+    },
+    {
+      "from": "dir",
+      "depends_on": "savedata"
+    },
+    {
+      "from": "text",
+      "depends_on": "dir"
+    },
+    {
+      "from": "dir",
+      "depends_on": "text2"
+    },
+    {
+      "from": "text",
+      "depends_on": "text2"
+    }
+  ],
+  "transitive_assignments": [
+    {
+      "variable": "text",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "p"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Request",
+        "QueryString",
+        "ToString"
+      ],
+      "calls": [
+        "ToString"
+      ],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "p"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Request",
+        "Form",
+        "ToString"
+      ],
+      "calls": [
+        "ToString"
+      ],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Fun",
+        "Webdirectory",
+        "text"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Path",
+        "GetExtension",
+        "text2",
+        "ToLower"
+      ],
+      "calls": [
+        "Path.GetExtension",
+        "ToLower"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "dir",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "ispdf",
+      "string_literals": [],
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "isjpg",
+      "string_literals": [],
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text4",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text5",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "val2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pages",
+        "i"
+      ],
+      "calls": [],
+      "operators": [
+        "indexing"
+      ]
+    },
+    {
+      "variable": "text4",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "dir",
+        "val2",
+        "Pcname"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "val2",
+        "Mobilename"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "dir",
+        "val2",
+        "Mobilename"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text4"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "text5"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "savedata",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Fun",
+        "Savedata"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "savedata"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "text"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Year",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Year.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text3"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text3"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text3",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Month",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Month.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text4",
+      "string_literals": [
+        "-",
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Guid",
+        "NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "calls": [
+        "Guid.NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text5",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "pdf2jpg"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text6",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "text6"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text8",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "pcdir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text",
+        "text8"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text10",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [
+        ".jpg"
+      ],
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [
+        "text",
+        "text10"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "mobiledir",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "pdf2jpg"
+      ],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "dir",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "savedata"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "Fun",
+        "Webdirectory",
+        "dir"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Year",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Year.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "dir",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text2"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text",
+      "string_literals": [
+        "/"
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "text2"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
+      ]
+    },
+    {
+      "variable": "text2",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Now",
+        "Month",
+        "ToString"
+      ],
+      "calls": [
+        "DateTime.Now.Month.ToString"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text3",
+      "string_literals": [
+        "-",
+        ""
+      ],
+      "numeric_literals": [],
+      "identifiers": [
+        "Guid",
+        "NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "calls": [
+        "Guid.NewGuid",
+        "ToString",
+        "Replace"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "text4",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "Page",
+        "Server",
+        "MapPath",
+        "webpathpdf"
+      ],
+      "calls": [
+        "Server.MapPath"
+      ],
+      "operators": []
+    },
+    {
+      "variable": "ismobile",
+      "string_literals": [],
+      "numeric_literals": [],
+      "identifiers": [
+        "E_settingbll",
+        "Sitesetting",
+        "Ismobile"
+      ],
+      "calls": [],
+      "operators": []
+    }
+  ],
   "relevant_assignments": [
     {
       "variable": "pcdir",
       "string_literals": [
         ""
       ],
-      "identifiers": []
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "mobiledir",
       "string_literals": [
         ""
       ],
-      "identifiers": []
+      "numeric_literals": [],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "ispdf",
       "string_literals": [],
-      "identifiers": []
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "isjpg",
       "string_literals": [],
-      "identifiers": []
+      "numeric_literals": [
+        "0"
+      ],
+      "identifiers": [],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "pcdir",
       "string_literals": [],
+      "numeric_literals": [],
       "identifiers": [
         "text4"
-      ]
+      ],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "mobiledir",
       "string_literals": [],
+      "numeric_literals": [],
       "identifiers": [
         "text5"
-      ]
+      ],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "pcdir",
       "string_literals": [
         ".jpg"
       ],
+      "numeric_literals": [],
       "identifiers": [
         "text",
         "text6"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
       ]
     },
     {
       "variable": "pcdir",
       "string_literals": [],
+      "numeric_literals": [],
       "identifiers": [
         "pdf2jpg"
-      ]
+      ],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "pcdir",
       "string_literals": [
         ".jpg"
       ],
+      "numeric_literals": [],
       "identifiers": [
         "text",
         "text8"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
       ]
     },
     {
       "variable": "mobiledir",
       "string_literals": [
         ".jpg"
+      ],
+      "numeric_literals": [
+        "0"
       ],
       "identifiers": [
         "text",
         "text10"
+      ],
+      "calls": [],
+      "operators": [
+        "concat_or_add"
       ]
     },
     {
       "variable": "mobiledir",
       "string_literals": [],
+      "numeric_literals": [],
       "identifiers": [
         "pdf2jpg"
-      ]
+      ],
+      "calls": [],
+      "operators": []
     },
     {
       "variable": "ismobile",
       "string_literals": [],
+      "numeric_literals": [],
       "identifiers": [
         "E_settingbll",
         "Sitesetting",
         "Ismobile"
-      ]
+      ],
+      "calls": [],
+      "operators": []
     }
   ],
   "relevant_string_literals": [
@@ -112,7 +889,8 @@
     "Page"
   ],
   "notes": [
-    "Derived metadata from transient ILSpy output; decompiled source is not committed.",
+    "Derived metadata from transient ILSpy output; decompiled source and statement text are not committed.",
+    "Transitive dependency summaries retain constants/identifiers/operators only, allowing filename reconstruction without source reproduction.",
     "Generic 53BK reference implementation only; candidate qlsn paths still require independent verification."
   ]
 }
