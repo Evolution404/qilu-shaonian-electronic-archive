@@ -1,0 +1,15 @@
+{
+  "target_url": "https://www.yunzhan365.com/newspapers/publications/images/齐鲁少年 .jpg",
+  "quarterly_anchors": 24,
+  "anchors_with_snapshot": 0,
+  "availability_errors": 0,
+  "unique_closest_snapshots": 0,
+  "verified_image_snapshots": 0,
+  "distinct_verified_sha256": 0,
+  "versions": [],
+  "notes": [
+    "Quarterly available sampling does not prove completeness; it is a fallback for the timed-out exact CDX history query.",
+    "Different verified SHA-256 values would indicate historical content changes under the fixed image URL.",
+    "No archived image bytes are committed."
+  ]
+}
