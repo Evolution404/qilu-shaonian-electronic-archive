@@ -1,0 +1,46 @@
+name: Inspect Legacy qlsn Downloads
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/inspect_legacy_downloads.py'
+      - '.github/workflows/inspect-legacy-downloads.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: inspect-legacy-downloads
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Inspect archived download pages and attachments
+        run: python scripts/inspect_legacy_downloads.py
+      - name: Commit download evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/legacy_downloads)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/legacy_downloads
+          git commit -m 'data: inspect legacy qlsn download section'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
