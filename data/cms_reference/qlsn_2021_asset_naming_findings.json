@@ -1,0 +1,28 @@
+{
+  "scope": "generic 53BK reference behavior applied to the observed 2021-12-25 qlsn A1 mobile Pagepic",
+  "pagepic_generation": {
+    "pc_basename_formula": "pc{yyyyMMdd}{guid32}.jpg",
+    "mobile_basename_formula": "mobile{yyyyMMdd}{same_guid32}.jpg",
+    "shared_date_and_guid": true,
+    "evidence_method": "Mvcb2b.admin.jquery.MakePhoto.ProcessSavejpg",
+    "observed_mobile_basename": "mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg",
+    "derived_pc_basename": "pc202112245170816f8aaf438f9a1a9119831a2eab.jpg",
+    "derived_pc_asset_verified": false,
+    "derived_pc_probe": "data/szb_2021_pc_probe/report.json"
+  },
+  "pagepdf": {
+    "independent_field": true,
+    "can_reference_pdf_or_jpg": true,
+    "supports_direct_upload": true,
+    "supports_browsing_preuploaded_files": true,
+    "reference_ui_example": "Img/2011/10/a1.pdf",
+    "deterministic_relation_to_pagepic_guid": false,
+    "do_not_infer_by_extension_swap": true
+  },
+  "guardrails": [
+    "Generic CMS behavior is evidence for filename construction, not proof that a historical qlsn asset survived in an archive.",
+    "A historical PC image or Pagepdf is promoted only after an actual media response or an archived page explicitly references it.",
+    "Do not treat a mobile filename with the prefix removed as the PC filename; the CMS uses the pc prefix.",
+    "Do not infer Pagepdf by replacing a Pagepic extension because Pagepdf can be independently uploaded and arbitrarily named."
+  ]
+}
