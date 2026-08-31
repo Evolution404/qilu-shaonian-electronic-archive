@@ -1,0 +1,9 @@
+entry,token,score,context
+paperweb/admin/jquery/PdfProcess.aspx,.Pdf,2,"﻿<%@ Page Language=""C#"" AutoEventWireup=""true"" CodeBehind=""PdfProcess.aspx.cs"" Inherits=""Mvcb2b.admin.jquery.PdfProcess"" %> <!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd""> <html xmlns=""http://www.w3.org/1999/xhtml"" > <head runat=""server""> <title>无标题页</title> </head> <body> <form id=""form1"" runat=""server""> <div> </div> </form> </body> </html>"
+paperweb/admin/controls/Upmappic.ascx,filename_only,0,
+paperweb/admin/controls/Uponenopostpic.ascx,filename_only,0,
+paperweb/admin/controls/Upqipdf.ascx,filename_only,0,
+paperweb/admin/controls/Upzoompic.ascx,filename_only,0,
+paperweb/admin/jquery/MakePhoto.aspx,MakePhoto,0,"﻿<%@ Page Language=""C#"" AutoEventWireup=""true"" AspCompat=""true"" CodeBehind=""MakePhoto.aspx.cs"" Inherits=""Mvcb2b.admin.jquery.MakePhoto"" %> <!DOCTYPE html PUBLIC ""-//W3C//DTD XHTML 1.0 Transitional//EN"" ""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd""> <html xmlns=""http://www.w3.org/1999/xhtml"" > <head runat=""server""> <title>无标题页</title> </head> <body> <form id=""form1"" runat=""server""> <div> </div> </form> </body> </html>"
+paperweb/editors/uploadinc/Upmappic.aspx,filename_only,0,
+paperweb/editors/uploadinc/Upzoompic.aspx,filename_only,0,

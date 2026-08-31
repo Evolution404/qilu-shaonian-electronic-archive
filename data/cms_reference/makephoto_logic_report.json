@@ -1,0 +1,20 @@
+{
+  "reference_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a951128&auth_key=21a551ff4669ab1cb48829b6d748b985",
+  "matched_file_count": 8,
+  "matched_files": [
+    "paperweb/admin/controls/Upmappic.ascx",
+    "paperweb/admin/controls/Uponenopostpic.ascx",
+    "paperweb/admin/controls/Upqipdf.ascx",
+    "paperweb/admin/controls/Upzoompic.ascx",
+    "paperweb/admin/jquery/MakePhoto.aspx",
+    "paperweb/admin/jquery/PdfProcess.aspx",
+    "paperweb/editors/uploadinc/Upmappic.aspx",
+    "paperweb/editors/uploadinc/Upzoompic.aspx"
+  ],
+  "context_count": 8,
+  "top_score": 2,
+  "notes": [
+    "Generic 53BK implementation evidence only.",
+    "Use this output to derive candidate filename mappings; verify every qlsn URL independently."
+  ]
+}
