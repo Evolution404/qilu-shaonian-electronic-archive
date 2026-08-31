@@ -2,10 +2,9 @@
 """Reduce transient ILSpy output to non-source MakePhoto naming metadata.
 
 The input decompiled C# is never committed. We retain only derived facts needed to recover
-historical asset names: local/member assignment dependency edges, string/numeric constants,
-selected call-site argument tokens, and naming-related method/type tokens. A transitive walk
-starts from the PC/mobile/PDF output variables so compiler-generated temporaries are not lost.
-No statement text or decompiled method body is persisted.
+historical asset names: local/member/object-initializer assignment dependency edges,
+string/numeric constants, selected call-site argument tokens, and naming-related method/type
+tokens. No statement text or decompiled method body is persisted.
 """
 from __future__ import annotations
 
@@ -30,6 +29,10 @@ LOCAL_ASSIGN_RE = re.compile(
 )
 MEMBER_ASSIGN_RE = re.compile(
     r"^([A-Za-z_][A-Za-z0-9_]*(?:\[[^\]]+\])?(?:\.[A-Za-z_][A-Za-z0-9_]*)+)\s*=\s*(?![=>])(.+?);\s*$"
+)
+# Object initializers are commonly rendered by ILSpy as `Pcname = expr,` and have no semicolon.
+INITIALIZER_ASSIGN_RE = re.compile(
+    r"^([A-Za-z_][A-Za-z0-9_]*)\s*=\s*(?![=>])(.+?),\s*$"
 )
 IDENT_RE = re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*\b")
 NUMBER_RE = re.compile(r"(?<![A-Za-z_])\d+(?:\.\d+)?(?![A-Za-z_])")
@@ -106,7 +109,17 @@ def parse_member_assignment(line: str):
         return None
     target, rhs = am.group(1), am.group(2)
     prop = target.rsplit(".", 1)[-1]
-    return {"target": target, "property": prop, **expression_facts(rhs)}
+    return {"target": target, "property": prop, "assignment_kind": "member", **expression_facts(rhs)}
+
+
+def parse_initializer_assignment(line: str):
+    am = INITIALIZER_ASSIGN_RE.match(line)
+    if not am:
+        return None
+    prop, rhs = am.group(1), am.group(2)
+    if prop.lower() not in SEEDS and not INTEREST.search(prop):
+        return None
+    return {"target": prop, "property": prop, "assignment_kind": "object_initializer", **expression_facts(rhs)}
 
 
 def parse_call_site(line: str):
@@ -116,8 +129,7 @@ def parse_call_site(line: str):
     call, args = m.group(1), m.group(2)
     if not INTEREST.search(call):
         return None
-    facts = expression_facts(args)
-    return {"call": call, **facts}
+    return {"call": call, **expression_facts(args)}
 
 
 def dedupe_rows(rows, keys):
@@ -162,6 +174,11 @@ def main():
                 member_assignments.append(member)
             continue
 
+        init = parse_initializer_assignment(line)
+        if init:
+            member_assignments.append(init)
+            continue
+
         row = parse_local_assignment(line)
         if row:
             all_assignments.append(row)
@@ -194,7 +211,7 @@ def main():
     )
     member_assignments = dedupe_rows(
         member_assignments,
-        ["target", "property", "string_literals", "numeric_literals", "identifiers", "calls", "operators"],
+        ["target", "property", "assignment_kind", "string_literals", "numeric_literals", "identifiers", "calls", "operators"],
     )
     call_sites = dedupe_rows(call_sites, ["call", "string_literals", "numeric_literals", "identifiers", "calls", "operators"])
 
@@ -222,7 +239,7 @@ def main():
         "relevant_type_tokens": sorted(type_names),
         "notes": [
             "Derived metadata from transient ILSpy output; decompiled source and statement text are not committed.",
-            "Member assignments retain only target/property plus expression constants/identifiers; this captures Pcname/Mobilename naming facts without source reproduction.",
+            "Object-initializer assignments capture Pcname/Mobilename rows that end with commas in ILSpy output.",
             "Generic 53BK reference implementation only; candidate qlsn paths still require independent verification.",
         ],
     }
