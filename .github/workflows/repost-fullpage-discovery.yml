@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'scripts/discover_repost_fullpages.py'
+      - 'scripts/ocr_repost_candidates.py'
       - '.github/workflows/repost-fullpage-discovery.yml'
 
 permissions:
@@ -29,10 +30,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install image dependency
-        run: python -m pip install --disable-pip-version-check pillow
+      - name: Install image and Chinese OCR dependencies
+        run: |
+          python -m pip install --disable-pip-version-check pillow
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
       - name: Scan editor and reader archives
         run: python scripts/discover_repost_fullpages.py
+      - name: OCR likely page scans
+        run: python scripts/ocr_repost_candidates.py
       - name: Commit candidate metadata
         run: |
           if [ -z "$(git status --porcelain -- data/repost_fullpage)" ]; then
