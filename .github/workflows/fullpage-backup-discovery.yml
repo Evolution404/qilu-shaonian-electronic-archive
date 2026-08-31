@@ -1,0 +1,53 @@
+name: Full-page Backup Discovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/discover_fullpage_backups.py'
+      - '.github/workflows/fullpage-backup-discovery.yml'
+  schedule:
+    - cron: '41 4 * * 0'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fullpage-backup-discovery
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install image inspection dependency
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Discover original-layout newspaper backups
+        run: python scripts/discover_fullpage_backups.py
+
+      - name: Commit discovery metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/fullpage_backup)" ]; then
+            echo 'No full-page backup metadata changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/fullpage_backup
+          git commit -m 'data: refresh full-page backup discovery'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
