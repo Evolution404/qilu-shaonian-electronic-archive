@@ -1,0 +1,42 @@
+name: QLSN Media Parent Recovery
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/recover_qlsn_media_parents.py'
+      - '.github/workflows/qlsn-media-parent-recovery.yml'
+      - 'data/qlsn_domain_timeline_report.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: qlsn-media-parent-recovery
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reverse-link archived media to parent pages
+        run: python scripts/recover_qlsn_media_parents.py
+      - name: Commit parent evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/qlsn_media_parents)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/qlsn_media_parents
+          git commit -m 'data: recover qlsn media parent references'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
