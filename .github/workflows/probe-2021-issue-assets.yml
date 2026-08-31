@@ -1,0 +1,44 @@
+name: Probe 2021 Issue Assets
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_2021_issue_assets.py'
+      - '.github/workflows/probe-2021-issue-assets.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe-2021-issue-assets
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe A1-A8 Wayback edition assets
+        run: python scripts/probe_2021_issue_assets.py
+      - name: Commit focused probe metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/szb_2021_issue_probe)" ]; then
+            echo 'No focused probe changes.'
+            exit 0
+          fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/szb_2021_issue_probe
+          git commit -m 'data: record 2021 A1-A8 asset probe'
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
