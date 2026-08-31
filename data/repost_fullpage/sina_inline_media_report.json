@@ -1,0 +1,15 @@
+{
+  "all_sina_posts": 232,
+  "semantic_posts_selected": 159,
+  "posts_with_inline_media": 26,
+  "raw_inline_media_refs": 52,
+  "unique_candidate_media_urls": 89,
+  "reachable_media": 89,
+  "likely_document_images": 0,
+  "posts_fetch_errors": 12,
+  "notes": [
+    "Only source URLs already embedded in historical Sina post HTML are considered; large/orignal siblings are deterministic legacy CDN variants.",
+    "likely_document is geometry triage only and requires content/OCR verification before archival promotion.",
+    "No image bytes are committed."
+  ]
+}
