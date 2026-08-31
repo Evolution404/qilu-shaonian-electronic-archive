@@ -23,10 +23,10 @@
     },
     {
       "page": "https://www.itmop.com/downinfo/407724.html",
-      "resolved": "",
+      "resolved": "https://www.itmop.com/downinfo/407724.html",
       "candidate_count": 0,
       "candidates": [],
-      "error": "URLError: <urlopen error timed out>"
+      "error": ""
     },
     {
       "page": "https://www.53bk.com/",
@@ -41,7 +41,7 @@
   "archives": [
     {
       "url": "http://www.onlinedown.net/iopdfbhjl/117759?module=download&t=website&v=20260831122323",
-      "resolved_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a95132d&auth_key=e63f408cfeef00d7758f5f923ba46ceb",
+      "resolved_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a951539&auth_key=9553aa8ef5c8035c4874ec219d8055cc",
       "content_type": "application/zip",
       "length": 7708257,
       "sha256": "fb1518659d969d01edd5dda6c0bd4c9ec146551ced41bcced6f8272fdfce6656",
@@ -3868,7 +3868,7 @@
     },
     {
       "url": "http://www.onlinedown.net/iopdfbhjl/117759?module=download&amp;t=website&amp;v=20260831122323`,`53bksoft.rar`);",
-      "resolved_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a951348&auth_key=8071a96f6652cbd27f1ffdc5a3be7fb4",
+      "resolved_url": "https://download.ihsdus.cn/down/2021down/11/16/53bksoft.rar?timestamp=6a951575&auth_key=cb7f10baf89330392e35eb39181fce76",
       "content_type": "application/zip",
       "length": 7708257,
       "sha256": "fb1518659d969d01edd5dda6c0bd4c9ec146551ced41bcced6f8272fdfce6656",

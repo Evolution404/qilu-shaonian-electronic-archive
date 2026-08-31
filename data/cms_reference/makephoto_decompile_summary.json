@@ -919,7 +919,7 @@
   ],
   "notes": [
     "Derived metadata from transient ILSpy output; decompiled source and statement text are not committed.",
-    "Member assignments retain only target/property plus expression constants/identifiers; this captures Pcname/Mobilename naming facts without source reproduction.",
+    "Object-initializer assignments capture Pcname/Mobilename rows that end with commas in ILSpy output.",
     "Generic 53BK reference implementation only; candidate qlsn paths still require independent verification."
   ]
 }
