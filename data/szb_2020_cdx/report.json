@@ -1,0 +1,13 @@
+{
+  "query": "szb.cnssiot.cn/content/2020*",
+  "cdx_rows": 0,
+  "publication_date_candidates": [],
+  "edition_route_rows": 0,
+  "article_route_rows": 0,
+  "query_error": "",
+  "valid_negative_result": true,
+  "notes": [
+    "A zero row count is treated as a negative result only if query_error is empty.",
+    "No archived page bytes are committed by this inventory step."
+  ]
+}
