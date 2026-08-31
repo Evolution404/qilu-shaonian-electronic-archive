@@ -1,0 +1,28 @@
+{
+  "scope": "2006-2010 issue-number/date calibration",
+  "publication_policy": {
+    "evidence": "Archived 2004 qlsn.com newspaper introduction states: 4开4版，彩色印刷，每周二出版；月末出版相应的A、B、C、D版。",
+    "source": "https://web.archive.org/web/20040804133449id_/http://www.qlsn.com/page/P1.htm"
+  },
+  "primary_date_anchor": {
+    "issue_number": 924,
+    "publication_date": "2010-06-08",
+    "status": "direct_forum_statement",
+    "evidence": "Official qlsn.com forum correction states ‘2010年的6月8日第924期吧’."
+  },
+  "independent_cross_check": {
+    "issue_number": 1000,
+    "date": "2011-11-22",
+    "source": "https://blog.sina.com.cn/s/blog_4c4fc7d90100zv7h.html",
+    "evidence": "Official editor blog published a post titled ‘我和《齐鲁少年》的故事 为齐鲁少年创刊1000期而作’ on 2011-11-22. This is exactly 76 weekly increments after issue 924 on 2010-06-08."
+  },
+  "method": "For other issue numbers, publication_date = 2010-06-08 + 7 * (issue_number - 924) days. Such dates are labeled inferred_weekly rather than verified/direct.",
+  "cross_checks": [
+    "Issue 740 infers 2006-11-28; its recovered qlsn.com article was posted 2006-12-11 and explicitly identifies 第740期.",
+    "Issue 745 infers 2007-01-02; three recovered qlsn.com article pages were posted 2007-01-18 and explicitly identify 齐鲁少年（745期）.",
+    "2009 official-home issue paths are normally posted days after the inferred Tuesday issue date, consistent with website republication/update lag.",
+    "Issue 898 infers 2009-12-08, resolving a raw forum-miner misclassification caused by a 2010-01-06 sample-copy request.",
+    "Issues 965 and 967 infer 2011 dates and are therefore excluded from the 2010 issue set."
+  ],
+  "caution": "This timeline is a reconstruction aid for locating scans and external reposts. Only issue 924 currently has a direct publication-date statement in the recovered forum evidence; do not describe all inferred dates as independently verified publication dates."
+}
