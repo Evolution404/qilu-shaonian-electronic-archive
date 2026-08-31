@@ -1,0 +1,49 @@
+name: Analyze Independent 2007-2010 Wayback Media
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/analyze_independent_2007_2010_wayback_media.py'
+      - '.github/workflows/analyze-independent-2007-2010-media.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: analyze-independent-2007-2010-media
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image and OCR dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-chi-sim
+          python -m pip install --disable-pip-version-check requests pillow
+      - name: Inspect independently archived legacy media
+        run: python scripts/analyze_independent_2007_2010_wayback_media.py
+      - name: Commit media metadata
+        run: |
+          if [ -z "$(git status --porcelain -- data/independent_2007_2010_wayback_media)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/independent_2007_2010_wayback_media
+          git commit -m 'data: inspect independent 2007-2010 Wayback media'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
