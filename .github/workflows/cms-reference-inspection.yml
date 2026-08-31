@@ -11,6 +11,8 @@ on:
       - 'scripts/extract_53bk_upload_naming.py'
       - 'scripts/extract_53bk_makephoto_logic.py'
       - 'scripts/extract_53bk_binary_strings.py'
+      - 'scripts/materialize_53bk_binary.py'
+      - 'scripts/summarize_53bk_makephoto_decompile.py'
       - '.github/workflows/cms-reference-inspection.yml'
 
 permissions:
@@ -23,7 +25,7 @@ concurrency:
 jobs:
   inspect:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,6 +33,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
       - name: Inspect public reference package paths
         run: python scripts/inspect_53bk_reference.py
       - name: Emit focused recovery summary
@@ -43,6 +48,14 @@ jobs:
         run: python scripts/extract_53bk_makephoto_logic.py
       - name: Extract compiled assembly naming strings
         run: python scripts/extract_53bk_binary_strings.py
+      - name: Decompile MakePhoto transiently and retain naming metadata only
+        run: |
+          python scripts/materialize_53bk_binary.py paperweb/bin/mvcb2b.dll /tmp/Mvcb2b.dll
+          dotnet tool install --global ilspycmd
+          export PATH="$PATH:$HOME/.dotnet/tools"
+          ilspycmd -t Mvcb2b.admin.jquery.MakePhoto /tmp/Mvcb2b.dll > /tmp/MakePhoto.cs
+          python scripts/summarize_53bk_makephoto_decompile.py /tmp/MakePhoto.cs
+          rm -f /tmp/MakePhoto.cs /tmp/Mvcb2b.dll
       - name: Commit reference metadata
         run: |
           if [ -z "$(git status --porcelain -- data/cms_reference)" ]; then exit 0; fi
