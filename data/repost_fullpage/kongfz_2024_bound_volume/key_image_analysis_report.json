@@ -1,0 +1,27 @@
+{
+  "listing_url": "https://book.kongfz.com/837895/9278771011/",
+  "page_fetch_error": "",
+  "large_portrait_images_analyzed": 5,
+  "images_with_html_listing_context": 5,
+  "images_with_issue_number": 0,
+  "images_with_issue_range": 1,
+  "images_with_2024_date": 0,
+  "images_with_identity_keywords": 2,
+  "high_value_rows": [
+    {
+      "source_url": "https://www0.kfzimg.com/sw/kfz-cos/kfzimg/ffefeeda/1f6581e7b815c541_b.jpg",
+      "html_occurrences": "3",
+      "issue_hits": "",
+      "issue_range_hits": "1634-1685",
+      "date_hits": "",
+      "page_hits": "",
+      "identity_keywords": "山东省少工委|共青团山东省委|山东青年报刊传媒中心|出版|主办",
+      "header_ocr": "a. * REY © Ss N awe — room， he ey ae | 7 : d | | ~ | ; R See cay apostle a TE aN , 区 J 一 Re ——— * Qos . | a = 2 - ff ‘ a, A ) : = = __ SO ET || rn ee \\ me SB KER 6 ISSN = ay Du! —— if — we 他 4 ee — af endl Ge > > ee 3? ial"
+    }
+  ],
+  "notes": [
+    "Multiple OCR passes/crops are used because product photos include perspective and watermark noise.",
+    "HTML occurrence/context helps distinguish the listing gallery from unrelated recommendation images.",
+    "No image bytes are committed."
+  ]
+}
