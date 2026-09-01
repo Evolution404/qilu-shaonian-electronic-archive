@@ -1,0 +1,48 @@
+name: Inspect Sina 2012 Winter Combined Posts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/inspect_sina_2012_winter_combined_posts.py'
+      - '.github/workflows/inspect-sina-2012-winter-combined.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: inspect-sina-2012-winter-combined
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4
+      - name: Inspect combined-issue posts
+        run: python scripts/inspect_sina_2012_winter_combined_posts.py
+      - name: Commit hidden-media evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_2012_winter_combined/hidden_media_refs.csv data/repost_fullpage/sina_2012_winter_combined/hidden_media_report.json)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage/sina_2012_winter_combined/hidden_media_refs.csv data/repost_fullpage/sina_2012_winter_combined/hidden_media_report.json
+          git commit -m 'data: inspect 2012 winter combined hidden media'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
