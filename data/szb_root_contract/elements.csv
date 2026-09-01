@@ -1,0 +1,16 @@
+tag,id,class,attrs
+a,,,href=/content/2021-12/25/edition326_A1.html
+a,,,href=/content/2021-12/25/edition333_A2.html
+a,,,href=/content/2021-12/25/edition327_A3.html
+a,,,href=/content/2021-12/25/edition328_A4.html
+a,,,href=/content/2021-12/25/edition329_A5.html
+a,,,href=/content/2021-12/25/edition330_A6.html
+a,,,href=/content/2021-12/25/edition331_A7.html
+a,,,href=/content/2021-12/25/edition332_A8.html
+input,cureditionid,,type=hidden | name=cureditionid | id=cureditionid | value=326
+div,swiperlist,swiper-container pagepic,class=swiper-container pagepic | id=swiperlist
+img,editionimg,,usemap=#usemap | id=editionimg | src=http://szb.cnssiot.cn/Img/2021/12/mobile202112245170816f8aaf438f9a1a9119831a2eab.jpg?editionid=326 | border=0 | alt=齐鲁少年深度报道
+script,,,type=text/javascript | src=/jquery/readtitle
+div,banpagezoom,banpagezoom circle,class=banpagezoom circle | id=banpagezoom
+span,,icon-enlarge,class=icon-enlarge
+div,zoomtu,modal clearfix,id=zoomtu | class=modal clearfix

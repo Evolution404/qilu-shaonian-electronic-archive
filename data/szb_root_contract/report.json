@@ -1,0 +1,30 @@
+{
+  "snapshot": "https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/",
+  "bytes": 9953,
+  "content_type": "text/html; charset=gb2312",
+  "sha256": "6de9ce06d83aa6ec03a1e0d521bb3dde780493c8feb4a7bcd53ce44e86de76ab",
+  "contexts": 30,
+  "interesting_elements": 15,
+  "unique_media_literals": 2,
+  "tokens_found": [
+    "/jquery/readtitle",
+    "edition326_A1",
+    "edition327_A3",
+    "edition328_A4",
+    "edition329_A5",
+    "edition330_A6",
+    "edition331_A7",
+    "edition332_A8",
+    "edition333_A2",
+    "editionid",
+    "large",
+    "media_literal",
+    "mobile202112245170816f8aaf438f9a1a9119831a2eab",
+    "pagepic",
+    "zoom"
+  ],
+  "notes": [
+    "Only short HTML contexts and element attributes are stored; full HTML body is not committed.",
+    "Used to detect hidden data-* high-resolution/PDF asset references."
+  ]
+}
