@@ -1,0 +1,167 @@
+{
+  "indexes_selected": 3,
+  "index_queries": 30,
+  "index_rows": 0,
+  "index_errors": 30,
+  "warc_records_recovered": 0,
+  "historical_media_urls": 0,
+  "dec31_historical_media_urls": 0,
+  "reachable_non_placeholder": 0,
+  "dec31_likely_document": 0,
+  "errors": [
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "HTTPError: HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2012",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-20",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "URLError: <urlopen error timed out>"
+    },
+    {
+      "index": "CC-MAIN-2013-48",
+      "url": "http://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "error": "URLError: <urlopen error timed out>"
+    }
+  ],
+  "notes": [
+    "Exact URL Common Crawl recovery only; no broad crawling.",
+    "No newspaper/image bytes or WARC bodies are committed."
+  ]
+}
