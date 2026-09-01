@@ -1,0 +1,25 @@
+{
+  "snapshot": "https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/",
+  "resources_discovered": 11,
+  "resources_recovered": 2,
+  "endpoints_discovered": 0,
+  "endpoint_probes": 0,
+  "data_responses_recovered": 0,
+  "responses_with_page_fields": 0,
+  "unique_asset_refs": 1,
+  "known_edition_ids": {
+    "A1": "326",
+    "A2": "333",
+    "A3": "327",
+    "A4": "328",
+    "A5": "329",
+    "A6": "330",
+    "A7": "331",
+    "A8": "332"
+  },
+  "notes": [
+    "Endpoints originate from the deployed historical frontend, not generic 53BK assumptions.",
+    "Probe values are restricted to the verified publication date and verified edition ids; no broad id enumeration is performed.",
+    "No newspaper/image bytes are committed."
+  ]
+}
