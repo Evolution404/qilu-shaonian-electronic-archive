@@ -1,0 +1,27 @@
+{
+  "history_records": 0,
+  "history_posts_with_records": 0,
+  "text_search_records": 150,
+  "historical_media_urls": 0,
+  "dec31_historical_media_urls": 0,
+  "reachable_non_placeholder": 0,
+  "dec31_likely_document": 0,
+  "errors": [
+    {
+      "stage": "textsearch",
+      "post_id": "blog_4c4fc7d9010116ni",
+      "query": "\"2012年寒假合刊编辑部的故事之四和六\"",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    },
+    {
+      "stage": "textsearch",
+      "post_id": "blog_4c4fc7d901011cp9",
+      "query": "\"今天我评报\"",
+      "error": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+    }
+  ],
+  "notes": [
+    "Arquivo.pt is an independent web-archive source; results still require content verification.",
+    "No third-party media or archived HTML bodies are committed."
+  ]
+}
