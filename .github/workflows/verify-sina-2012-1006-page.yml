@@ -35,6 +35,24 @@ jobs:
           sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
       - name: Deep verify recovered 2012 page candidate
         run: python scripts/verify_sina_2012_1006_page.py
+      - name: Export transient candidate preview
+        run: |
+          mkdir -p /tmp/qilu-preview
+          python - <<'PY'
+          import urllib.request
+          url='https://s12.sinaimg.cn/large/4c4fc7d9hb626902713eb&690'
+          ref='https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html'
+          req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':ref,'Accept':'image/*,*/*'})
+          with urllib.request.urlopen(req,timeout=30) as r, open('/tmp/qilu-preview/2012-01-03-candidate.jpg','wb') as f:
+              f.write(r.read(20*1024*1024))
+          PY
+      - name: Upload transient visual-QA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: qilu-2012-01-03-page-preview
+          path: /tmp/qilu-preview/2012-01-03-candidate.jpg
+          retention-days: 1
+          if-no-files-found: error
       - name: Commit verification evidence
         run: |
           if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_2012_1006)" ]; then exit 0; fi
