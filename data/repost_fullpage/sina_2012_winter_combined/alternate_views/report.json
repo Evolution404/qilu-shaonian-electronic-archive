@@ -1,0 +1,13 @@
+{
+  "views_probed": 20,
+  "views_recovered": 20,
+  "media_rows": 2,
+  "unique_media_urls": 1,
+  "dec31_unique_media_urls": 0,
+  "cover_post_unique_media_urls": 1,
+  "dec31_media_urls": [],
+  "notes": [
+    "Alternate live view probe only; media URLs require content verification.",
+    "No image bytes are committed."
+  ]
+}
