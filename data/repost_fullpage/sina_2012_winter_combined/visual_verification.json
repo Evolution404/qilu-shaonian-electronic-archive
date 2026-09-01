@@ -1,0 +1,39 @@
+{
+  "publication": "齐鲁少年",
+  "publication_date": "2012-01-03",
+  "issue_range": "1006-1014",
+  "edition_kind": "寒假合刊",
+  "page_role": "cover",
+  "record_type": "verified_cover_scan",
+  "source_post": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+  "source_post_date": "2012-01-10",
+  "source_post_title": "今天我评报_齐鲁少年编辑部的故事_新浪博客",
+  "image_url": "https://s12.sinaimg.cn/large/4c4fc7d9hb626902713eb&690",
+  "sha256": "92592bb66b826a7d65856b6d713334d7f648a43aa3d4e9e27cbdf7c2dc32631f",
+  "width": 1944,
+  "height": 2592,
+  "file_bytes": 1271281,
+  "visible_text_verified": {
+    "masthead": "齐鲁少年",
+    "website": "http://www.qlsn.com",
+    "qq": "857087447",
+    "sponsor": "山东省少工委主办",
+    "cover_title": "寒假合刊",
+    "issue_line": "第1006-1014期",
+    "publication_date_line": "2012年1月3日出版"
+  },
+  "visual_layout_findings": {
+    "whole_cover_visible": true,
+    "interior_newspaper_page": false,
+    "complete_combined_issue": false,
+    "description": "整张图片为《齐鲁少年》2012年寒假合刊封面，包含完整报头、合刊标题、期号范围和出版日期；画面主体为封面插画，无内页正文版面。"
+  },
+  "camera_exif_observed": {
+    "manufacturer": "Canon",
+    "model": "Canon PowerShot A95",
+    "datetime": "2012-01-10 15:16:17"
+  },
+  "verification_status": "verified",
+  "rights_note": "Only metadata, hashes and source URLs are committed. The newspaper image itself remains at the public source and is not committed to Git.",
+  "next_action": "Recover the interior pages of the 1006-1014 winter combined issue before creating any complete PDF."
+}
