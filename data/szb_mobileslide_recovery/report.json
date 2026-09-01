@@ -1,0 +1,15 @@
+{
+  "known_resources": 6,
+  "resources_recovered": 0,
+  "resources_with_assets": 0,
+  "endpoints_discovered": 1,
+  "endpoint_probes": 21,
+  "endpoint_responses_recovered": 0,
+  "responses_with_assets": 0,
+  "responses_with_page_fields": 0,
+  "notes": [
+    "Actual mobileslide deployment resources from verified root snapshot only.",
+    "Queryless and closest-capture recovery is attempted for cache-busted JS URLs.",
+    "No newspaper/image bytes are committed."
+  ]
+}

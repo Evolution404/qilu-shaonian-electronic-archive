@@ -1,0 +1,2 @@
+endpoint_url,kind,source_url,params,context
+http://szb.cnssiot.cn/jquery/readtitle,root_script_src,http://szb.cnssiot.cn/,,verified root snapshot script src=/jquery/readtitle
