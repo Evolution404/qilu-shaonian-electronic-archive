@@ -1,0 +1,37 @@
+{
+  "entries": 42,
+  "pages_with_fee_metadata": [
+    "2",
+    "5",
+    "6",
+    "7",
+    "13",
+    "17",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28，29"
+  ],
+  "entries_by_page": {
+    "2": 6,
+    "5": 1,
+    "6": 4,
+    "7": 6,
+    "13": 1,
+    "17": 1,
+    "24": 4,
+    "25": 3,
+    "26": 4,
+    "27": 4,
+    "28，29": 8
+  },
+  "min_page": "2",
+  "max_page": "28，29",
+  "combined_issue_identity": "2012-01-03 / 第1006-1014期 / 寒假合刊",
+  "notes": [
+    "Page numbers come from the second column of the editor-blog contributor-fee table after the 寒合刊 group marker.",
+    "Blank page cells inherit the preceding page value, matching the table layout.",
+    "This index proves content/page association, not availability of a page scan."
+  ]
+}
