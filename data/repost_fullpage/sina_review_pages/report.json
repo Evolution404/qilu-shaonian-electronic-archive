@@ -1,0 +1,28 @@
+{
+  "review_media_rows": 32,
+  "unique_review_images": 6,
+  "ocr_selected": 6,
+  "strong_review_page_candidates": 0,
+  "newspaper_page_candidates": 1,
+  "dense_review_images": 0,
+  "candidates": [
+    {
+      "post_date": "2012-01-10",
+      "post_title": "今天我评报_齐鲁少年编辑部的故事_新浪博客",
+      "issue_hints": "",
+      "media_url": "http://s12.sinaimg.cn/large/4c4fc7d9hb626902713eb&690",
+      "sha256": "92592bb66b826a7d65856b6d713334d7f648a43aa3d4e9e27cbdf7c2dc32631f",
+      "width": "1944",
+      "height": "2592",
+      "evidence_hits": "official_qq|official_site|sponsor",
+      "issue_matches": "",
+      "date_matches": "2012年1月3日",
+      "classification": "newspaper_page_candidate",
+      "ocr_excerpt": "a pee Ly % — = ) + ‘ a MAGE ved Ce 4 bs http:/Awww.qisn.com QQ; 857087447 ag 3 各 wrevrsem “人 以 5 “4 0148 i 7 310007 = 2012年1月3日出版 到 PIA 4s co20 Seq = ittp://www.qisn.com QQ; 857087447 SX 山蒜省少工要主办 站 Vv Vv v = 20124713 H 假名io >>». eo re 6."
+    }
+  ],
+  "notes": [
+    "Review-post images are high-value leads because the editor blog explicitly ties many posts to issue numbers.",
+    "No image bytes are committed."
+  ]
+}
