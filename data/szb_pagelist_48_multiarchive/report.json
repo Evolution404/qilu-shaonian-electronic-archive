@@ -1,0 +1,92 @@
+{
+  "target": "http://szb.cnssiot.cn/api/Pagelist/48",
+  "captures_total": 0,
+  "captures_by_archive": {},
+  "responses_recovered": 0,
+  "responses_with_page_fields": 0,
+  "pages_signaled": [],
+  "unique_media_refs": 0,
+  "errors": [
+    {
+      "stage": "wayback_cdx",
+      "target": "http://szb.cnssiot.cn/api/Pagelist/48",
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "stage": "wayback_cdx",
+      "target": "https://szb.cnssiot.cn/api/Pagelist/48",
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "stage": "wayback_timemap",
+      "target": "http://szb.cnssiot.cn/api/Pagelist/48",
+      "api": "https://web.archive.org/web/timemap/json?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48",
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2021-43",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2021-43-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 502: Bad Gateway"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2021-49",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2021-49-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-05",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-05-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-21",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-21-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-27",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-27-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-33",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-33-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-40",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-40-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2022-49",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2022-49-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2023-06",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2023-06-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    },
+    {
+      "stage": "commoncrawl",
+      "index": "CC-MAIN-2023-14",
+      "api": "https://index.commoncrawl.org/CC-MAIN-2023-14-index?url=http%3A%2F%2Fszb.cnssiot.cn%2Fapi%2FPagelist%2F48&output=json&filter=status%3A200&matchType=exact",
+      "error": "HTTPError: HTTP Error 404: Not Found"
+    }
+  ],
+  "notes": [
+    "All archive queries are exact-URL and low-frequency.",
+    "A zero is meaningful only for archive queries that completed successfully; service failures remain errors.",
+    "No archived response body or newspaper/media bytes are committed."
+  ]
+}
