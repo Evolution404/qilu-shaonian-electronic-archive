@@ -1,0 +1,46 @@
+name: Probe Sina 2012 Winter Alternate Views
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_sina_2012_winter_alt_views.py'
+      - '.github/workflows/probe-sina-2012-winter-alt-views.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: probe-sina-2012-winter-alt-views
+  cancel-in-progress: true
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe desktop and mobile renderings
+        run: python scripts/probe_sina_2012_winter_alt_views.py
+      - name: Commit alternate-view evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_2012_winter_combined/alternate_views)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage/sina_2012_winter_combined/alternate_views
+          git commit -m 'data: probe Sina winter alternate views'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
