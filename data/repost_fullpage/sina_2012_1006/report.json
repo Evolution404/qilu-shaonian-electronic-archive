@@ -1,0 +1,34 @@
+{
+  "source_post": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+  "source_post_date": "2012-01-10",
+  "source_post_title": "今天我评报_齐鲁少年编辑部的故事_新浪博客",
+  "media_url": "https://s12.sinaimg.cn/large/4c4fc7d9hb626902713eb&690",
+  "sha256": "92592bb66b826a7d65856b6d713334d7f648a43aa3d4e9e27cbdf7c2dc32631f",
+  "width": 1944,
+  "height": 2592,
+  "aspect_ratio": 1.3333,
+  "merged_evidence_hits": [
+    "official_qq",
+    "official_site",
+    "publication_date",
+    "shandong",
+    "sponsor"
+  ],
+  "merged_issue_matches": [],
+  "merged_page_matches": [
+    "a4"
+  ],
+  "identity_score": 5,
+  "publication_date_2012_01_03": true,
+  "issue_1006_detected": false,
+  "vertical_text_coverage_zones": 3,
+  "identity_verified": false,
+  "full_page_layout_candidate": false,
+  "inferred_issue_sequence_note": "Issue 1000 is independently anchored on 2011-11-22 in the editor blog; weekly cadence places 2012-01-03 at issue 1006. OCR must independently detect 1006 before identity_verified becomes true.",
+  "classification": "strong_newspaper_page_candidate",
+  "notes": [
+    "No image bytes are committed.",
+    "Composite newspaper identity uses independent masthead/site/QQ/sponsor/date/issue/location evidence; it does not rely solely on stylized masthead OCR.",
+    "A complete issue PDF is not created unless all pages of the issue are recovered and verified."
+  ]
+}
