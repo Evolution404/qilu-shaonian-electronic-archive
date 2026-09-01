@@ -1,0 +1,39 @@
+{
+  "posts_targeted": 5,
+  "cdx_captures": 0,
+  "archived_posts_recovered": 0,
+  "historical_media_refs": 0,
+  "unique_historical_media_urls": 0,
+  "media_variants_probed": 0,
+  "reachable_non_placeholder": 0,
+  "dec31_source_media_urls": 0,
+  "dec31_reachable_non_placeholder": 0,
+  "dec31_likely_document": 0,
+  "errors": [
+    {
+      "post_url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html",
+      "stage": "cdx",
+      "error": "TimeoutError: The read operation timed out"
+    },
+    {
+      "post_url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html",
+      "stage": "cdx",
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "post_url": "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html",
+      "stage": "cdx",
+      "error": "URLError: <urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "post_url": "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html",
+      "stage": "cdx",
+      "error": "TimeoutError: The read operation timed out"
+    }
+  ],
+  "notes": [
+    "Historical Wayback HTML is used specifically to recover media references deleted from current Sina HTML.",
+    "No image bytes or archived HTML bodies are committed; only source/capture URLs, hashes and dimensions are stored.",
+    "Any recovered image still requires content/visual verification before promotion as a newspaper page."
+  ]
+}
