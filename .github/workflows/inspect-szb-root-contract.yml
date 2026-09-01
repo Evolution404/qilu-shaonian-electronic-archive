@@ -1,0 +1,36 @@
+name: Inspect SZB Root Contract
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/inspect_szb_root_contract.py'
+      - '.github/workflows/inspect-szb-root-contract.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect verified root snapshot
+        run: python scripts/inspect_szb_root_contract.py
+      - name: Commit contract evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/szb_root_contract)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/szb_root_contract
+          git commit -m 'data: record szb root hidden asset contract'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
