@@ -1,0 +1,6 @@
+source,request_url,status,resolved_url,content_type,bytes,sha256,jsonish,known_edition_mentions,media_literals,excerpt,error
+wayback_exact,https://web.archive.org/web/20220928010853id_/http://szb.cnssiot.cn/api/Pagelist/48,error,,,,,,,,,HTTPError: HTTP Error 404: NOT FOUND
+live_http,http://szb.cnssiot.cn/api/Pagelist/48,error,,,,,,,,,URLError: <urlopen error [Errno -2] Name or service not known>
+live_https,https://szb.cnssiot.cn/api/Pagelist/48,error,,,,,,,,,URLError: <urlopen error [Errno -2] Name or service not known>
+live_http_slash,http://szb.cnssiot.cn/api/Pagelist/48/,error,,,,,,,,,URLError: <urlopen error [Errno -2] Name or service not known>
+live_https_slash,https://szb.cnssiot.cn/api/Pagelist/48/,error,,,,,,,,,URLError: <urlopen error [Errno -2] Name or service not known>

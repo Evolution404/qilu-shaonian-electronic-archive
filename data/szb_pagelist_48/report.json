@@ -1,0 +1,16 @@
+{
+  "target": "http://szb.cnssiot.cn/api/Pagelist/48",
+  "root_contract": "var allpagefile=webd+\"api/Pagelist/48\"",
+  "responses_recovered": 0,
+  "usable_response_found": false,
+  "normalized_rows": 0,
+  "pages_identified": [],
+  "complete_a1_to_a8": false,
+  "unique_media_urls": 0,
+  "verified_media": 0,
+  "verified_pdfs": 0,
+  "notes": [
+    "API path is directly evidenced by verified Qilu Shaonian root HTML.",
+    "No response bodies or media bytes are committed; normalized metadata/hashes only."
+  ]
+}
