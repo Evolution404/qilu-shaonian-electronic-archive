@@ -1,0 +1,51 @@
+name: OCR Sina Review Page Images
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/ocr_sina_review_pages.py'
+      - '.github/workflows/ocr-sina-review-pages.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ocr-sina-review-pages
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install OCR dependencies
+        run: |
+          python -m pip install --disable-pip-version-check pillow
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-chi-sim
+      - name: Audit review-post images
+        run: python scripts/ocr_sina_review_pages.py
+      - name: Commit review-page OCR evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_review_pages)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage/sina_review_pages
+          git commit -m 'data: audit Sina review page images'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
