@@ -1,0 +1,41 @@
+name: Build 2012 Winter Combined Page Index
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_2012_winter_page_index.py'
+      - '.github/workflows/build-2012-winter-page-index.yml'
+      - 'data/repost_fullpage/sina_2012_winter_combined/fee_dictionary/table_rows.csv'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build page/title index
+        run: python scripts/build_2012_winter_page_index.py
+      - name: Commit page index
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_2012_winter_combined/page_title_index.csv data/repost_fullpage/sina_2012_winter_combined/page_title_index_report.json)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage/sina_2012_winter_combined/page_title_index.csv data/repost_fullpage/sina_2012_winter_combined/page_title_index_report.json
+          git commit -m 'data: build 2012 winter combined page index'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
