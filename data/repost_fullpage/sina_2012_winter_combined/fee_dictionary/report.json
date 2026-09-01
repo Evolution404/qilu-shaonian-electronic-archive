@@ -1,11 +1,13 @@
 {
   "source_url": "https://blog.sina.com.cn/s/blog_4c4fc7d901012sbb.html",
-  "source_bytes": 124031,
+  "source_bytes": 124033,
   "content_type": "text/html; charset=UTF-8",
   "body_chars": 1934,
   "body_lines": 284,
   "structured_hint_rows": 5,
-  "issue_counts": {
+  "html_tables": 1,
+  "table_rows": 84,
+  "table_issue_counts": {
     "1002": 1,
     "1003": 1,
     "1004": 1,
@@ -20,10 +22,11 @@
     "1013": 0,
     "1014": 0
   },
-  "page_hint_rows": 0,
-  "money_hint_rows": 0,
+  "table_page_hint_rows": 0,
+  "table_money_hint_rows": 0,
   "notes": [
-    "Only short metadata contexts are stored; the full blog post is not mirrored.",
+    "Only compact table metadata/short contexts are stored; the full blog post is not mirrored.",
+    "Table rows preserve HTML column relationships and rowspan-derived values where possible.",
     "Issue/title/author clues are for reverse-search and require independent page-image verification."
   ]
 }
