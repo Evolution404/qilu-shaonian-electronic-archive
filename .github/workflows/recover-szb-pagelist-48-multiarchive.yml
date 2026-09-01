@@ -1,0 +1,46 @@
+name: Recover SZB Pagelist 48 Multiarchive
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/recover_szb_pagelist_48_multiarchive.py'
+      - '.github/workflows/recover-szb-pagelist-48-multiarchive.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recover-szb-pagelist-48-multiarchive
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 28
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Locate exact API response in web archives
+        run: python scripts/recover_szb_pagelist_48_multiarchive.py
+      - name: Commit archive evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/szb_pagelist_48_multiarchive)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/szb_pagelist_48_multiarchive
+          git commit -m 'data: record Pagelist multiarchive recovery'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
