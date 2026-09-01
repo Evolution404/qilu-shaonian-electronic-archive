@@ -1,0 +1,74 @@
+{
+  "posts_targeted": 5,
+  "posts_recovered": 5,
+  "media_refs": 121,
+  "unique_media_urls": 14,
+  "by_post": {
+    "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nf.html": {
+      "title": "2012年寒假合刊编辑部的故事之三",
+      "refs": 24,
+      "unique_urls": 13,
+      "hosts": [
+        "blog7photo,blog7icp",
+        "mjs.sinaimg.cn",
+        "n.sinaimg.cn",
+        "simg.sinajs.cn",
+        "sjs.sinajs.cn"
+      ]
+    },
+    "https://blog.sina.com.cn/s/blog_4c4fc7d9010116ni.html": {
+      "title": "2012年寒假合刊编辑部的故事之四和六",
+      "refs": 24,
+      "unique_urls": 13,
+      "hosts": [
+        "blog7photo,blog7icp",
+        "mjs.sinaimg.cn",
+        "n.sinaimg.cn",
+        "simg.sinajs.cn",
+        "sjs.sinajs.cn"
+      ]
+    },
+    "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nl.html": {
+      "title": "2012年寒假合刊编辑部的故事之五",
+      "refs": 24,
+      "unique_urls": 13,
+      "hosts": [
+        "blog7photo,blog7icp",
+        "mjs.sinaimg.cn",
+        "n.sinaimg.cn",
+        "simg.sinajs.cn",
+        "sjs.sinajs.cn"
+      ]
+    },
+    "https://blog.sina.com.cn/s/blog_4c4fc7d9010116nn.html": {
+      "title": "2012年寒假合刊编辑部的故事之七",
+      "refs": 24,
+      "unique_urls": 13,
+      "hosts": [
+        "blog7photo,blog7icp",
+        "mjs.sinaimg.cn",
+        "n.sinaimg.cn",
+        "simg.sinajs.cn",
+        "sjs.sinajs.cn"
+      ]
+    },
+    "https://blog.sina.com.cn/s/blog_4c4fc7d901011cp9.html": {
+      "title": "今天我评报",
+      "refs": 25,
+      "unique_urls": 14,
+      "hosts": [
+        "blog7photo,blog7icp",
+        "mjs.sinaimg.cn",
+        "n.sinaimg.cn",
+        "s12.sinaimg.cn",
+        "simg.sinajs.cn",
+        "sjs.sinajs.cn"
+      ]
+    }
+  },
+  "errors": [],
+  "notes": [
+    "Broad hidden-media inspection only; each candidate must be content-verified.",
+    "No media bytes are committed."
+  ]
+}
