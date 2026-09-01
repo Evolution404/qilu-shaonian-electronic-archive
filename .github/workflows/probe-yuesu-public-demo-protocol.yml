@@ -1,0 +1,36 @@
+name: Probe Yuesu Public Demo Protocol
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/probe_yuesu_public_demo_protocol.py'
+      - '.github/workflows/probe-yuesu-public-demo-protocol.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inspect public listing/demo protocol
+        run: python scripts/probe_yuesu_public_demo_protocol.py
+      - name: Commit public protocol evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/cms_reference/yuesu_public_demo)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/cms_reference/yuesu_public_demo
+          git commit -m 'data: record Yuesu public demo protocol'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
