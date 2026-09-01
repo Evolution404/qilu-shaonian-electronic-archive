@@ -1,0 +1,21 @@
+{
+  "cdx_api": "https://web.archive.org/cdx/search/cdx?url=szb.cnssiot.cn%2F%2A&from=2021&to=2023&output=json&fl=timestamp%2Coriginal%2Cstatuscode%2Cmimetype%2Cdigest%2Clength&filter=%21mimetype%3Awarc%2Frevisit&collapse=urlkey&limit=20000",
+  "inventory_urls": 1,
+  "category_counts": {
+    "other": 1
+  },
+  "high_value_urls": 0,
+  "high_value_bodies_checked": 0,
+  "pagelist_urls": [],
+  "issue_2021_12_25_urls": 0,
+  "img_2021_12_urls": 0,
+  "pdf_urls": 0,
+  "recovered_media_bodies": 0,
+  "discovered_asset_refs": 0,
+  "errors": [],
+  "notes": [
+    "Single low-load domain inventory query replaces many guessed-path queries.",
+    "A successful inventory establishes archived URL existence even if replay later fails.",
+    "No full archived text or third-party media bytes are committed."
+  ]
+}
