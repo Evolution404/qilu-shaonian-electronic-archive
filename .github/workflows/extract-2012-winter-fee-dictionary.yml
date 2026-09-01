@@ -1,0 +1,44 @@
+name: Extract 2012 Winter Fee Issue Dictionary
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/extract_2012_winter_fee_issue_dictionary.py'
+      - '.github/workflows/extract-2012-winter-fee-dictionary.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser dependency
+        run: python -m pip install --disable-pip-version-check beautifulsoup4
+      - name: Extract issue/title metadata hints
+        run: python scripts/extract_2012_winter_fee_issue_dictionary.py
+      - name: Commit structured hints
+        run: |
+          if [ -z "$(git status --porcelain -- data/repost_fullpage/sina_2012_winter_combined/fee_dictionary)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/repost_fullpage/sina_2012_winter_combined/fee_dictionary
+          git commit -m 'data: build 2012 winter issue title dictionary'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
