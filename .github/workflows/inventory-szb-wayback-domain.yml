@@ -1,0 +1,46 @@
+name: Inventory SZB Wayback Domain
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/inventory_szb_wayback_domain.py'
+      - '.github/workflows/inventory-szb-wayback-domain.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: inventory-szb-wayback-domain
+  cancel-in-progress: true
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    env:
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Inventory archived URLs and inspect high-value captures
+        run: python scripts/inventory_szb_wayback_domain.py
+      - name: Commit Wayback inventory evidence
+        run: |
+          if [ -z "$(git status --porcelain -- data/szb_wayback_inventory)" ]; then exit 0; fi
+          git config user.name 'qilu-archive-bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/szb_wayback_inventory
+          git commit -m 'data: inventory archived szb URL surface'
+          for attempt in 1 2 3 4; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt * 2))
+          done
+          exit 1
