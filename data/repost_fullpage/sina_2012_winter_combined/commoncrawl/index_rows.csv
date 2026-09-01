@@ -1,1 +1,1 @@
-post_id,post_title,query_url,index,timestamp,url,status,mime,digest,filename,offset,length
+post_id,post_title,query_url,index_host,index,timestamp,url,status,mime,digest,filename,offset,length
