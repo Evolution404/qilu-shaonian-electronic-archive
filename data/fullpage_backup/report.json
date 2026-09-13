@@ -1,12 +1,43 @@
 {
-  "elapsed_seconds": 11.23,
+  "elapsed_seconds": 49.24,
   "wayback_media_candidates": 88,
   "inspected_candidates": 88,
-  "large_portrait_candidates": 0,
+  "large_portrait_candidates": 3,
   "reachable_pdf_candidates": 0,
   "internet_archive_item_hits": 1,
-  "large_portrait_examples": [],
-  "errors": [],
+  "large_portrait_examples": [
+    {
+      "original": "http://qlsn.com/upload/newsImg/2014-06/60cf3a14-430a-4757-83a1-e51ddd47d7f0.jpg",
+      "archive_url": "https://web.archive.org/web/20150113052956id_/http://qlsn.com/upload/newsImg/2014-06/60cf3a14-430a-4757-83a1-e51ddd47d7f0.jpg",
+      "width": "1872",
+      "height": "3328",
+      "sha256": "53f242e8ed44399a23b92c1cea40e80038599bfb6eb1fe822b74f1e2c25f8ec1",
+      "historical_identity": "requires_context_verification"
+    },
+    {
+      "original": "http://qlsn.com/upload/newsImg/2014-06/d20b8c04-462e-4c0f-bc28-bcaa50b07602.JPG",
+      "archive_url": "https://web.archive.org/web/20150113035004id_/http://qlsn.com/upload/newsImg/2014-06/d20b8c04-462e-4c0f-bc28-bcaa50b07602.JPG",
+      "width": "1168",
+      "height": "1752",
+      "sha256": "160838af4e03346f3cfc97af5ba3da35492667ec81f610f5cc2aa28009704f98",
+      "historical_identity": "requires_context_verification"
+    },
+    {
+      "original": "http://qlsn.com/upload/newsImg/2014-06/f2b1f68e-e6df-437e-8fdd-5b1246cd6bd6.jpg",
+      "archive_url": "https://web.archive.org/web/20150113022530id_/http://qlsn.com/upload/newsImg/2014-06/f2b1f68e-e6df-437e-8fdd-5b1246cd6bd6.jpg",
+      "width": "1216",
+      "height": "2048",
+      "sha256": "d6c74e0ba4d4bf8a0e747a729abe1f15091587c60c2a9cb7f1f9774a01bde137",
+      "historical_identity": "requires_context_verification"
+    }
+  ],
+  "errors": [
+    {
+      "source": "wayback",
+      "target": "202.102.188.131/qilushaonian/*",
+      "error": "TimeoutError: The read operation timed out"
+    }
+  ],
   "notes": [
     "Large portrait classification is triage only; visual identity/issue/page must be verified before promotion.",
     "qlsn.com resources after the verified historical period require contextual verification because the domain was later repurposed.",
