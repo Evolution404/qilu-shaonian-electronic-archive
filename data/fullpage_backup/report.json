@@ -1,20 +1,29 @@
 {
-  "elapsed_seconds": 28.1,
+  "elapsed_seconds": 50.44,
   "wayback_media_candidates": 88,
   "inspected_candidates": 88,
-  "large_portrait_candidates": 0,
+  "large_portrait_candidates": 1,
   "reachable_pdf_candidates": 0,
   "internet_archive_item_hits": 1,
-  "large_portrait_examples": [],
+  "large_portrait_examples": [
+    {
+      "original": "http://qlsn.com/upload/newsImg/2014-06/d20b8c04-462e-4c0f-bc28-bcaa50b07602.JPG",
+      "archive_url": "https://web.archive.org/web/20150113035004id_/http://qlsn.com/upload/newsImg/2014-06/d20b8c04-462e-4c0f-bc28-bcaa50b07602.JPG",
+      "width": "1168",
+      "height": "1752",
+      "sha256": "160838af4e03346f3cfc97af5ba3da35492667ec81f610f5cc2aa28009704f98",
+      "historical_identity": "requires_context_verification"
+    }
+  ],
   "errors": [
     {
       "source": "wayback",
-      "target": "www.dzwww.com/qilushaonian/*",
+      "target": "szb.cnssiot.cn/*",
       "error": "TimeoutError: The read operation timed out"
     },
     {
       "source": "wayback",
-      "target": "www.qlsn.com/*",
+      "target": "www.dzwww.com/qilushaonian/*",
       "error": "TimeoutError: The read operation timed out"
     }
   ],
