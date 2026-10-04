@@ -1,11 +1,11 @@
 {
-  "generated_at_utc": "2026-09-27T09:17:22.428361+00:00",
-  "elapsed_seconds": 2.52,
+  "generated_at_utc": "2026-10-04T09:48:29.003805+00:00",
+  "elapsed_seconds": 3.66,
   "verifier_version": "1.1",
   "source_records": 250,
   "html_records": 147,
   "html_checked": 30,
-  "html_with_identity_keyword_hits": 18,
+  "html_with_identity_keyword_hits": 19,
   "image_records": 86,
   "strongest_pages": [
     {
@@ -133,6 +133,13 @@
       "title": "齐鲁少年博客-首页",
       "identity_hits": "齐鲁少年",
       "excerpt": "齐鲁少年博客-首页 齐鲁少年博客 欢迎大家来到齐鲁少年博客建立自己的网上家园 申请博客 | 进入论坛 博客首页 | 博客索引 | 话题索引 | 文章 | 收藏 | 相册 | 书签 | 交易 用户信息 论坛用户： 论坛密码： 登录保存： 不保存 保存一天 保存一月 保存一年 新 闻 本站博客正式对外开放 欢迎大家来到本站的博客系统建立自己的网上家园！ 请注意文明、坦诚、平等交流，对事不对人，尊重别人看法，哪怕有不全面的地方 关键字： 标题 作者 分类 文章 收藏 书签 交易 相册 新博客用户 我们的家园 家园 科幻小说《哆米B梦》 刘延祥 我是少年天使 少年天使 sjwxl 的博客 sjwxl "
+    },
+    {
+      "original": "http://www.qlsn.com/bbs/bokeindex.asp?show_topic.4.html",
+      "archive_url": "https://web.archive.org/web/20061215123725id_/http://www.qlsn.com/bbs/bokeindex.asp?show_topic.4.html",
+      "title": "齐鲁少年博客-交易",
+      "identity_hits": "齐鲁少年",
+      "excerpt": "齐鲁少年博客-交易 齐鲁少年博客 欢迎大家来到齐鲁少年博客建立自己的网上家园 申请博客 | 进入论坛 博客首页 | 博客索引 | 话题索引 | 文章 | 收藏 | 相册 | 书签 | 交易 话题索引 日记 知识 读书 心情 生活 体育 下载 数码 帖图 电影 音乐 网络 软件 开发 传媒 交易 话题索引 → 交易 提示信息： 你查看的数据不存在或参数错误！ 返回上一页 关闭窗口 Power by iBoker V1.0.0 Copyright © 齐鲁少年博客 查询次数：(1),页面执行时间 0.12500 秒"
     }
   ],
   "notes": [
